@@ -1,0 +1,74 @@
+DisplayTypeName:Ground Radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:
+SECTORTITLE:
+Free Text:ULMM - Helipads\[H]:freetext
+Free Text:ULMM - Stands\1:freetext
+Free Text:ULMM - Stands\1:freetext
+Free Text:ULMM - Stands\1:freetext
+Free Text:ULMM - Stands\10:freetext
+Free Text:ULMM - Stands\11:freetext
+Free Text:ULMM - Stands\12:freetext
+Free Text:ULMM - Stands\13:freetext
+Free Text:ULMM - Stands\2:freetext
+Free Text:ULMM - Stands\2:freetext
+Free Text:ULMM - Stands\2:freetext
+Free Text:ULMM - Stands\3:freetext
+Free Text:ULMM - Stands\3:freetext
+Free Text:ULMM - Stands\3:freetext
+Free Text:ULMM - Stands\4:freetext
+Free Text:ULMM - Stands\4:freetext
+Free Text:ULMM - Stands\4:freetext
+Free Text:ULMM - Stands\5:freetext
+Free Text:ULMM - Stands\5:freetext
+Free Text:ULMM - Stands\5:freetext
+Free Text:ULMM - Stands\6:freetext
+Free Text:ULMM - Stands\6:freetext
+Free Text:ULMM - Stands\6:freetext
+Free Text:ULMM - Stands\7:freetext
+Free Text:ULMM - Stands\7:freetext
+Free Text:ULMM - Stands\7:freetext
+Free Text:ULMM - Stands\8:freetext
+Free Text:ULMM - Stands\8:freetext
+Free Text:ULMM - Stands\8:freetext
+Free Text:ULMM - Stands\9:freetext
+Free Text:ULMM - Stands\9:freetext
+Free Text:ULMM - Stands\9:freetext
+Free Text:ULMM - Stands\B1:freetext
+Free Text:ULMM - Stands\B2:freetext
+Free Text:ULMM - Stands\B3:freetext
+Free Text:ULMM - Stands\B4:freetext
+Free Text:ULMM - Stands\B5:freetext
+Free Text:ULMM - Stands\B6:freetext
+Free Text:ULMM - Start-up\[1]:freetext
+Free Text:ULMM - Start-up\[2]:freetext
+Free Text:ULMM - Start-up\[3]:freetext
+Free Text:ULMM - Start-up\[4]:freetext
+Free Text:ULMM - Taxiways\A:freetext
+Free Text:ULMM - Taxiways\B:freetext
+Free Text:ULMM - Taxiways\C:freetext
+Free Text:ULMM - Taxiways\D:freetext
+Free Text:ULMM - Taxiways\E:freetext
+Free Text:ULMM - Taxiways\F:freetext
+Geo:ULMM:
+Regions:ULMM:polygon
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:6
+SHOWLEADER:0
+TURNLEADER:0
+HISTORY_DOTS:0
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:313.00000
+TAGFAMILY:TopSky
+WINDOWAREA:68.772432:32.720429:68.789174:32.783172
+PLUGIN:Ground Radar plugin:AirportElevation:267
+PLUGIN:Ground Radar plugin:AirportRadius:1.0
+PLUGIN:Ground Radar plugin:GroundMode:ULMM
+PLUGIN:Ground Radar plugin:TowerMode:ULMM
+PLUGIN:TopSky plugin:NoDraw:1

@@ -1,0 +1,38 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:
+SECTORTITLE:
+ARTCC boundary:ULLL_CTR:
+ARTCC low boundary:ULAM_APP:
+ARTCC low boundary:ULAM_TWR:
+Geo:ULAM:
+Regions:ULAM:polygon
+Runways:ULAM 06-24:extended centerline 1
+Runways:ULAM 06-24:extended centerline 1 left base
+Runways:ULAM 06-24:extended centerline 1 left ticks
+Runways:ULAM 06-24:extended centerline 1 left vectoring
+Runways:ULAM 06-24:extended centerline 1 right base
+Runways:ULAM 06-24:extended centerline 1 right ticks
+Runways:ULAM 06-24:extended centerline 1 right vectoring
+Runways:ULAM 06-24:extended centerline 2
+Runways:ULAM 06-24:extended centerline 2 left base
+Runways:ULAM 06-24:extended centerline 2 left ticks
+Runways:ULAM 06-24:extended centerline 2 left vectoring
+Runways:ULAM 06-24:extended centerline 2 right base
+Runways:ULAM 06-24:extended centerline 2 right ticks
+Runways:ULAM 06-24:extended centerline 2 right vectoring
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:6
+SHOWLEADER:0
+TURNLEADER:0
+HISTORY_DOTS:0
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:349.00000
+TAGFAMILY:TopSky
+WINDOWAREA:66.315416:48.114917:68.966443:58.128423

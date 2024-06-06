@@ -1,0 +1,24 @@
+PROFILE
+PROFILE:ULLI_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! https://vats.im/ulll
+PROFILE:ULLI_VFR_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! https://vats.im/ulll
+PROFILE:ULLI_N_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! https://vats.im/ulll
+PROFILE:ULLI_S_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! https://vats.im/ulll
+PROFILE:ULLI_GND:20:3
+ATIS2:Pulkovo Ground
+ATIS3:We love feedback! https://vats.im/ulll
+PROFILE:ULLI_DEL:20:2
+ATIS2:Pulkovo Delivery
+ATIS3:We love feedback! https://vats.im/ulll
+PROFILE:%%_OBS:600:0
+ATIS2:
+ATIS3:
+ATIS4:
+END

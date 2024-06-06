@@ -1,0 +1,83 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:
+SECTORTITLE:
+Airports:ULAA:name
+Airports:ULAA:symbol
+Airports:ULAM:name
+Airports:ULAM:symbol
+Airports:ULKK:name
+Airports:ULKK:symbol
+Airports:ULLI:name
+Airports:ULLI:symbol
+Airports:ULPB:name
+Airports:ULPB:symbol
+Airports:ULWC:name
+Airports:ULWC:symbol
+Airports:ULWW:name
+Airports:ULWW:symbol
+Airports:UMKK:name
+Airports:UMKK:symbol
+Airports:UUDD:name
+Airports:UUDD:symbol
+Airports:UUEE:name
+Airports:UUEE:symbol
+Airports:UUWW:name
+Airports:UUWW:symbol
+Airports:UUYY:name
+Airports:UUYY:symbol
+ARTCC boundary:ULLL_CTR:
+ARTCC boundary:UMKK_CTR:
+ARTCC high boundary:ULLL_W1_CTR:
+ARTCC high boundary:ULLL_W2_CTR:
+ARTCC low boundary:ULWC_TWR:
+ARTCC low boundary:ULWW_TWR:
+Geo:ULWC:
+Geo:ULWW:
+Regions:ULLL_W1_CTR:polygon
+Regions:ULLL_W2_CTR:polygon
+Regions:ULWC:polygon
+Regions:ULWW:polygon
+Runways:ULWC 03-21:extended centerline 1
+Runways:ULWC 03-21:extended centerline 1 left base
+Runways:ULWC 03-21:extended centerline 1 left ticks
+Runways:ULWC 03-21:extended centerline 1 left vectoring
+Runways:ULWC 03-21:extended centerline 1 right base
+Runways:ULWC 03-21:extended centerline 1 right ticks
+Runways:ULWC 03-21:extended centerline 1 right vectoring
+Runways:ULWC 03-21:extended centerline 2
+Runways:ULWC 03-21:extended centerline 2 left base
+Runways:ULWC 03-21:extended centerline 2 left ticks
+Runways:ULWC 03-21:extended centerline 2 left vectoring
+Runways:ULWC 03-21:extended centerline 2 right base
+Runways:ULWC 03-21:extended centerline 2 right ticks
+Runways:ULWC 03-21:extended centerline 2 right vectoring
+Runways:ULWW 15-33:extended centerline 1
+Runways:ULWW 15-33:extended centerline 1 left base
+Runways:ULWW 15-33:extended centerline 1 left ticks
+Runways:ULWW 15-33:extended centerline 1 left vectoring
+Runways:ULWW 15-33:extended centerline 1 right base
+Runways:ULWW 15-33:extended centerline 1 right ticks
+Runways:ULWW 15-33:extended centerline 1 right vectoring
+Runways:ULWW 15-33:extended centerline 2
+Runways:ULWW 15-33:extended centerline 2 left base
+Runways:ULWW 15-33:extended centerline 2 left ticks
+Runways:ULWW 15-33:extended centerline 2 left vectoring
+Runways:ULWW 15-33:extended centerline 2 right base
+Runways:ULWW 15-33:extended centerline 2 right ticks
+Runways:ULWW 15-33:extended centerline 2 right vectoring
+SHOWC:1
+SHOWSB:0
+BELOW:300
+ABOVE:0
+LEADER:6
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:0
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:349.00000
+TAGFAMILY:TopSky
+WINDOWAREA:57.727689:30.527323:63.219945:51.109741
