@@ -1,13 +1,8 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
-ARTCC boundary:ULLL_CTR:
-ARTCC low boundary:ULLI_R_APP:
-ARTCC low boundary:ULLI_TWR:
-ARTCC low boundary:ULLL_APP:
-Geo:ULLI:
+SECTORFILE:D:\ULLL SECTOR\ULLL-Galaxy_20240606213540-240501-0031.sct
+SECTORTITLE:ULLL-Galaxy_20240606213540-240501-0031.sct
 NDBs:K:symbol
 NDBs:L:symbol
 NDBs:O:symbol
@@ -16,7 +11,7 @@ NDBs:PL:symbol
 NDBs:PO:symbol
 NDBs:PU:symbol
 NDBs:U:symbol
-Regions:ULLI:polygon
+Runways:ULLI 10L-28R:centerline
 Runways:ULLI 10L-28R:extended centerline 1
 Runways:ULLI 10L-28R:extended centerline 1 left base
 Runways:ULLI 10L-28R:extended centerline 1 left ticks
@@ -31,6 +26,7 @@ Runways:ULLI 10L-28R:extended centerline 2 left vectoring
 Runways:ULLI 10L-28R:extended centerline 2 right base
 Runways:ULLI 10L-28R:extended centerline 2 right ticks
 Runways:ULLI 10L-28R:extended centerline 2 right vectoring
+Runways:ULLI 10R-28L:centerline
 Runways:ULLI 10R-28L:extended centerline 1
 Runways:ULLI 10R-28L:extended centerline 1 left base
 Runways:ULLI 10R-28L:extended centerline 1 left ticks
@@ -47,7 +43,7 @@ Runways:ULLI 10R-28L:extended centerline 2 right ticks
 Runways:ULLI 10R-28L:extended centerline 2 right vectoring
 SHOWC:1
 SHOWSB:1
-BELOW:0
+BELOW:300
 ABOVE:0
 LEADER:-1
 SHOWLEADER:1

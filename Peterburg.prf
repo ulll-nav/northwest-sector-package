@@ -27,9 +27,9 @@ Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
 Settings	alias	\ULLL\Alias\Aliases.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
-Settings	sector	\ULLL-Galaxy_20240601161705-240501-0030.sct
-TeamSpeakVccs	TsVccsMiniControlX	1740
-TeamSpeakVccs	TsVccsMiniControlY	26
+Settings	sector	\ULLL-Galaxy_20240606213540-240501-0031.sct
+TeamSpeakVccs	TsVccsMiniControlX	1332
+TeamSpeakVccs	TsVccsMiniControlY	75
 Sounds	Sound0	\Sounds\handoff_request.wav
 Sounds	Sound1	\Sounds\handoff_accept.wav
 Sounds	Sound2	\Sounds\conflict_alert.wav
@@ -49,8 +49,8 @@ Sounds	Sound15	\Sounds\new_atis.wav
 Sounds	Sound16	\Sounds\handoff_refused.wav
 Sounds	Sound17	\Sounds\pointout.wav
 Sounds	Sound18	\Sounds\startup.wav
-RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_CTR.asr
-RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_APP.asr
+RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_APP.asr
+RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_CTR.asr
 Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Peterburg\TopSky.dll
 Plugins	Plugin1	\ULLL\Plugins\GRplugin Peterburg\GRplugin.dll
@@ -65,6 +65,7 @@ Plugins	Plugin3Display1	Ground Radar display
 Plugins	Plugin5Display0	Ground Radar display
 Plugins	Plugin5Display1	SMR radar display
 Plugins	Plugin5Display2	Standard ES radar screen
-LastSession	atis_freq4	118000
-LastSession	connecttype	3
-LastSession	playback	D:\EuroScope logs\EuroScope20240509.txt
+TeamSpeakVccs	Ts3DialogLeft	0
+TeamSpeakVccs	Ts3DialogTop	0
+TeamSpeakVccs	Ts3DialogRight	750
+TeamSpeakVccs	Ts3DialogBottom	600

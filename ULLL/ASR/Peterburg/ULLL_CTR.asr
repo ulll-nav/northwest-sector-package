@@ -1,8 +1,8 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
+SECTORFILE:D:\ULLL SECTOR\ULLL-Galaxy_20240606213540-240501-0031.sct
+SECTORTITLE:ULLL-Galaxy_20240606213540-240501-0031.sct
 Airports:ULAA:symbol
 Airports:ULAM:symbol
 Airports:ULDW:symbol
@@ -20,7 +20,6 @@ Airports:UUYS:symbol
 Airports:UUYW:symbol
 Airports:UUYX:symbol
 Airports:UUYY:symbol
-Geo:ULLL FIR border ULLL:
 Regions:ULLL ULLL-AR:polygon
 Regions:ULLL ULLL-KT:polygon
 Regions:ULLL ULLL-MR:polygon

@@ -42,7 +42,7 @@ Color_Active_Text_Map=190,190,190
 Color_AIW_Intrusion=255,152,0
 Color_Arm=97,97,97
 Color_Assumed=255,255,255
-Color_Background=32,32,32
+Color_Background=33,40,40
 Color_Border=51,51,52
 Color_BottomShadow=70,70,70
 Color_CARD_Conflict_Number
