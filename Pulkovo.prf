@@ -27,7 +27,7 @@ Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
 Settings	alias	\ULLL\Alias\Aliases.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
-Settings	sector	\ULLL-Galaxy_20240606213540-240501-0031.sct
+Settings	sector	\ULLL-Galaxy_20240609100931-240501-0033.sct
 TeamSpeakVccs	TsVccsMiniControlX	1421
 TeamSpeakVccs	TsVccsMiniControlY	40
 Plugins	Plugin0Display0	Ground Radar display

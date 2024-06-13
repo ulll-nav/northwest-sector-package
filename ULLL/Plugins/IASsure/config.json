@@ -1,0 +1,12 @@
+{
+    "mach":{
+        "digits":2,
+        "thresholdFL":265
+    },
+    "ias.prefix":"N",
+    "mass.prefix":"M",
+    "weather":{
+        "url":"http://localhost:3000/api/regions/ULLL/wx",
+        "update":30
+    }
+}

@@ -1,7 +1,0 @@
-Setup_AutoSignIn=1
-
-Window_MsgIn=1,900,890
-Window_MsgOut=1,900,950
-Window_QNHTL=1,0,750
-Window_WxMsgs=1,1280,800
-List_Holding=1657,700
