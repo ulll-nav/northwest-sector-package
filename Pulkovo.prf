@@ -1,18 +1,18 @@
-Settings	SettingsfileSYMBOLOGY	\ULLL\Settings\Peterburg\ULLI_Symbology.txt
+Settings	SettingsfileSYMBOLOGY	\ULLL\Settings\Pulkovo\ULLI_Symbology.txt
 Settings	SettingsfileVOICE	\ULLL\Settings\ALL\Frequencies.txt
-Settings	SettingsfilePROFILE	\ULLL\Settings\Peterburg\ULLI_Settings.txt
+Settings	SettingsfilePROFILE	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	SettingsfileTAGS	\ULLL\Settings\ALL\Tags.txt
-Settings	SettingsfileSIL	\ULLL\Settings\Peterburg\ULLI_Lists.txt
-Settings	SettingsfileSEL	\ULLL\Settings\Peterburg\ULLI_Lists.txt
-Settings	SettingsfileDEP	\ULLL\Settings\Peterburg\ULLI_Lists.txt
-Settings	SettingsfileARR	\ULLL\Settings\Peterburg\ULLI_Lists.txt
-Settings	SettingsfileFP	\ULLL\Settings\Peterburg\ULLI_Lists.txt
-Settings	SettingsfilePLUGINS	\ULLL\Settings\Peterburg\ULLI_Settings.txt
-Settings	Settingsfile	\ULLL\Settings\Peterburg\ULLI_Settings.txt
-Settings	SettingsfileSCREEN	\ULLL\Settings\Peterburg\ULLI_Settings.txt
-Settings	SettingsfileCONFLICT	\ULLL\Settings\Peterburg\ULLI_Lists.txt
-Settings	SettingsfileVCCS	\ULLL\Settings\Peterburg\ULLI_Lists.txt
-Settings	SettingsfilePILOTING	\ULLL\Settings\Peterburg\ULLI_Lists.txt
+Settings	SettingsfileSIL	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
+Settings	SettingsfileSEL	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
+Settings	SettingsfileDEP	\ULLL\Settings\Pulkovo\ULLI_DepartureList.txt
+Settings	SettingsfileARR	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
+Settings	SettingsfileFP	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
+Settings	SettingsfilePLUGINS	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	Settingsfile	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	SettingsfileSCREEN	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	SettingsfileCONFLICT	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
+Settings	SettingsfileVCCS	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
+Settings	SettingsfilePILOTING	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
 Settings	SettingsfileORIGPLANE	\Settings\Ground Tower\Settings.txt
 Settings	SettingsfileSTUP	\Settings\Ground Tower\Settings.txt
 Settings	SettingsfileTAXIOUT	\Settings\Ground Tower\Settings.txt
@@ -27,9 +27,9 @@ Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
 Settings	alias	\ULLL\Alias\Aliases.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
-Settings	sector	\ULLL-Galaxy_20240609100931-240501-0033.sct
-TeamSpeakVccs	TsVccsMiniControlX	1421
-TeamSpeakVccs	TsVccsMiniControlY	40
+Settings	sector	\ULLL-Galaxy_20240622142626-240601-0008.sct
+TeamSpeakVccs	TsVccsMiniControlX	1470
+TeamSpeakVccs	TsVccsMiniControlY	24
 Plugins	Plugin0Display0	Ground Radar display
 Plugins	Plugin3	\ULLL\Plugins\TopSky Pulkovo\TopSky.dll
 Plugins	Plugin0	\ULLL\Plugins\GRplugin Pulkovo\GRplugin.dll

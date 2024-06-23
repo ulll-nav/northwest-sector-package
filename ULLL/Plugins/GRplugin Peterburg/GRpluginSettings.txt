@@ -4,13 +4,15 @@ System_AutoAssignDist=100
 
 System_SchengenArea=BI,EB,ED,EE,EF,EH,EK,EL,EN,EP,ES,ET,EV,EY,GC,LE,LF,LG,LH,LI,LJ,LK,LM,LO,LP,LS,LZ,LT,UA,UB,UD,LB,UM,UK,LR,LY,EG,UT
 
-System_State_OnFreq=ON FREQ
-System_State_DeIce=DE-ICEING
-System_State_StartUp=START UP
-System_State_Push=PUSHBACK
-System_State_Taxi=TAXI
-System_State_LineUp=LINE UP
-System_State_Depa=TAKE-OFF
+System_State_OnFreq=STBY
+System_State_StartUp=SUG
+System_State_Push=PBG
+System_State_Taxi_In=TX
+System_State_Taxi_Out=TXG
+System_State_LineUp=ALU
+System_State_Depa=DEP
+System_State_DeIce=DEICE
+System_State_Parked=ONB
 
 System_APM=1
 System_CVM=1
@@ -20,76 +22,121 @@ System_RIM=1
 System_RVM=1
 System_SRM=1
 
-Color_Arrival=189,240,24
+Track_HistoryDots_GND=5
+Track_PredictionLine_APP=0
+Track_HistoryDots_APP=5
+
+Color_Arrival=240,240,0
+Color_Departure=0,232,232
+Color_RawVideo=255,255,0
+Color_Unknown=160,160,160
+
+Color_New_Stand=255,110,0
+
+Color_Warning=255,120,0
+Color_WBackground=135,135,135
+Color_New_Stand=255,255,0
+Color_APP_Background=0,0,0
+Color_TSW2_Background=0,0,0
+
+Color_SelectedLabelFill_Gnd=50,50,50
+Color_SelectedLabelBorder_Gnd=0,0,0
+
+Color_Arrival=240,240,0
+Color_Departure=20,255,182
 Color_Background=25,25,25
 Color_Caution=192,192,192
-Color_Departure=255,255,255
-Color_New_Stand=254,249,154
-Color_RawVideo=111,111,60
+Color_Departure=30,255,215
 Color_RawVideoHistory=111,111,60
-Color_SelectedLabelFill_Gnd=163,161,164
+
 Color_SelectedLabelFill_App=163,161,164
 Color_Selected=7,163,7
-Color_Unknown=111,245,74
-Color_Warning=236,51,35
 
 RawVideo=1
-RawVideo_MaxHistory=5
-RawVideo_Brightness=20
-RawVideo_Afterglow=30
+RawVideo_Brightness=70
+RawVideo_Afterglow=70
+RawVideo_MaxHistory=0
 
 Track_Heading_Line=0
-Track_HistoryDots_GND=0
 Track_PredictionLine_TWR=1
-Track_PredictionLine_APP=1
 
-Window_APP=1,1500,557,550,400
 Window_APP_Extensions=16
 Window_APP_Scale=15
 Window_APP_Rotation=350
 Window_APP_AltFilter=6000
 
+GroundLabel_Filter_NoState=1
+GroundLabel_Filter_Parked=1
+GroundLabel_Filter_OnFreq=0
+
 GroundLabel_FontSize=12
-GroundLabel_Transparency_Bd=255
-GroundLabel_Transparency_Bg=255
+GroundLabel_Transparency_Bd=100
+GroundLabel_Transparency_Bg=100
 
 AppLabel_FontSize=12
 AppLabel_UseSelColor=1
 AppLabel_Transparency_Bg=255
 
-Label_AFL=1,0,0
-Label_ATYP=1,1,1
-Label_GS=1,0,0
-Label_RMK=0,0,0
-Label_STAND=1,1,1
-Label_WTC=1,1,1
+GroundLabel=1
 
-Label=GND:DEP:0:ALRT,0,0:ASSR_E,0,1,1:COMM,0,1
-Label=GND:DEP:1:CALLSIGN,0,0
-Label=GND:DEP:2:ATYP,0,0:WTC,0,3
-Label=GND:DEP:3:DEP,0,0
+Label=GND:ARR:0:ALRT,0,0:COMM,0,1 
+Label=GND:ARR:1:CALLSIGN,0,0:STAND,0,1 
+Label=GND:ARR:2:ATYP,0,0:WTC,0,1,0
+Label=GND:ARR:3:RMK,0,1 
 
-Label=GND:ARR:0:ALRT,0,0:ASSR_E,0,1,1:COMM,0,1
-Label=GND:ARR:1:CALLSIGN,0,0
-Label=GND:ARR:2:ATYP,0,0:WTC,0,3
-Label=GND:ARR:3:STAND,0,0
+Label=GND:DEP:0:ALRT,0,0:ASSR_E,0,1:COMM,0,1 
+Label=GND:DEP:1:CALLSIGN,0,0:DRWY,0,1,1 
+Label=GND:DEP:2:ATYP,0,0:WTC,0,1,0
+Label=GND:DEP:3:DEP,0,0:RMK,0,1 
 
-Label=APP:DEP:0:ALRT,0,0:ASSR_E,0,1,1:COMM,0,1
-Label=APP:DEP:1:CALLSIGN,0,0
-Label=APP:DEP:2:ATYP,0,0:WTC,0,4
-Label=APP:DEP:3:AFL,0,0:GS,0,2
+Label=GND:OTH:0:ALRT,0,0:COMM,0,0
+Label=GND:OTH:1:CALLSIGN,0,0
+Label=GND:OTH:2:
+Label=GND:OTH:3:
 
-Label=APP:ARR:0:ALRT,0,0:ASSR_E,0,1,1:COMM,0,1
-Label=APP:ARR:1:CALLSIGN,0,0
-Label=APP:ARR:2:ATYP,0,0:WTC,0,4
-Label=APP:ARR:3:AFL,0,0:GS,0,2
+Label=GND:UNC:0:ALRT,0,0:ASSR_E,0,1:COMM,0,0
+Label=GND:UNC:1:TSSR,0,0
+Label=GND:UNC:2:
+Label=GND:UNC:3:
 
-Label=APP:OTH:0:ALRT,0,0:ASSR_E,0,1,1:COMM,0,1
-Label=APP:OTH:1:CALLSIGN,0,0
-Label=APP:OTH:2:ATYP,0,0:WTC,0,4
-Label=APP:OTH:3:AFL,0,0:GS,0,2
+Label=TWR:ARR:0:ALRT,0,0:COMM,0,1 
+Label=TWR:ARR:1:CALLSIGN,0,0:ATYP,0,1
+Label=TWR:ARR:2:AFL+VS,0,1,20:GS,0,1
+Label=TWR:ARR:3:ARWY,0,0:RMK,0,1 
 
-List_Arrival=1,750,48
+Label=TWR:DEP:0:ALRT,0,0:COMM,0,1 
+Label=TWR:DEP:1:CALLSIGN,0,0:ATYP,0,1
+Label=TWR:DEP:2:AFL+VS,0,1,20:GS,0,1
+Label=TWR:DEP:3:DEP,0,0:RMK,0,1
+
+Label=APP:DEP:0:ALRT,0,0:COMM,0,1
+Label=APP:DEP:1:CALLSIGN,0,0:GS,0,1,1
+Label=APP:DEP:2:AFL+VS,0,23:ATYP,0,1
+Label=APP:DEP:3:DEP,0,0:RMK,0,1
+
+Label=APP:ARR:0:ALRT,0,0:COMM,0,1
+Label=APP:ARR:1:CALLSIGN,0,0:GS,0,1,1
+Label=APP:ARR:2:AFL+VS,0,23:ATYP,0,1
+Label=APP:ARR:3:ARWY,0,0:STAND,0,1:RMK,0,1
+
+Label=APP:OTH:0:ALRT,0,0
+Label=APP:OTH:1:CALLSIGN,0,0:GS,0,1,1
+Label=APP:OTH:2:AFL+VS,0,23
+Label=APP:OTH:3:
+
+Label=APP:UNC:0:ALRT,0,0
+Label=APP:UNC:1:CALLSIGN,0,0:GS,0,1,1
+Label=APP:UNC:2:AFL+VS,0,23
+Label=APP:UNC:3:
+
+Label_AFL+VS=1,0,1
+Label_ARWY=0,0,0
+Label_ATYP=0,1,0
+Label_DEP=0,0,0
+Label_DRWY=0,1,0
+Label_RMK=0,1,1
+Label_STAND=0,1,0
+Label_GS=1,0,1
 
 [ULLI]
 Airport_Elevation=79

@@ -19,6 +19,7 @@ Settings	SettingsfileTAXIOUT	\ULLL\Settings\Peterburg\ULLL_Settings.txt
 Settings	SettingsfileTAKEOFF	\ULLL\Settings\Peterburg\ULLL_Settings.txt
 Settings	SettingsfileADCS	\ULLL\Settings\Peterburg\ULLL_Settings.txt
 Settings	SettingsfileTAXIIN	\ULLL\Settings\Peterburg\ULLL_Settings.txt
+Settings	sector	\ULLL-Galaxy_20240622142626-240601-0008.sct
 Settings	AselKey	5111808
 Settings	FreqKey	3604480
 Settings	airlines	\ULLL\ICAO\ICAO_Airlines.txt
@@ -27,9 +28,8 @@ Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
 Settings	alias	\ULLL\Alias\Aliases.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
-Settings	sector	\ULLL-Galaxy_20240609100931-240501-0033.sct
-TeamSpeakVccs	TsVccsMiniControlX	846
-TeamSpeakVccs	TsVccsMiniControlY	28
+TeamSpeakVccs	TsVccsMiniControlX	1670
+TeamSpeakVccs	TsVccsMiniControlY	171
 Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
 Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
 Sounds	Sound2	\ULLL\Sounds\conflict_alert.wav
@@ -49,8 +49,9 @@ Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup.wav
-RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_APP.asr
-RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_CTR.asr
+RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_CTR.asr
+RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLI_GND.asr
+RecentFiles	Recent3	\ULLL\ASR\Peterburg\ULLL_APP.asr
 Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Peterburg\TopSky.dll
 Plugins	Plugin1	\ULLL\Plugins\GRplugin Peterburg\GRplugin.dll
@@ -68,4 +69,3 @@ TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
 TeamSpeakVccs	Ts3DialogBottom	600
-LastSession	atis_freq4	118000

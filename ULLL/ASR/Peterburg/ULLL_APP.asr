@@ -3,9 +3,13 @@ DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
-ARTCC boundary:TMA ULLI PULKOVO RADAR:
-ARTCC boundary:Tower CTR ULLI PULKOVO TOWER:
 ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
+ARTCC low boundary:TMA ULLI PULKOVO RADAR:
+ARTCC low boundary:TMA XLLJ CTA:
+ARTCC low boundary:TMA XLLV CTA:
+ARTCC low boundary:TMA XLLY CTA:
+ARTCC low boundary:Tower CTR ULLI PULKOVO TOWER:
+Geo:ULLL Centerlines Inner:
 NDBs:K:symbol
 NDBs:L:symbol
 NDBs:O:symbol
@@ -14,6 +18,7 @@ NDBs:PL:symbol
 NDBs:PO:symbol
 NDBs:PU:symbol
 NDBs:U:symbol
+Regions:ULLL Approch background:polygon
 Runways:ULLI 10L-28R:centerline
 Runways:ULLI 10L-28R:extended centerline 1
 Runways:ULLI 10L-28R:extended centerline 1 left base
@@ -57,6 +62,6 @@ DISABLEPANNING:0
 DISABLEZOOMING:0
 DisplayRotation:349.00000
 TAGFAMILY:Galaxy
-WINDOWAREA:58.633704:26.242085:60.754525:34.388124
+WINDOWAREA:58.526134:26.501266:60.646956:34.647309
 PLUGIN:TopSky plugin:HideMapData:ULLL_CTR
 PLUGIN:TopSky plugin:ShowMapData:ULLL_APP

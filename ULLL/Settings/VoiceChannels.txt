@@ -23,7 +23,7 @@
 ;  only. The data must not be copied, photocopied, translated, reverse engineered, decompiled or reduced to any           ;
 ;  electronic medium or machine legible form, neither completely nor in part.                                             ;
 ;=========================================================================================================================;
-;  AIRAC 2405/1  ++  Valid period: 16/MAY/2024 - 12/JUN/2024  ++  File-Publisher: St Petersburg - ULLL                    ;
+;  AIRAC 2406/1  ++  Valid period: 13/JUN/2024 - 10/JUL/2024  ++  File-Publisher: St Petersburg - ULLL                    ;
 ;=========================================================================================================================;
 VOICE
 AG:RU-NWC_FSS Northwestern Russia Control:135.620:novoice:RU-NWC_FSS
@@ -31,6 +31,7 @@ AG:ULAA_APP ARKHANGELSK APPROACH:122.000:novoice:ULAA_APP
 AG:ULAA_TWR ARKHANGELSK TOWER:121.800:novoice:ULAA_TWR
 AG:ULAS_TWR Solovki Tower:118.000:novoice:ULAS_TWR
 AG:ULKK_TWR Kotlas Tower:120.300:novoice:ULKK_TWR
+AG:ULLI_ATIS:127.300:novoice:ULLI_ATIS
 AG:ULLI_DEL Pulkovo Delivery:121.900:novoice:ULLI_DEL
 AG:ULLI_GND Pulkovo Ground:121.700:novoice:ULLI_GND
 AG:ULLI_N_TWR Pulkovo Tower:118.100:novoice:ULLI_N_TWR
@@ -42,21 +43,19 @@ AG:ULLL_1_APP Peterburg Approach:125.200:novoice:ULLL_1_APP
 AG:ULLL_2S_CTR Peterburg Control:133.100:novoice:ULLL_2S_CTR
 AG:ULLL_APP Peterburg Approach:119.300:novoice:ULLL_APP
 AG:ULLL_AR_CTR Peterburg Control:132.150:novoice:ULLL_AR_CTR
-AG:ULLL_CTR Peterburg Control:134.100:novoice:ULLL_CTR
+AG:ULLL_CTR Peterburg Control:135.600:novoice:ULLL_CTR
 AG:ULLL_E_APP Peterburg Approach:125.200:novoice:ULLL_E_APP
 AG:ULLL_I_CTR Peterburg Information:126.000:novoice:ULLL_I_CTR
 AG:ULLL_KT_CTR Peterburg Control:129.900:novoice:ULLL_KT_CTR
 AG:ULLL_MR_CTR Peterburg Control:132.100:novoice:ULLL_MR_CTR
 AG:ULLL_NM_CTR Peterburg Control:133.200:novoice:ULLL_NM_CTR
-AG:ULLL_R1_CTR Peterburg Control:129.250:novoice:ULLL_R1_CTR
 AG:ULLL_R2_CTR Peterburg Control:135.600:novoice:ULLL_R2_CTR
 AG:ULLL_R4_CTR Peterburg Control:135.400:novoice:ULLL_R4_CTR
 AG:ULLL_R5_CTR Peterburg Control:133.600:novoice:ULLL_R5_CTR
 AG:ULLL_R6_CTR Peterburg Control:129.300:novoice:ULLL_R6_CTR
-AG:ULLL_R_CTR Peterburg Control:134.500:novoice:ULLL_R_CTR
+AG:ULLL_R_CTR Peterburg Control:129.250:novoice:ULLL_R_CTR
 AG:ULLL_SK_CTR Peterburg Control:133.300:novoice:ULLL_SK_CTR
 AG:ULLL_SW_CTR Peterburg Control:126.900:novoice:ULLL_SW_CTR
-AG:ULLL_W1_CTR Peterburg Control:132.900:novoice:ULLL_W1_CTR
 AG:ULLL_W2_CTR Peterburg Control:131.300:novoice:ULLL_W2_CTR
 AG:ULLL_WK_CTR Peterburg Control:132.900:novoice:ULLL_WK_CTR
 AG:ULMM_CTR Murmansk Control:132.100:novoice:ULMM_CTR

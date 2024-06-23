@@ -3,9 +3,13 @@ DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
-ARTCC boundary:TMA ULLI PULKOVO RADAR:
-ARTCC boundary:Tower CTR ULLI PULKOVO TOWER:
+ARTCC low boundary:CTR ULLI:
 ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
+ARTCC low boundary:TMA ULLI PULKOVO RADAR:
+ARTCC low boundary:TMA XLLJ CTA:
+ARTCC low boundary:TMA XLLV CTA:
+ARTCC low boundary:TMA XLLY CTA:
+ARTCC low boundary:Tower CTR ULLI PULKOVO TOWER:
 Airports:ULAA:symbol
 Airports:ULAM:symbol
 Airports:ULDW:symbol
@@ -23,23 +27,10 @@ Airports:UUYS:symbol
 Airports:UUYW:symbol
 Airports:UUYX:symbol
 Airports:UUYY:symbol
-Regions:ULLL ULLL-AR:polygon
-Regions:ULLL ULLL-KT:polygon
-Regions:ULLL ULLL-MR:polygon
-Regions:ULLL ULLL-NM:polygon
-Regions:ULLL ULLL-R1:polygon
-Regions:ULLL ULLL-R2:polygon
-Regions:ULLL ULLL-R3:polygon
-Regions:ULLL ULLL-R4:polygon
-Regions:ULLL ULLL-R5:polygon
-Regions:ULLL ULLL-R6:polygon
-Regions:ULLL ULLL-S1:polygon
-Regions:ULLL ULLL-S2:polygon
-Regions:ULLL ULLL-S3:polygon
-Regions:ULLL ULLL-S4:polygon
-Regions:ULLL ULLL-S5:polygon
-Regions:ULLL ULLL-W1:polygon
-Regions:ULLL ULLL-W2:polygon
+Geo:ULLL Coastline:
+Geo:ULLL FIR border FIR BORDER:
+Geo:ULLL Inner border:
+Geo:XXXX FIR border Borders:
 VORs:BLZ:symbol
 VORs:GNB:symbol
 VORs:KRG:symbol
@@ -57,13 +48,14 @@ SHOWC:1
 SHOWSB:0
 BELOW:300
 ABOVE:0
-LEADER:6
+LEADER:-3
 SHOWLEADER:1
 TURNLEADER:0
 HISTORY_DOTS:0
 SIMULATION_MODE:1
 DISABLEPANNING:0
 DISABLEZOOMING:0
-DisplayRotation:349.00000
-TAGFAMILY:TopSky
-WINDOWAREA:57.640580:24.430555:61.313390:38.537757
+DisplayRotation:0.00000
+TAGFAMILY:Galaxy-CTR
+WINDOWAREA:52.872990:3.032881:76.113942:92.188859
+PLUGIN:TopSky plugin:HideMapData:ULLL_APP

@@ -638,8 +638,8 @@ HTTP_GRIB_Longitude_Max=90
 HTTP_GRIB_Longitude_Min=20
 
 Label_AHDG_Point_Label=0
-Label_AHDG_HideDctIfCOPX=1
-Label_AHDG_ShowExtra=1
+Label_AHDG_HideDctIfCOPX=0
+Label_AHDG_ShowDct=2
 Label_Field18_Flag_Items=STS/,newbie,NEWBIE,Newbie,beginner,newbe,deaf,blind,new,first,slow,slowly,noob
 Label_GS_Digits=2
 
@@ -679,11 +679,17 @@ SAP_Buffer_Vert_L_IFR=500
 SAP_Buffer_Vert_L_VFR=500
 
 Shortcut_RadarMenu_Combo=0x00
-Shortcut_Map_Xfr_Key=1,0x4D ; M
-Shortcut_Map_Xfr_Key=2,0x44 ; D
-Shortcut_Map_Xfr_Key=3,0x47 ; G
-Shortcut_Map_Xfr_Key=4,0x48 ; H
-Shortcut_Map_Xfr_Key=5,0x42 ; B
+Shortcut_Map_Xfr_Key=1,0x47 ; G
+Shortcut_Map_Target=1,ULLI\ULLI STANDS
+Shortcut_Map_Xfr_Key=2,0x41 ; A
+Shortcut_Map_Target=2,ULLL\ULLL_CTR_HIGHAIRWAYS
+Shortcut_Map_Xfr_Key=3,0x46; F
+//Shortcut_Map_Target=3,MISC/FIXES
+//0x47 ; G
+//Shortcut_Map_Xfr_Key=4,0x48 ; H
+//Shortcut_Map_Xfr_Key=5,0x42 ; B
+
+//Shortcut_Quick_Look_Combo=0x42
 
 STCA_Sep_Lat_SepLevel=24500
 STCA_Filter=1
@@ -766,3 +772,7 @@ Window_QNHTL=3,1250,528
 [_APP]
 MTCD=0
 AIW=0
+
+[_CTR]
+Label_GS_Digits=3
+Label_GS_Prefix=N

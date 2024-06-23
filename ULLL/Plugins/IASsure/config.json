@@ -1,12 +1,14 @@
 {
     "mach":{
         "digits":2,
-        "thresholdFL":265
+        "thresholdFL":250
     },
-    "ias.prefix":"N",
-    "mass.prefix":"M",
+    "prefix":{
+        "ias":"N",
+        "mach":"M"
+    },
     "weather":{
-        "url":"http://localhost:3000/api/regions/ULLL/wx",
+        "url":"https://wx.vatsim-petersburg.com/api/regions/Pulkovo/wx",
         "update":30
     }
 }
