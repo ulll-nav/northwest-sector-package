@@ -3,6 +3,34 @@ DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
+ARTCC boundary:APATITY:
+ARTCC boundary:Arkhangelsk:
+ARTCC boundary:Arkhangelsk CTR:
+ARTCC boundary:Arkhanglesk sector:
+ARTCC boundary:KHARYAGINSKIY:
+ARTCC boundary:Kotlas:
+ARTCC boundary:Kotlas sector:
+ARTCC boundary:Murmansk:
+ARTCC boundary:Murmansk sector:
+ARTCC boundary:PECHORA:
+ARTCC boundary:Peterbrug Approach:
+ARTCC boundary:Petrazovodsk:
+ARTCC boundary:Pskov:
+ARTCC boundary:Pulkovo Radar:
+ARTCC boundary:R sector:
+ARTCC boundary:ROGACHEVO CTR:
+ARTCC boundary:SOLOVKI CTR:
+ARTCC boundary:SYKTYVKAR CTA:
+ARTCC boundary:SYKTYVKAR CTR:
+ARTCC boundary:Staraya Russa:
+ARTCC boundary:Staraya Russa CTR:
+ARTCC boundary:Syktyvkar sector:
+ARTCC boundary:UKHTA CTA:
+ARTCC boundary:UKHTA CTR:
+ARTCC boundary:ULDD CTR:
+ARTCC boundary:USINSK CTR:
+ARTCC boundary:UST-TSILMA CTR:
+ARTCC boundary:Vologda sector:
 ARTCC low boundary:CTR ULLI:
 ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
 ARTCC low boundary:TMA ULLI PULKOVO RADAR:
@@ -28,8 +56,6 @@ Airports:UUYW:symbol
 Airports:UUYX:symbol
 Airports:UUYY:symbol
 Geo:ULLL Coastline:
-Geo:ULLL FIR border FIR BORDER:
-Geo:ULLL Inner border:
 Geo:XXXX FIR border Borders:
 VORs:BLZ:symbol
 VORs:GNB:symbol
@@ -48,7 +74,7 @@ SHOWC:1
 SHOWSB:0
 BELOW:300
 ABOVE:0
-LEADER:-3
+LEADER:10
 SHOWLEADER:1
 TURNLEADER:0
 HISTORY_DOTS:0
@@ -57,5 +83,5 @@ DISABLEPANNING:0
 DISABLEZOOMING:0
 DisplayRotation:0.00000
 TAGFAMILY:Galaxy-CTR
-WINDOWAREA:52.872990:3.032881:76.113942:92.188859
+WINDOWAREA:52.170524:2.369044:76.812947:96.901287
 PLUGIN:TopSky plugin:HideMapData:ULLL_APP
