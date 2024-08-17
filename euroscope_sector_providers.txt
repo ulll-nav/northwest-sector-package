@@ -10,12 +10,6 @@ DOWNLOADINTERVAL:48
 PROVIDER_NAME:VATSIM Bulgarian Sector File Provider
 PROVIDER_URL:http://vaccbul.avsim-bg.org/ES/VACCBUL_sector_provider.txt
 
-PROVIDER_NAME:EuroCenter vACC Sector File Provider
-PROVIDER_URL:http://www.euc-vacc.org/es/EUROCEN_sector_file.txt
-
-PROVIDER_NAME:LHCC - VACCHUN Sector Files
-PROVIDER_URL:http://www.vacchun.hu/es/vacchun_sector_files.txt
-
 PROVIDER_NAME:Shanwick & Gander Oceanic
 PROVIDER_URL:http://idisk.mac.com/boerner-Public/EuroScope/EGGX-CZQX_sector_file.txt
 

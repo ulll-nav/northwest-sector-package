@@ -19,7 +19,7 @@ Settings	SettingsfileTAXIOUT	\ULLL\Settings\Peterburg\ULLL_Settings.txt
 Settings	SettingsfileTAKEOFF	\ULLL\Settings\Peterburg\ULLL_Settings.txt
 Settings	SettingsfileADCS	\ULLL\Settings\Peterburg\ULLL_Settings.txt
 Settings	SettingsfileTAXIIN	\ULLL\Settings\Peterburg\ULLL_Settings.txt
-Settings	sector	\ULLL-Galaxy_20240622142626-240601-0008.sct
+Settings	sector	\ULLL-Galaxy_20240706183557-240601-0012.sct
 Settings	AselKey	5111808
 Settings	FreqKey	3604480
 Settings	airlines	\ULLL\ICAO\ICAO_Airlines.txt
@@ -56,7 +56,7 @@ Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Peterburg\TopSky.dll
 Plugins	Plugin1	\ULLL\Plugins\GRplugin Peterburg\GRplugin.dll
 Plugins	Plugin2	\ULLL\Plugins\DiscordEuroscope\DiscordEuroscope.dll
-Plugins	Plugin3	\ULLL\Plugins\IASsure\IASsure.dll
+Plugins	Plugin3	\ULLL\Plugins\IASsure Peterburg\IASsure.dll
 Plugins	Plugin0Display1	Ground Radar display
 Plugins	Plugin1Display0	Ground Radar display
 Plugins	Plugin1Display1	Standard ES radar screen
@@ -69,5 +69,3 @@ TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
 TeamSpeakVccs	Ts3DialogBottom	600
-LastSession	atis_freq4	118000
-LastSession	connecttype	2

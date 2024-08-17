@@ -1,0 +1,26 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:
+SECTORTITLE:
+ARTCC boundary:KALININGRAD ACC:
+ARTCC low boundary:Kaliningrad Approach:
+ARTCC low boundary:Kaliningrad Tower:
+Geo:ULLL FIR border FIR BORDER:
+Geo:UMKK Coastline:
+Geo:XXXX FIR border Borders:
+Runways:UMKK 06-24:centerline
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Matias (built in)
+WINDOWAREA:53.775104:15.044421:57.030313:26.821727
