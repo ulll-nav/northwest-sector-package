@@ -138,7 +138,7 @@ Divergence_CLAM_MinCFL=3500
 
 Equip_UseCodes=3
 
-FlightLeg_FontSize=11
+FlightLeg_FontSize=12
 FlightLeg_Label_Time=1
 FlightLeg_Label_DIST=1
 FlightLeg_Label_RFL=1
@@ -256,12 +256,12 @@ System_UseSidStarAllocationColor=0
 Track_HistoryDots=5
 Track_PredictionLine=0
 
-Vector_AHDG_FontSize=11
+Vector_AHDG_FontSize=12
 Vector_AHDG_Label_Dist=2
 Vector_AHDG_Label_Time=1
-Vector_MinSep_FontSize=11
+Vector_MinSep_FontSize=12
 Vector_MinSep_Label_Time=1
-Vector_QDM_FontSize=11
+Vector_QDM_FontSize=12
 Vector_QDM_MaxNumber=99
 Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1
