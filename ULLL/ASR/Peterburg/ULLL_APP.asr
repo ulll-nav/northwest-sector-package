@@ -1,8 +1,9 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
+SECTORFILE:D:\ULLL SECTOR\ULLL-Galaxy_20240706183557-240601-0012.sct
+SECTORTITLE:ULLL-Galaxy_20240706183557-240601-0012.sct
+ARTCC boundary:R sector:
 ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
 ARTCC low boundary:TMA ULLI PULKOVO RADAR:
 ARTCC low boundary:TMA XLLJ CTA:

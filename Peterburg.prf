@@ -49,8 +49,8 @@ Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup.wav
-RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_APP.asr
-RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_CTR.asr
+RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_CTR.asr
+RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_APP.asr
 RecentFiles	Recent3	\ULLL\ASR\Peterburg\ULLI_GND.asr
 Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Peterburg\TopSky.dll
@@ -69,3 +69,8 @@ TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
 TeamSpeakVccs	Ts3DialogBottom	600
+LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
+LastSession	atis_url1	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
+LastSession	atis_url2	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
+LastSession	atis_url3	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
+LastSession	atis_freq4	118000

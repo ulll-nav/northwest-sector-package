@@ -43,10 +43,11 @@ Color_SelectedLabelFill_Gnd=50,50,50
 Color_SelectedLabelBorder_Gnd=0,0,0
 
 Color_Arrival=240,240,0
-Color_Departure=20,255,182
+Color_Departure=20,255,102
+Color_Departure=20,255,0
 Color_Background=25,25,25
 Color_Caution=192,192,192
-Color_Departure=30,255,215
+Color_Departure=30,255,245
 Color_RawVideoHistory=111,111,60
 
 Color_SelectedLabelFill_App=163,161,164

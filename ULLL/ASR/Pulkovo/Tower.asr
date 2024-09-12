@@ -1,8 +1,19 @@
-DisplayTypeName:Ground Radar display
+DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:0
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
+SECTORFILE:D:\ULLL SECTOR\ULLL-Galaxy_20240706183557-240601-0012.sct
+SECTORTITLE:ULLL-Galaxy_20240706183557-240601-0012.sct
+ARTCC boundary:Arkhanglesk sector:
+ARTCC boundary:Kotlas sector:
+ARTCC boundary:Murmansk sector:
+ARTCC boundary:R sector:
+ARTCC boundary:Syktyvkar sector:
+ARTCC boundary:Vologda sector:
+ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
+ARTCC low boundary:TMA ULLI PULKOVO RADAR:
+ARTCC low boundary:Tower CTR ULLI PULKOVO TOWER:
+Geo:ULLI Landmark Coastline:
+Geo:ULLI Landmark Rivers:
 SHOWC:1
 SHOWSB:1
 BELOW:0
@@ -15,8 +26,8 @@ SIMULATION_MODE:1
 DISABLEPANNING:0
 DISABLEZOOMING:0
 DisplayRotation:343.60000
-TAGFAMILY:TopSky
-WINDOWAREA:59.286793:28.946728:60.137352:32.213711
+TAGFAMILY:Galaxy
+WINDOWAREA:58.828333:27.331264:60.491671:33.712091
 PLUGIN:Ground Radar plugin:AirportElevation:79
 PLUGIN:Ground Radar plugin:AirportRadius:1.5
 PLUGIN:Ground Radar plugin:TowerMode:ULLI

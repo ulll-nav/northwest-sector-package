@@ -27,8 +27,8 @@ APW_Buffer_Vert_L_IFR=500
 APW_Buffer_Vert_L_VFR=500
 
 Areas_Label_Name=0
-Areas_Label_MapText=0
-Areas_Label_Times=0
+Areas_Label_MapText=1
+Areas_Label_Times=1
 
 //Standard colors, all other defined below
 Color_Assumed=255,255,255
@@ -187,7 +187,7 @@ MSAW_VFR=0
 
 MTCD_Filter_Dep=3
 
-RDF_Mode=0
+RDF_Mode=1
 RDF_Floor=-999
 
 SAP_Floor=3500
@@ -201,6 +201,7 @@ SAP_Buffer_Vert_L_VFR=500
 
 Shortcut_RadarMenu_Combo=0x00
 Shortcut_Map_Xfr_Key=1,0x47 ; G
+Shortcut_Map_Target=1,ULLI\ULLI STANDS
 Shortcut_Map_Target=1,ULLI\ULLI STANDS
 Shortcut_Map_Xfr_Key=2,0x41 ; A
 Shortcut_Map_Target=2,ULLL\ULLL_CTR_HIGHAIRWAYS
