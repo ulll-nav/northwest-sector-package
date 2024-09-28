@@ -25,7 +25,7 @@ Settings	FreqKey	3604480
 Settings	airlines	\ULLL\ICAO\ICAO_Airlines.txt
 Settings	airports	\ULLL\ICAO\ICAO_Airports.txt
 Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
-Settings	alias	\ULLL\Alias\Aliases.txt
+Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
 TeamSpeakVccs	TsVccsMiniControlX	1670
@@ -70,7 +70,8 @@ TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
 TeamSpeakVccs	Ts3DialogBottom	600
 LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
-LastSession	atis_url1	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
-LastSession	atis_url2	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
-LastSession	atis_url3	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
-LastSession	atis_freq4	118000
+LastSession	atis_url1	https://vatis.ru/P-D287FC46?arrp=$atisairportB&arr=$arrrwy($atisairportB)&dep=$deprwy($atisairportB)&info=$atiscodeB
+LastSession	atis_url2	https://vatis.ru/P-D287FC46?arrp=$atisairportC&arr=$arrrwy($atisairportC)&dep=$deprwy($atisairportC)&info=$atiscodeC
+LastSession	atis_url3	https://vatis.ru/P-D287FC46?arrp=$atisairportD&arr=$arrrwy($atisairportD)&dep=$deprwy($atisairportD)&info=$atiscodeD
+LastSession	atis_freq0	127300
+LastSession	atis_callsign0	ULLI_ATIS
