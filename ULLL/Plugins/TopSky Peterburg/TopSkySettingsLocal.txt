@@ -1,2 +1,0 @@
-System_GUI_Scale_Screen=0.8
-System_GUI_Scale_Tracks=0.5

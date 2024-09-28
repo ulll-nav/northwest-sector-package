@@ -28,7 +28,7 @@ Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
 Settings	sector	\ULLL-Galaxy_20240706183557-240601-0012.sct
-TeamSpeakVccs	TsVccsMiniControlX	1470
+TeamSpeakVccs	TsVccsMiniControlX	1757
 TeamSpeakVccs	TsVccsMiniControlY	24
 Plugins	Plugin0Display0	Ground Radar display
 Plugins	Plugin3	\ULLL\Plugins\TopSky Pulkovo\TopSky.dll
