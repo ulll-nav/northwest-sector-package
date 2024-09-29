@@ -229,7 +229,8 @@ STCA_WarningTime_U=80
 STCA_WarningTime_L=60
 STCA_WarningTime_U_Imm=50
 STCA_WarningTime_L_Imm=50
-STCA_AlertSound
+STCA_AlertSound=1
+STCA_AlertSound_Filter=1
 
 System_TrueColorMode=1
 System_UseReportedGS=1
