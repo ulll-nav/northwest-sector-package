@@ -1,8 +1,8 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
+SECTORFILE:D:\ULLL SECTOR\ULLL-Galaxy_20240706183557-240601-0012.sct
+SECTORTITLE:ULLL-Galaxy_20240706183557-240601-0012.sct
 ARTCC boundary:APATITY:
 ARTCC boundary:Arkhangelsk:
 ARTCC boundary:Arkhangelsk CTR:
@@ -31,15 +31,10 @@ ARTCC boundary:ULDD CTR:
 ARTCC boundary:USINSK CTR:
 ARTCC boundary:UST-TSILMA CTR:
 ARTCC boundary:Vologda sector:
-ARTCC low boundary:CTR ULLI:
 ARTCC low boundary:Cherepovets CTA:
 ARTCC low boundary:NARYAN MAR CTA:
-ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
-ARTCC low boundary:TMA ULLI PULKOVO RADAR:
-ARTCC low boundary:TMA XLLJ CTA:
-ARTCC low boundary:TMA XLLV CTA:
-ARTCC low boundary:TMA XLLY CTA:
-ARTCC low boundary:Tower CTR ULLI PULKOVO TOWER:
+ARTCC low boundary:Pulkovo Tower:
+ARTCC low boundary:ULLA CTA:
 ARTCC low boundary:VELIKIY USTYUG CTR:
 ARTCC low boundary:Varandey CTA:
 ARTCC low boundary:Vologda CTA:
@@ -88,5 +83,5 @@ DISABLEPANNING:0
 DISABLEZOOMING:0
 DisplayRotation:0.00000
 TAGFAMILY:Galaxy CTR
-WINDOWAREA:54.129800:8.799420:67.507540:60.118552
+WINDOWAREA:53.509996:5.125773:75.673179:85.311917
 PLUGIN:TopSky plugin:HideMapData:ULLL_APP

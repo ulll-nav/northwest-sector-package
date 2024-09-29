@@ -1,16 +1,13 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
+SECTORFILE:D:\ULLL SECTOR\ULLL-Galaxy_20240706183557-240601-0012.sct
+SECTORTITLE:ULLL-Galaxy_20240706183557-240601-0012.sct
+ARTCC boundary:Peterbrug Approach:
+ARTCC boundary:Pulkovo Radar:
 ARTCC boundary:R sector:
-ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
-ARTCC low boundary:TMA ULLI PULKOVO RADAR:
-ARTCC low boundary:TMA XLLJ CTA:
-ARTCC low boundary:TMA XLLV CTA:
-ARTCC low boundary:TMA XLLY CTA:
-ARTCC low boundary:Tower CTR ULLI PULKOVO TOWER:
-Geo:ULLL Centerlines Inner:
+ARTCC low boundary:Pulkovo Tower:
+ARTCC low boundary:ULLA CTA:
 NDBs:K:symbol
 NDBs:L:symbol
 NDBs:O:symbol
