@@ -31,9 +31,14 @@ Settings	sector	\ULLL-Galaxy_20240706183557-240601-0012.sct
 TeamSpeakVccs	TsVccsMiniControlX	1757
 TeamSpeakVccs	TsVccsMiniControlY	24
 Plugins	Plugin0Display0	Ground Radar display
-Plugins	Plugin3	\ULLL\Plugins\TopSky Pulkovo\TopSky.dll
 Plugins	Plugin0	\ULLL\Plugins\GRplugin Pulkovo\GRplugin.dll
 Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope\DiscordEuroscope.dll
+Plugins	Plugin2	\ULLL\Plugins\TopSky Pulkovo\TopSky.dll
+Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
+Plugins	Plugin3Display0	Ground Radar display
+Plugins	Plugin2Display0	Ground Radar display
+Plugins	Plugin3Display1	Standard ES radar screen
+Plugins	Plugin2Display1	Standard ES radar screen
 Plugins	Plugin0Display1	Standard ES radar screen
 Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
 Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
@@ -57,10 +62,6 @@ Sounds	Sound18	\ULLL\Sounds\startup.wav
 RecentFiles	Recent1	\ULLL\ASR\Pulkovo\Ground.asr
 RecentFiles	Recent2	\ULLL\ASR\Pulkovo\Tower.asr
 RecentFiles	Recent3	\ULLL\ASR\Pulkovo\VEGA Ground.asr
-Plugins	Plugin3Display0	Ground Radar display
-Plugins	Plugin2Display0	SMR radar display
-Plugins	Plugin3Display1	Standard ES radar screen
-Plugins	Plugin3Display2	SMR radar display
 TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
