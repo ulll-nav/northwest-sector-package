@@ -11,7 +11,7 @@ Settings	SettingsfilePLUGINS	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	Settingsfile	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	SettingsfileSCREEN	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	SettingsfileCONFLICT	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
-Settings	SettingsfileVCCS	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
+Settings	SettingsfileVCCS	\ULLL\Settings\Pulkovo\ULLI_VCCS.txt
 Settings	SettingsfilePILOTING	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
 Settings	SettingsfileORIGPLANE	\Settings\Ground Tower\Settings.txt
 Settings	SettingsfileSTUP	\Settings\Ground Tower\Settings.txt
