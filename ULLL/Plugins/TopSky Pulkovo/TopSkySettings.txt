@@ -199,15 +199,8 @@ MTCD_Filter_Dep=3
 MSAW=0
 MTCD=0
 
-RDF_Mode=0
-RDF_AccuracMSAW=0
-MTCD=0
-
-RDF_Mode=0
-RDF_Accuracy=0
-RDF_Floor=0y=0
-RDF_Floor=0
-RDF_Mode=1
+RDF_Mode=2
+RDF_Accuracy=2
 RDF_Floor=-999
 
 SAP_Floor=3500

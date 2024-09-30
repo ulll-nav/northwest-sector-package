@@ -1,19 +1,19 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
+SECTORFILE:D:\ULLL SECTOR\ULLL-Galaxy_20240706183557-240601-0012.sct
+SECTORTITLE:ULLL-Galaxy_20240706183557-240601-0012.sct
 ARTCC boundary:Arkhanglesk sector:
 ARTCC boundary:Kotlas sector:
 ARTCC boundary:Murmansk sector:
+ARTCC boundary:Peterbrug Approach:
+ARTCC boundary:Pulkovo Radar:
 ARTCC boundary:R sector:
 ARTCC boundary:Syktyvkar sector:
 ARTCC boundary:Vologda sector:
-ARTCC low boundary:TMA ULLI PETERBURG APPROACH:
-ARTCC low boundary:TMA ULLI PULKOVO RADAR:
-ARTCC low boundary:Tower CTR ULLI PULKOVO TOWER:
-Geo:ULLI Landmark Coastline:
-Geo:ULLI Landmark Rivers:
+ARTCC low boundary:Pulkovo Tower:
+ARTCC low boundary:ULLA CTA:
+Geo:ULLL Coastline:
 NDBs:K:symbol
 NDBs:L:symbol
 NDBs:O:symbol
@@ -22,6 +22,7 @@ NDBs:PL:symbol
 NDBs:PO:symbol
 NDBs:PU:symbol
 NDBs:U:symbol
+Regions:ULLL Approch background:polygon
 VORs:SPB:symbol
 SHOWC:1
 SHOWSB:1
