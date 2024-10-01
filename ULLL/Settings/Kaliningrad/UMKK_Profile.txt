@@ -13,4 +13,7 @@ ATIS4:Advise ATIS information [122.475] on initial contact. Expect ILS RWY $arrr
 PROFILE:UMKK_CTR:500:6
 ATIS2:Kaliningrad Control
 ATIS3:We love feedback! vats.im/ulll-discord
+PROFILE:UMKK_FIS_CTR:500:6
+ATIS2:Kaliningrad Information
+ATIS3:We love feedback! vats.im/ulll-discord
 END
