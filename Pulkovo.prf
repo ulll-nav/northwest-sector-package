@@ -35,6 +35,7 @@ Plugins	Plugin0	\ULLL\Plugins\GRplugin Pulkovo\GRplugin.dll
 Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope\DiscordEuroscope.dll
 Plugins	Plugin2	\ULLL\Plugins\TopSky Pulkovo\TopSky.dll
 Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
+Plugins	Plugin4	\ULLL\Plugins\IASsure Peterburg\IASsure.dll
 Plugins	Plugin3Display0	Ground Radar display
 Plugins	Plugin2Display0	Ground Radar display
 Plugins	Plugin3Display1	Standard ES radar screen
