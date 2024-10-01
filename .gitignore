@@ -1,7 +1,7 @@
 ipaddr.txt
 *.rwy
 version.txt
-.sentry-native
+*.sentry-native
 euroscope_sector_providers.txt
 SectorFileProviderDescriptor.txt
 /ULLL/Plugins/UlllPlugin
