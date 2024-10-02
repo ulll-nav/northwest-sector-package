@@ -56,7 +56,7 @@ Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Peterburg\TopSky.dll
 Plugins	Plugin1	\ULLL\Plugins\GRplugin Peterburg\GRplugin.dll
 Plugins	Plugin2	\ULLL\Plugins\DiscordEuroscope\DiscordEuroscope.dll
-Plugins	Plugin3	\ULLL\Plugins\IASsure Peterburg\IASsure.dll
+Plugins	Plugin3	\ULLL\Plugins\IASsure\IASsure.dll
 Plugins	Plugin0Display1	Ground Radar display
 Plugins	Plugin1Display0	Ground Radar display
 Plugins	Plugin1Display1	Standard ES radar screen
