@@ -13,12 +13,12 @@ Settings	SettingsfileSCREEN	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	SettingsfileCONFLICT	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
 Settings	SettingsfileVCCS	\ULLL\Settings\Pulkovo\ULLI_VCCS.txt
 Settings	SettingsfilePILOTING	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
-Settings	SettingsfileORIGPLANE	\Settings\Ground Tower\Settings.txt
-Settings	SettingsfileSTUP	\Settings\Ground Tower\Settings.txt
-Settings	SettingsfileTAXIOUT	\Settings\Ground Tower\Settings.txt
-Settings	SettingsfileTAKEOFF	\Settings\Ground Tower\Settings.txt
-Settings	SettingsfileADCS	\Settings\Ground Tower\Settings.txt
-Settings	SettingsfileTAXIIN	\Settings\Ground Tower\Settings.txt
+Settings	SettingsfileORIGPLANE	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	SettingsfileSTUP	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	SettingsfileTAXIOUT	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	SettingsfileTAKEOFF	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	SettingsfileADCS	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
+Settings	SettingsfileTAXIIN	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	AselKey	5111808
 Settings	FreqKey	3604480
 Settings	airlines	\ULLL\ICAO\ICAO_Airlines.txt
