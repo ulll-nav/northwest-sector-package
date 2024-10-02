@@ -1,6 +1,6 @@
 SYMBOLOGY
 SYMBOLSIZE
-Airports:symbol:4343054:1.0:0:0:7
+Airports:symbol:7501336:1.0:0:0:7
 Airports:name:4343054:3.7:0:0:2
 Low airways:line:3026478:5.0:0:5:7
 Low airways:name:6579300:3.5:0:0:8
