@@ -114,7 +114,3 @@ m_Column:TX:6:0:102:39:0:1::::1:0.0
 m_Column:TXB:6:0:103:40:0:1::::1:0.0
 m_Column:HOLD:5:0:104:43:0:1::::1:0.0
 END
-VCCS
-Ts3Server:localhost
-Ts3Port:9988
-END

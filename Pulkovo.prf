@@ -27,8 +27,8 @@ Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
 Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
-Settings	sector	\ULLL-Galaxy_20240706183557-240601-0012.sct
-TeamSpeakVccs	TsVccsMiniControlX	1757
+Settings	sector	\ULLL-Galaxy-radar_20241003143341-241001-0001.sct
+TeamSpeakVccs	TsVccsMiniControlX	1758
 TeamSpeakVccs	TsVccsMiniControlY	24
 Plugins	Plugin0Display0	Ground Radar display
 Plugins	Plugin0	\ULLL\Plugins\GRplugin Pulkovo\GRplugin.dll
@@ -60,8 +60,8 @@ Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup.wav
-RecentFiles	Recent1	\ULLL\ASR\Pulkovo\Ground.asr
-RecentFiles	Recent2	\ULLL\ASR\Pulkovo\Tower.asr
+RecentFiles	Recent1	\ULLL\ASR\Pulkovo\Tower.asr
+RecentFiles	Recent2	\ULLL\ASR\Pulkovo\Ground.asr
 TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750

@@ -243,6 +243,7 @@ System_TransferConfirmation=0
 System_GUI_Font_1_Size=12
 System_GUI_Font_2_Size=10
 System_GUI_Scale_Menus=1
+System_MetricUnits_Distance=1
 //System_ProxySounds=0
 
 System_FIC_Position=1
@@ -269,7 +270,7 @@ Vector_QDM_AP_Label_Dist=1
 
 Window_ASM=3,80,120,570,300
 Window_SM_LeaveHoldTime=3
-Window_QNHTL=3,1637,551
+Window_QNHTL=3,1637,741
 Window_COL_Warning_Threshold=12
 
 WXR_Brightness=40
@@ -287,8 +288,6 @@ WXR_Echo_dBZ_Med=30
 WXR_Echo_dBZ_Lo=25
 
 AIW=1
-
-Window_QNHTL=3,1250,528
 
 [_APP]
 MTCD=0

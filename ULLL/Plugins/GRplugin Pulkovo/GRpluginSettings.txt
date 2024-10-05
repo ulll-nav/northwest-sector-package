@@ -53,12 +53,9 @@ Color_RawVideoHistory=111,111,60
 Color_SelectedLabelFill_App=163,161,164
 Color_Selected=7,163,7
 
-RawVideo=1
-RawVideo_Brightness=70
-RawVideo_Afterglow=70
-RawVideo_MaxHistory=0
+RawVideo=0
 
-Track_Heading_Line=0
+Track_Heading_Line=1
 Track_PredictionLine_TWR=1
 
 Window_APP_Extensions=16

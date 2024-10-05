@@ -258,6 +258,7 @@ System_TransferConfirmation=0
 System_GUI_Font_1_Size=12
 System_GUI_Font_2_Size=10
 System_GUI_Scale_Menus=1
+System_MetricUnits_Distance=1
 //System_ProxySounds=0
 
 System_FIC_Position=1

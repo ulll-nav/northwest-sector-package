@@ -23,12 +23,12 @@ ATIS3:We love feedback! vats.im/ulll-discord
 PROFILE:ULLL_AM_CTR:500:6
 ATIS2:Peterburg Control
 ATIS3:We love feedback! vats.im/ulll-discord
-PROFILE:ULLL_R1_CTR:500:6
-ATIS2:[DO NOT USE!!!] Peterburg Control [R1]
+PROFILE:[DO NOT USE!!!] ULLL_R1_CTR:500:6
+ATIS2:Peterburg Control [R1]
 ATIS3:We love feedback! vats.im/ulll-discord
 PROFILE:ULLL_R2_CTR:500:6
 ATIS2:Peterburg Control [R2]
-ATIS4:We love feedback! vats.im/ulll-discord
+ATIS3:We love feedback! vats.im/ulll-discord
 PROFILE:[DO NOT USE!!!] ULLL_R3_CTR:500:6
 ATIS2:Peterburg Control [R3]
 ATIS3:We love feedback! vats.im/ulll-discord
