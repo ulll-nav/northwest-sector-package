@@ -30,14 +30,6 @@ Areas_Label_Name=0
 Areas_Label_MapText=1
 Areas_Label_Times=1
 
-//Standard colors, all other defined below
-Color_Assumed=255,255,255
-Color_Concerned=85,173,255
-Color_Unconcerned=150,150,150
-Color_Unknown=239,224,42
-Color_Redundant=40,184,40
-Color_Coordination=85,173,255
-
 Color_Active_Map_Type_1=120,0,0
 Color_Active_Map_Type_2=80,162,74
 Color_Active_Map_Type_3=179,180,180
@@ -112,8 +104,7 @@ Color_Trough=97,99,97
 Color_TSA_Active=93,138,195
 Color_TSA_Border_Highlight=200,53,18
 Color_TSA_Preactive=132,142,139
-Color_Unconcerned=150,150,150
-Color_Unknown=239,224,42
+Color_Unknown=255,255,255
 Color_Urgency=225,25,25
 Color_Urgency_FL=225,25,25
 Color_VAW_Profile=152,202,172
@@ -130,6 +121,7 @@ Color_Proposition_Accepted=0,160,0
 Color_Proposition_In=0,128,125
 Color_Proposition_Out=200,185,120
 Color_Weather_Map=207,128,238
+Color_VFR=255,255,255
 
 Color_Assumed=255,255,255 
 Color_Concerned=255,255,255

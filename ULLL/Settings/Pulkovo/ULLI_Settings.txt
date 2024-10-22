@@ -42,7 +42,7 @@ m_DoNotUseAcceptedColor:0
 m_DoNotUseRefusedColor:0
 SET_TransparentAcListBackground:0
 m_PutIncomingCoordinationToFirst:0
-m_AutoProxyMode:0
+m_AutoProxyMode:1
 m_TransparentAcListSelectedBackground:0
 m_TransparentDetailedTagBackground:1
 m_TransparentDetailedTagSelectedItemBackground:1
@@ -62,7 +62,7 @@ SET_WTC_A380:J
 m_RotateRouteTexts:0
 m_NeverCloseFreqChat:1
 m_KeepScratchPadAfterDirect:1
-m_HiliteASELAircraft:0
+m_HiliteASELAircraft:1
 m_EnableVoiceRecognition:0
 m_VoiceRecognitionStyle:2
 m_SModeTransponders:IEFGRWQ
@@ -139,13 +139,13 @@ m_ShowControllers:1
 m_ShowAircraft:0
 m_ShowTextMessages:0
 m_ShowTitle:1
-m_ShowTitleFileName:1
+m_ShowTitleFileName:0
 m_ShowTitleController:1
 m_ShowTitlePrimaryFreq:1
 m_ShowTitleAtisFreq:0
 m_ShowTitleClock:1
-m_ShowTitleLeader:1
-m_ShowTitleFilter:1
+m_ShowTitleLeader:0
+m_ShowTitleFilter:0
 m_ShowTitleTrans:0
 m_ShowVoiceRoomUsers:0
 m_ShowFSSControllers:1

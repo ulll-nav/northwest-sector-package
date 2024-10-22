@@ -5,26 +5,26 @@ ATIS3:
 ATIS4:
 PROFILE:ULLI_DEL:20:2
 ATIS2:Pulkovo Delivery
-ATIS3:We love feedback! vats.im/ulll-discord
+ATIS3:We love feedback! vats.im/ulll/discord
 ATIS4:
 PROFILE:ULLI_GND:20:3
 ATIS2:Pulkovo Ground
-ATIS3:We love feedback! vats.im/ulll-discord
+ATIS3:We love feedback! vats.im/ulll/discord
 ATIS4:
 PROFILE:ULLI_TWR:50:4
 ATIS2:Pulkovo Tower
-ATIS3:We love feedback! vats.im/ulll-discord
+ATIS3:We love feedback! vats.im/ulll/discord
 ATIS4:
 PROFILE:ULLI_N_TWR:50:4
 ATIS2:Pulkovo Tower
-ATIS3:We love feedback! vats.im/ulll-discord
+ATIS3:We love feedback! vats.im/ulll/discord
 ATIS4:
 PROFILE:ULLI_S_TWR:50:4
 ATIS2:Pulkovo Tower
-ATIS3:We love feedback! vats.im/ulll-discord
+ATIS3:We love feedback! vats.im/ulll/discord
 ATIS4:
 PROFILE:ULLI_VFR_TWR:50:4
 ATIS2:Pulkovo Tower
-ATIS3:We love feedback! vats.im/ulll-discord
+ATIS3:We love feedback! vats.im/ulll/discord
 ATIS4:
 END

@@ -162,7 +162,8 @@ Label_AHDG_Point_Label=0
 Label_AHDG_HideDctIfCOPX=0
 Label_AHDG_ShowDct=2
 Label_Field18_Flag_Items=STS/,newbie,NEWBIE,Newbie,beginner,newbe,deaf,blind,new,first,slow,slowly,noob
-Label_GS_Digits=2
+Label_GS_Digits=3
+Label_GS_Prefix=N
 
 Label_Rev_Highlight_Delta_ETN=4
 Label_OpTextCaps=0
@@ -296,6 +297,4 @@ AIW=0
 RDF_Accuracy=3
 
 [_CTR]
-Label_GS_Digits=3
-Label_GS_Prefix=N
 RDF_Accuracy=5
