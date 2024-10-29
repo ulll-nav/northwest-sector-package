@@ -28,10 +28,10 @@ Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
 Settings	sector	\ULLL-Galaxy-radar_20241003143341-241001-0001.sct
-TeamSpeakVccs	TsVccsMiniControlX	1758
-TeamSpeakVccs	TsVccsMiniControlY	24
+TeamSpeakVccs	TsVccsMiniControlX	1695
+TeamSpeakVccs	TsVccsMiniControlY	85
 Plugins	Plugin0Display0	Ground Radar display
-Plugins	Plugin0	\ULLL\Plugins\GRplugin Pulkovo\GRplugin.dll
+Plugins	Plugin0	\ULLL\Plugins\GRplugin\GRplugin.dll
 Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope\DiscordEuroscope.dll
 Plugins	Plugin2	\ULLL\Plugins\TopSky Pulkovo\TopSky.dll
 Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
@@ -63,8 +63,8 @@ Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup.wav
-RecentFiles	Recent1	\ULLL\ASR\Pulkovo\Tower.asr
-RecentFiles	Recent2	\ULLL\ASR\Pulkovo\Ground.asr
+RecentFiles	Recent1	\ULLL\ASR\Pulkovo\Ground.asr
+RecentFiles	Recent2	\ULLL\ASR\Pulkovo\Tower.asr
 TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
@@ -75,3 +75,6 @@ LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy
 LastSession	atis_url1	https://vatis.ru/P-D287FC46?arrp=$atisairportB&arr=$arrrwy($atisairportB)&dep=$deprwy($atisairportB)&info=$atiscodeB
 LastSession	atis_url2	https://vatis.ru/P-D287FC46?arrp=$atisairportC&arr=$arrrwy($atisairportC)&dep=$deprwy($atisairportC)&info=$atiscodeC
 LastSession	atis_url3	https://vatis.ru/P-D287FC46?arrp=$atisairportD&arr=$arrrwy($atisairportD)&dep=$deprwy($atisairportD)&info=$atiscodeD
+LastSession	atis_freq4	118000
+LastSession	connecttype	3
+LastSession	playback	C:\Users\A20N\Documents\EuroScope\ctp.txt
