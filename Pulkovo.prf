@@ -11,7 +11,7 @@ Settings	SettingsfilePLUGINS	\ULLL\Settings\Pulkovo\ULLI_Plugins.txt
 Settings	Settingsfile	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	SettingsfileSCREEN	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	SettingsfileCONFLICT	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
-Settings	SettingsfileVCCS	\ULLL\Settings\Pulkovo\ULLI_VCCS.txt
+Settings	SettingsfileVCCS	\ULLL\Settings\ALL\VCCS.txt
 Settings	SettingsfilePILOTING	\ULLL\Settings\Pulkovo\ULLI_Lists.txt
 Settings	SettingsfileORIGPLANE	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
 Settings	SettingsfileSTUP	\ULLL\Settings\Pulkovo\ULLI_Settings.txt
@@ -28,8 +28,8 @@ Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
 Settings	sector	\ULLL-Galaxy-radar_20241003143341-241001-0001.sct
-TeamSpeakVccs	TsVccsMiniControlX	1695
-TeamSpeakVccs	TsVccsMiniControlY	85
+TeamSpeakVccs	TsVccsMiniControlX	1470
+TeamSpeakVccs	TsVccsMiniControlY	24
 Plugins	Plugin0Display0	Ground Radar display
 Plugins	Plugin0	\ULLL\Plugins\GRplugin\GRplugin.dll
 Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope\DiscordEuroscope.dll
@@ -75,6 +75,3 @@ LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy
 LastSession	atis_url1	https://vatis.ru/P-D287FC46?arrp=$atisairportB&arr=$arrrwy($atisairportB)&dep=$deprwy($atisairportB)&info=$atiscodeB
 LastSession	atis_url2	https://vatis.ru/P-D287FC46?arrp=$atisairportC&arr=$arrrwy($atisairportC)&dep=$deprwy($atisairportC)&info=$atiscodeC
 LastSession	atis_url3	https://vatis.ru/P-D287FC46?arrp=$atisairportD&arr=$arrrwy($atisairportD)&dep=$deprwy($atisairportD)&info=$atiscodeD
-LastSession	atis_freq4	118000
-LastSession	connecttype	3
-LastSession	playback	C:\Users\A20N\Documents\EuroScope\ctp.txt
