@@ -96,7 +96,7 @@ Color_SEP_Tool_2=255,153,184
 Color_SEP_Tool_3=255,209,143
 Color_SEP_Tool_4=197,64,212
 Color_SEP_Tool_5=140,140,255
-Color_Sid_Star_Allocation=13,156,164
+Color_Sid_Star_Allocation=25,113,195
 Color_Suite_Highlight=0,220,255
 Color_SMW_Level_Band=24,209,114
 Color_SMW_Overflight=254,152,1
@@ -213,22 +213,10 @@ Shortcut_Map_Xfr_Key=3,0x46; F
 
 //Shortcut_Quick_Look_Combo=0x42
 
-STCA_Sep_Lat_SepLevel=24500
-STCA_Filter=1
-STCA_Floor=2000
-STCA_LinPred_Sep_Lat_U=5.4
-STCA_LinPred_Sep_Lat_L=2.7
-STCA_LinPred_Sep_Vert_U=1775
-STCA_LinPred_Sep_Vert_L=775
-STCA_CurrProx_Sep_Lat_U=5
-STCA_CurrProx_Sep_Lat_L=3
-STCA_CurrProx_Sep_Vert_U=1775
-STCA_CurrProx_Sep_Vert_L=775
+STCA_Sep_Lat_SepLevel=8100
+STCA_Filter=2
+STCA_Floor=2500
 STCA_VFR=0
-STCA_WarningTime_U=80
-STCA_WarningTime_L=60
-STCA_WarningTime_U_Imm=50
-STCA_WarningTime_L_Imm=50
 STCA_AlertSound=1
 STCA_AlertSound_Filter=1
 
@@ -253,8 +241,8 @@ System_FIC_Position_Free_Filtered=1
 
 System_UseAcceptedCoordColor=1
 System_UseRwyLockedColor=1
-System_UseSidStarAllocationColor=0
-//System_UseSidStarNoAllocationColor=0
+System_UseSidAllocationColor=1
+System_UseStarAllocationColor=1
 
 Track_HistoryDots=5
 Track_PredictionLine=0
