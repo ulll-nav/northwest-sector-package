@@ -32,7 +32,7 @@ TeamSpeakVccs	TsVccsMiniControlX	1470
 TeamSpeakVccs	TsVccsMiniControlY	24
 Plugins	Plugin0Display0	Ground Radar display
 Plugins	Plugin0	\ULLL\Plugins\GRplugin\GRplugin.dll
-Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope\DiscordEuroscope.dll
+Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope Peterburg\DiscordEuroscope.dll
 Plugins	Plugin2	\ULLL\Plugins\TopSky Pulkovo\TopSky.dll
 Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
 Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
