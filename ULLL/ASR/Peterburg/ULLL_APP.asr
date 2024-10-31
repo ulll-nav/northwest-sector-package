@@ -17,36 +17,6 @@ NDBs:PO:symbol
 NDBs:PU:symbol
 NDBs:U:symbol
 Regions:ULLL Approch background:polygon
-Runways:ULLI 10L-28R:centerline
-Runways:ULLI 10L-28R:extended centerline 1
-Runways:ULLI 10L-28R:extended centerline 1 left base
-Runways:ULLI 10L-28R:extended centerline 1 left ticks
-Runways:ULLI 10L-28R:extended centerline 1 left vectoring
-Runways:ULLI 10L-28R:extended centerline 1 right base
-Runways:ULLI 10L-28R:extended centerline 1 right ticks
-Runways:ULLI 10L-28R:extended centerline 1 right vectoring
-Runways:ULLI 10L-28R:extended centerline 2
-Runways:ULLI 10L-28R:extended centerline 2 left base
-Runways:ULLI 10L-28R:extended centerline 2 left ticks
-Runways:ULLI 10L-28R:extended centerline 2 left vectoring
-Runways:ULLI 10L-28R:extended centerline 2 right base
-Runways:ULLI 10L-28R:extended centerline 2 right ticks
-Runways:ULLI 10L-28R:extended centerline 2 right vectoring
-Runways:ULLI 10R-28L:centerline
-Runways:ULLI 10R-28L:extended centerline 1
-Runways:ULLI 10R-28L:extended centerline 1 left base
-Runways:ULLI 10R-28L:extended centerline 1 left ticks
-Runways:ULLI 10R-28L:extended centerline 1 left vectoring
-Runways:ULLI 10R-28L:extended centerline 1 right base
-Runways:ULLI 10R-28L:extended centerline 1 right ticks
-Runways:ULLI 10R-28L:extended centerline 1 right vectoring
-Runways:ULLI 10R-28L:extended centerline 2
-Runways:ULLI 10R-28L:extended centerline 2 left base
-Runways:ULLI 10R-28L:extended centerline 2 left ticks
-Runways:ULLI 10R-28L:extended centerline 2 left vectoring
-Runways:ULLI 10R-28L:extended centerline 2 right base
-Runways:ULLI 10R-28L:extended centerline 2 right ticks
-Runways:ULLI 10R-28L:extended centerline 2 right vectoring
 SHOWC:1
 SHOWSB:1
 BELOW:200
