@@ -39,9 +39,9 @@ Color_Active_RD_Infill_Map=90,90,90
 Color_Active_Sector=28,28,28
 Color_Active_Text_Map=190,190,190
 Color_AIW_Intrusion=255,152,0
-Color_Background=33,40,40
-Color_Border=51,51,52
-Color_BottomShadow=70,70,70
+Color_Background=10,20,20
+Color_Border=25,35,35
+Color_BottomShadow=25,35,35
 Color_CARD_Conflict_Number
 Color_CARD_Mark_All=255,125,0
 Color_CARD_Mark_Own=255,125,0

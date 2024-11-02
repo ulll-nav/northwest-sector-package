@@ -331,7 +331,3 @@ m_Column:STN:4:1:19:29:0:1::::1:0.0
 m_Column:ATYP:4:1:16:0:0:1::::1:0.0
 m_Column:STS:4:1:59:46:46:1::::1:0.0
 END
-VCCS
-Ts3Server:localhost
-Ts3Port:9988
-END
