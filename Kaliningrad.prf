@@ -48,7 +48,7 @@ Sounds	Sound14	\ULLL\Sounds\ongoing_manual.wav
 Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
-Sounds	Sound18	\ULLL\Sounds\startup.wav
+Sounds	Sound18	\ULLL\Sounds\startup_silent.wav
 RecentFiles	Recent1	\ULLL\ASR\Kaliningrad\UMKK_CTR.asr
 RecentFiles	Recent2	\ULLL\ASR\Kaliningrad\UMKK_APP.asr
 RecentFiles	Recent3	\ULLL\ASR\Kaliningrad\UMKK_TWR.asr
