@@ -96,7 +96,7 @@ Color_SEP_Tool_2=255,153,184
 Color_SEP_Tool_3=255,209,143
 Color_SEP_Tool_4=197,64,212
 Color_SEP_Tool_5=140,140,255
-Color_Sid_Star_Allocation=13,156,164
+Color_Sid_Star_Allocation=25,113,195
 Color_Suite_Highlight=0,220,255
 Color_SMW_Level_Band=24,209,114
 Color_SMW_Overflight=254,152,1
@@ -254,8 +254,8 @@ System_FIC_Position_Free_Filtered=1
 
 System_UseAcceptedCoordColor=1
 System_UseRwyLockedColor=1
-System_UseSidStarAllocationColor=0
-//System_UseSidStarNoAllocationColor=0
+System_UseSidAllocationColor=1
+System_UseStarAllocationColor=1
 
 Track_HistoryDots=5
 Track_PredictionLine=0
