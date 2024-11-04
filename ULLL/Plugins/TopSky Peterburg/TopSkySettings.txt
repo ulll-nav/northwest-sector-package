@@ -128,7 +128,9 @@ Color_WM_Frame=88,95,99
 Color_Proposition_Accepted=0,160,0
 Color_Proposition_In=0,128,125
 Color_Proposition_Out=200,185,120
-Color_Weather_Map=207,128,238
+Color_Weather_Map=207,128,23
+Color_Standard_Line_RDF=190,190,220
+Color_Standard_RDF=190,190,220
 
 CPDLC_Default=0
 
