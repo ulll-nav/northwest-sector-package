@@ -275,10 +275,6 @@ Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1
 Vector_QDM_AP_Label_Dist=1
 
-Window_SM_LeaveHoldTime=3
-Window_QNHTL=3,0,400
-Window_COL_Warning_Threshold=12
-
 WXR_Brightness=40
 WXR_Gain=85
 WXR_Latitude=63
