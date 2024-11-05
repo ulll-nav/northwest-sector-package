@@ -3,16 +3,46 @@ DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
+ARTCC boundary:Amderma CTR:
+ARTCC boundary:Apatity CTR:
+ARTCC boundary:Arkhangelsk CTA:
+ARTCC boundary:Arkhangelsk CTR:
 ARTCC boundary:Arkhanglesk sector:
+ARTCC boundary:Kharyaginsky CTR:
+ARTCC boundary:Kotlas CTR:
 ARTCC boundary:Kotlas sector:
+ARTCC boundary:Murmansk CTA:
 ARTCC boundary:Murmansk sector:
+ARTCC boundary:Pechora CTR:
 ARTCC boundary:Peterbrug Approach:
+ARTCC boundary:Petrazovodsk CTA:
+ARTCC boundary:Pskov CTA:
 ARTCC boundary:Pulkovo Radar:
 ARTCC boundary:R sector:
+ARTCC boundary:Rogachevo CTR:
+ARTCC boundary:Solovki CTR:
+ARTCC boundary:Staraya Russa CTA:
+ARTCC boundary:Staraya Russa CTR:
+ARTCC boundary:Syktyvkar CTA:
+ARTCC boundary:Syktyvkar CTR:
 ARTCC boundary:Syktyvkar sector:
+ARTCC boundary:Ukhta CTA:
+ARTCC boundary:Ukhta CTR:
+ARTCC boundary:Usinsk CTR:
+ARTCC boundary:Ust-Tsilma CTR:
 ARTCC boundary:Vologda sector:
-ARTCC low boundary:ULLA CTA:
+ARTCC low boundary:Cherepovets CTR:
+ARTCC low boundary:Levashovo CTR:
+ARTCC low boundary:Naryan-Mar CTA:
+ARTCC low boundary:Pulkovo Tower:
+ARTCC low boundary:Varandey CTA:
+ARTCC low boundary:Vaskovo CTR:
+ARTCC low boundary:Velikiy Ustyug CTR:
+ARTCC low boundary:Vologda CTA:
+ARTCC low boundary:Vorkuta CTR:
+ARTCC low boundary:Vorkuta TMA:
 Geo:ULLL Coastline:
+Geo:ULLL FIR border Borders:
 NDBs:K:symbol
 NDBs:L:symbol
 NDBs:O:symbol
@@ -21,7 +51,6 @@ NDBs:PL:symbol
 NDBs:PO:symbol
 NDBs:PU:symbol
 NDBs:U:symbol
-Regions:ULLL Approch background:polygon
 VORs:SPB:symbol
 SHOWC:1
 SHOWSB:1
@@ -36,7 +65,7 @@ DISABLEPANNING:0
 DISABLEZOOMING:0
 DisplayRotation:343.60000
 TAGFAMILY:Galaxy Tower
-WINDOWAREA:59.638570:29.668378:59.952302:30.871904
+WINDOWAREA:59.663786:29.728090:59.977518:30.931616
 PLUGIN:Ground Radar plugin:AirportElevation:79
 PLUGIN:Ground Radar plugin:AirportRadius:1.5
 PLUGIN:Ground Radar plugin:TowerMode:ULLI

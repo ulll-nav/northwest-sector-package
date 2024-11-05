@@ -11,7 +11,7 @@ Fixes:name:6908265:3.5:0:0:8
 Sids:line:16384:3.0:0:1:7
 Stars:line:24576:3.0:0:2:7
 ARTCC high boundary:line:5593858:3.0:0:0:7
-ARTCC boundary:line:11447982:3.0:0:1:7
+ARTCC boundary:line:11447982:3.0:2:1:7
 ARTCC low boundary:line:8158268:0.5:2:0:7
 Geo:line:16777215:3.0:0:0:7
 VORs:symbol:10526880:1.0:0:0:7
@@ -96,9 +96,9 @@ Chat:name unread:16776960:3.5:0:0:7
 Ground Network:exit:16711680:3.5:0:3:7
 Ground Network:taxiway:65280:3.5:0:3:7
 Ground Network:terminal taxiway:255:3.5:0:3:7
-Sector:line:0:0.6:1:1:7
+Sector:line:12829570:0.6:2:1:7
 Sector:msaw:32768:2.0:0:2:7
-Sector:active sector background:0:3.5:0:0:7
+Sector:active sector background:0:3.5:2:0:7
 Sector:inactive sector background:0:3.5:0:0:7
 SYMBOL:0
 SYMBOLITEM:MOVETO -4 -4
