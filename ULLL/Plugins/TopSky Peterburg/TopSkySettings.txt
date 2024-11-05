@@ -259,10 +259,10 @@ Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1
 Vector_QDM_AP_Label_Dist=1
 
-Window_ASM=3,80,120,570,300
 Window_SM_LeaveHoldTime=3
-Window_QNHTL=3,1637,741
+Window_QNHTL=3,0,400
 Window_COL_Warning_Threshold=12
+Window_PredTfc=3,1620,741
 
 WXR_Brightness=40
 WXR_Gain=85
@@ -287,3 +287,4 @@ RDF_Accuracy=3
 
 [_CTR]
 RDF_Accuracy=5
+Window_CARD=3,1564,340
