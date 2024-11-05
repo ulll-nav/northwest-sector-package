@@ -291,8 +291,6 @@ WXR_Echo_dBZ_Lo=25
 
 AIW=1
 
-Window_QNHTL=3,1250,528
-
 [_APP]
 MTCD=0
 AIW=0
