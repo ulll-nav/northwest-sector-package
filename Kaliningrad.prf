@@ -28,8 +28,8 @@ Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
 Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
-TeamSpeakVccs	TsVccsMiniControlX	1755
-TeamSpeakVccs	TsVccsMiniControlY	26
+TeamSpeakVccs	TsVccsMiniControlX	1733
+TeamSpeakVccs	TsVccsMiniControlY	76
 Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
 Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
 Sounds	Sound2	\ULLL\Sounds\conflict_alert.wav

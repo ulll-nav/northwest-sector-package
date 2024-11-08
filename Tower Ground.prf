@@ -1,7 +1,7 @@
 Settings	SettingsfileSYMBOLOGY	\ULLL\Settings\Tower Ground\TG_Symbology.txt
 Settings	SettingsfileVOICE	\ULLL\Settings\ALL\Frequencies.txt
 Settings	SettingsfilePROFILE	\ULLL\Settings\Tower Ground\TG_Profile.txt
-Settings	SettingsfileTAGS	\ULLL\Settings\ALL\Tags.txt
+Settings	SettingsfileTAGS	\ULLL\Settings\ALL\Tags.txtf
 Settings	SettingsfileSIL	\ULLL\Settings\Tower Ground\TG_Lists.txt
 Settings	SettingsfileSEL	\ULLL\Settings\Tower Ground\TG_Lists.txt
 Settings	SettingsfileDEP	\ULLL\Settings\Tower Ground\TG_DepartureList.txt
@@ -28,22 +28,22 @@ Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
 Settings	sector	\ULLL-Galaxy-radar_20241003143341-241001-0001.sct
-TeamSpeakVccs	TsVccsMiniControlX	1541
-TeamSpeakVccs	TsVccsMiniControlY	26
+TeamSpeakVccs	TsVccsMiniControlX	1470
+TeamSpeakVccs	TsVccsMiniControlY	24
 Plugins	Plugin0Display0	Ground Radar display
 Plugins	Plugin0	\ULLL\Plugins\GRplugin\GRplugin.dll
 Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope Peterburg\DiscordEuroscope.dll
 Plugins	Plugin2	\ULLL\Plugins\TopSky Tower Ground\TopSky.dll
 Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
 Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
-Plugins	Plugin5	\ULLL\Plugins\ULLL Plugin\ULLLPlugin.dll
-Plugins	Plugin5Display0	Ground Radar display
-Plugins	Plugin5Display1	Standard ES radar screen
 Plugins	Plugin3Display0	Ground Radar display
 Plugins	Plugin2Display0	Ground Radar display
 Plugins	Plugin3Display1	Standard ES radar screen
 Plugins	Plugin2Display1	Standard ES radar screen
 Plugins	Plugin0Display1	Standard ES radar screen
+Plugins	Plugin5	\ULLL\Plugins\ULLL Plugin\ULLLPlugin.dll
+Plugins	Plugin5Display0	Ground Radar display
+Plugins	Plugin5Display1	Standard ES radar screen
 Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
 Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
 Sounds	Sound2	\ULLL\Sounds\conflict_alert.wav
@@ -66,7 +66,6 @@ Sounds	Sound18	\ULLL\Sounds\startup_silent.wav
 RecentFiles	Recent1	\ULLL\ASR\Tower Ground\ULLI Ground.asr
 RecentFiles	Recent2	\ULLL\ASR\Tower Ground\ULLI Tower.asr
 RecentFiles	Recent3	\ULLL\ASR\Tower Ground\ULAA Ground.asr
-RecentFiles	Recent4	\ULLL\ASR\Tower Ground\ALL Tower.asr
 TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
