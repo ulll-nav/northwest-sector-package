@@ -49,8 +49,8 @@ Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup_silent.wav
-RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_CTR.asr
-RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_APP.asr
+RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_APP.asr
+RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_CTR.asr
 RecentFiles	Recent3	\ULLL\ASR\Peterburg\ULLI_GND.asr
 Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Peterburg\TopSky.dll
@@ -58,6 +58,9 @@ Plugins	Plugin1	\ULLL\Plugins\GRplugin\GRplugin.dll
 Plugins	Plugin2	\ULLL\Plugins\DiscordEuroscope Peterburg\DiscordEuroscope.dll
 Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
 Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
+Plugins	Plugin5	\ULLL\Plugins\ULLL Plugin\ULLLPlugin.dll
+Plugins	Plugin5Display0	Ground Radar display
+Plugins	Plugin5Display1	Standard ES radar screen
 Plugins	Plugin0Display1	Ground Radar display
 Plugins	Plugin1Display0	Ground Radar display
 Plugins	Plugin1Display1	Standard ES radar screen
@@ -76,4 +79,3 @@ LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy
 LastSession	atis_url1	https://vatis.ru/P-D287FC46?arrp=$atisairportB&arr=$arrrwy($atisairportB)&dep=$deprwy($atisairportB)&info=$atiscodeB
 LastSession	atis_url2	https://vatis.ru/P-D287FC46?arrp=$atisairportC&arr=$arrrwy($atisairportC)&dep=$deprwy($atisairportC)&info=$atiscodeC
 LastSession	atis_url3	https://vatis.ru/P-D287FC46?arrp=$atisairportD&arr=$arrrwy($atisairportD)&dep=$deprwy($atisairportD)&info=$atiscodeD
-LastSession	atis_freq4	118000

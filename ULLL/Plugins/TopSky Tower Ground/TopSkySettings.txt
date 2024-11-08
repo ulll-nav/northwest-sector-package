@@ -258,8 +258,8 @@ System_FIC_Position_Free_Filtered=1
 
 System_UseAcceptedCoordColor=1
 System_UseRwyLockedColor=1
-System_UseSidStarAllocationColor=0
-//System_UseSidStarNoAllocationColor=0
+System_UseSidAllocationColor=1
+System_UseStarAllocationColor=1
 
 Track_HistoryDots=5
 Track_PredictionLine=0
@@ -274,11 +274,6 @@ Vector_QDM_MaxNumber=99
 Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1
 Vector_QDM_AP_Label_Dist=1
-
-Window_ASM=3,80,120,570,300
-Window_SM_LeaveHoldTime=3
-Window_QNHTL=3,1637,551
-Window_COL_Warning_Threshold=12
 
 WXR_Brightness=40
 WXR_Gain=85
@@ -295,8 +290,6 @@ WXR_Echo_dBZ_Med=30
 WXR_Echo_dBZ_Lo=25
 
 AIW=1
-
-Window_QNHTL=3,1250,528
 
 [_APP]
 MTCD=0
