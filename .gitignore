@@ -1,8 +1,13 @@
 ipaddr.txt
-aeronav_copyright.txt
-*.rwy
 version.txt
 *.sentry-native
 euroscope_sector_providers.txt
 SectorFileProviderDescriptor.txt
 cords
+*.ese
+*.rwy
+*.sct
+aeronav_copyright.txt
+VoiceChannels.txt
+ULLL/ICAO/*
+ULLL/NavData/*
