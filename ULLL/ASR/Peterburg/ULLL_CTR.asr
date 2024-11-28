@@ -3,6 +3,22 @@ DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
+Airports:ULAA:symbol
+Airports:ULAE:symbol
+Airports:ULAH:symbol
+Airports:ULAM:symbol
+Airports:ULAS:symbol
+Airports:ULLA:symbol
+Airports:ULLI:symbol
+Airports:ULLY:symbol
+Airports:ULMM:symbol
+Airports:ULOO:symbol
+Airports:ULPB:symbol
+Airports:ULWC:symbol
+Airports:ULWW:symbol
+Airports:UUYH:symbol
+Airports:UUYS:symbol
+Airports:UUYY:symbol
 ARTCC boundary:Amderma CTR:
 ARTCC boundary:Apatity CTR:
 ARTCC boundary:Arkhangelsk CTA:
@@ -41,23 +57,6 @@ ARTCC low boundary:Velikiy Ustyug CTR:
 ARTCC low boundary:Vologda CTA:
 ARTCC low boundary:Vorkuta CTR:
 ARTCC low boundary:Vorkuta TMA:
-Airports:ULAA:symbol
-Airports:ULAM:symbol
-Airports:ULDW:symbol
-Airports:ULLI:symbol
-Airports:ULMK:symbol
-Airports:ULMM:symbol
-Airports:ULNR:symbol
-Airports:ULOO:symbol
-Airports:ULPB:symbol
-Airports:ULWC:symbol
-Airports:ULWW:symbol
-Airports:UUYH:symbol
-Airports:UUYP:symbol
-Airports:UUYS:symbol
-Airports:UUYW:symbol
-Airports:UUYX:symbol
-Airports:UUYY:symbol
 Geo:ULLL Coastline:
 Geo:ULLL FIR border Borders:
 VORs:BLZ:symbol
