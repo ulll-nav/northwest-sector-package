@@ -207,7 +207,7 @@ Shortcut_RadarMenu_Combo=0x00
 Shortcut_Map_Xfr_Key=1,0x47 ; G
 Shortcut_Map_Target=1,AIRPORTS\ALL
 Shortcut_Map_Xfr_Key=2,0x41 ; A
-Shortcut_Map_Target=2,ULLL\ULLL_CTR_HIGHAIRWAYS
+Shortcut_Map_Target=2,ULLL\ULLL_High_Airways
 Shortcut_Map_Xfr_Key=3,0x50; P
 Shortcut_Map_Target=3,ULLI
 //0x47 ; G
