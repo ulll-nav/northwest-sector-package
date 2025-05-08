@@ -1,5 +1,7 @@
 Equip_ProMode=1
 
+System_GUI_Version=1
+
 System_AutoAssignDist=100
 
 System_SchengenArea=BI,EB,ED,EE,EF,EH,EK,EL,EN,EP,ES,ET,EV,EY,GC,LE,LF,LG,LH,LI,LJ,LK,LM,LO,LP,LS,LZ,LT,UA,UB,UD,LB,UM,UK,LR,LY,EG,UT
@@ -14,13 +16,13 @@ System_State_Depa=DEP
 System_State_DeIce=DEICE
 System_State_Parked=ONB
 
-System_APM=1
-System_CVM=1
+System_APW=1
+System_CBM=1
+System_ICM=1
 System_ECM=1
 System_OSM=1
 System_RIM=1
 System_RVM=1
-System_SRM=1
 
 Track_HistoryDots_GND=5
 Track_PredictionLine_APP=0
@@ -33,19 +35,23 @@ Color_Unknown=160,160,160
 
 Color_New_Stand=255,110,0
 
-Color_Warning=255,120,0
+Color_Warning=232,224,8
+Color_WarningText=0,0,0
 Color_WBackground=135,135,135
 Color_New_Stand=255,255,0
 Color_APP_Background=0,0,0
-Color_TSW2_Background=0,0,0
 
 Color_SelectedLabelFill_Gnd=50,50,50
 Color_SelectedLabelBorder_Gnd=0,0,0
 
+Color_WTitleBar=25,25,112
+Color_WTitleText=255,255,255
+Color_WForeground=0,0,0
+Color_WBackground2=200,200,200
+Color_WBackground3=200,200,200
 Color_Arrival=240,240,0
 Color_Departure=20,255,102
 Color_Departure=20,255,0
-Color_Background=25,25,25
 Color_Caution=192,192,192
 Color_Departure=30,255,245
 Color_RawVideoHistory=111,111,60
@@ -63,6 +69,16 @@ Window_APP_Scale=15
 Window_APP_Rotation=350
 Window_APP_AltFilter=6000
 
+System_GlobalMenu_QNH=0
+System_GlobalMenu_FontSize=13
+
+System_GUI_Scale_GlobalMenu=1
+
+GroundLabel=1
+GroundLabel_UseSelColor=1
+GroundLabel_Field_Transparency_Bg=255
+GroundLabel_Transparency_Bg=255
+GroundLabel_Transparency_Bd=255
 GroundLabel_Filter_NoState=1
 GroundLabel_Filter_Parked=1
 GroundLabel_Filter_OnFreq=0
@@ -135,6 +151,16 @@ Label_DRWY=0,1,0
 Label_RMK=0,1,1
 Label_STAND=0,1,0
 Label_GS=1,0,1
+
+Window_APP_AltFilter=3500
+Window_APP_Extensions=11
+Window_APP_Extensions_TickWidth=0.25
+Window_APP_Rotation=343.6
+Window_APP_Scale=20.0
+
+Window_QNH=1,2050,45
+Window_QNH_Units=1
+Window_QNH_SwitchUnits=1
 
 [ULLI]
 Airport_Elevation=79
