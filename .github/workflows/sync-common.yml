@@ -48,6 +48,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Make read_common_manifest.sh executable
+        run: chmod +x .github/scripts/read_common_manifest.sh
+
       - name: Read common manifest
         id: manifest
         run: ./.github/scripts/read_common_manifest.sh
