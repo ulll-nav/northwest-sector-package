@@ -49,9 +49,8 @@ jobs:
             --allow-unrelated-histories \
             -X ours \
             -m "chore: merge from UMKK @${{ github.run_id }}"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+      - name: Push to main
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
+          git push origin HEAD:main --force
+  
