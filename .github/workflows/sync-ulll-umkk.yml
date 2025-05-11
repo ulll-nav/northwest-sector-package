@@ -31,25 +31,37 @@ jobs:
 
       - name: Merge from ULLL (favor ULLL on conflicts)
         run: |
-          git merge repo-ulll/main \
-            --allow-unrelated-histories \
-            -X ours \
-            -m "chore: merge from ULLL @${{ github.run_id }}"
+            git merge repo-ulll/main \
+              --allow-unrelated-histories \
+              -X ours \
+              -m "chore: merge from ULLL @${{ github.run_id }}"
+        
+            # Remove .github/ from ULLL merge
+            git rm -r --cached .github || true
+            rm -rf .github
 
       - name: Read UMKK tree into temp dir
         run: |
-          mkdir umkk-temp
-          git --work-tree=umkk-temp checkout repo-umkk/main -- .
+          mkdir -p /tmp/umkk-temp
+          git --work-tree=/tmp/umkk-temp checkout repo-umkk/main -- . ':(exclude).github'
 
       - name: Move UMKK → ULLL and root files
         run: |
           mkdir -p ULLL
-          rsync -a umkk-temp/UMKK/ ULLL/
-          rsync -a --exclude=UMKK --exclude=.git umkk-temp/ ./
+          rsync -a /tmp/umkk-temp/UMKK/ ULLL/
+          rsync -a --exclude=UMKK --exclude=.git /tmp/umkk-temp/ ./
+
+      - name: Cleanup temp dir
+        run: rm -rf /tmp/umkk-temp
 
       - name: Commit & push to main
         run: |
           git add .
-          git commit -m "chore: merge from UMKK @${{ github.run_id }}" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
-          git push origin HEAD:main
+          git status
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: merge from UMKK @${{ github.run_id }}"
+            git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
+            git push origin HEAD:main
+          fi
