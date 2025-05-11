@@ -12,6 +12,7 @@ jobs:
       - name: Checkout C
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
           submodules: false
@@ -53,3 +54,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
