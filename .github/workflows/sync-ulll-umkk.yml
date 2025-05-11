@@ -24,11 +24,11 @@ jobs:
 
       - name: Merge from ULLL
         run: |
-          git merge repo-ulll/master --allow-unrelated-histories -m "chore: merge from ULLL @${{ github.run_id }}"
+          git merge repo-ulll/main  --allow-unrelated-histories -m "chore: merge from ULLL @${{ github.run_id }}"
       
       - name: Merge from UMKK
         run: |
-          git merge repo-umkk/master --allow-unrelated-histories -m "chore: merge from UMKK @${{ github.run_id }}"
+          git merge repo-umkk/main  --allow-unrelated-histories -m "chore: merge from UMKK @${{ github.run_id }}"
 
       - name: Unify UMKK into ULLL
         run: |
