@@ -3,9 +3,9 @@ name: Sync common folders to shared, northwest & UMKK
 on:
   push:
     paths:
-      - 'Sounds/**'
-      - 'Settings/**'
-      - 'Plugins/**'
+      - 'ULLL/Sounds/**'
+      - 'ULLL/Settings/**'
+      - 'ULLL/Plugins/**'
 
 jobs:
   sync-common:
