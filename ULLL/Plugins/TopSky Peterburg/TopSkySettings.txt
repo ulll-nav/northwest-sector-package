@@ -264,7 +264,6 @@ Vector_QDM_AP_Label_Dist=1
 Window_SM_LeaveHoldTime=3
 Window_QNHTL=3,0,400
 Window_COL_Warning_Threshold=12
-Window_PredTfc=3,1620,741
 
 WXR_Brightness=40
 WXR_Gain=85
