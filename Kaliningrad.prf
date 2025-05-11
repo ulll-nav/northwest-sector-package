@@ -1,0 +1,79 @@
+Settings	SettingsfileSYMBOLOGY	\ULLL\Settings\Kaliningrad\UMKK_Symbology.txt
+Settings	SettingsfileVOICE	\ULLL\Settings\ALL\Frequencies.txt
+Settings	SettingsfilePROFILE	\ULLL\Settings\Kaliningrad\UMKK_Profile.txt
+Settings	SettingsfileTAGS	\ULLL\Settings\ALL\Tags.txt
+Settings	SettingsfileSIL	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileSEL	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileDEP	\ULLL\Settings\Kaliningrad\UMKK_DepartureList.txt
+Settings	SettingsfileARR	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileFP	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfilePLUGINS	\ULLL\Settings\Kaliningrad\UMKK_Plugins.txt
+Settings	Settingsfile	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileSCREEN	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileCONFLICT	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileVCCS	\ULLL\Settings\ALL\VCCS.txt
+Settings	SettingsfileFP	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileORIGPLANE	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileSTUP	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileTAXIOUT	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileTAKEOFF	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileADCS	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileTAXIIN	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	sector	\ULLL-Galaxy-radar_20241003143341-241001-0001.sct
+Settings	AselKey	5111808
+Settings	FreqKey	3604480
+Settings	airlines	\ULLL\ICAO\ICAO_Airlines.txt
+Settings	airports	\ULLL\ICAO\ICAO_Airports.txt
+Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
+Settings	alias	\ULLL\Alias\alias.txt
+Settings	airways	\ULLL\NavData\airway.txt
+Settings	airportcoords	\ULLL\NavData\icao.txt
+TeamSpeakVccs	TsVccsMiniControlX	1755
+TeamSpeakVccs	TsVccsMiniControlY	26
+Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
+Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
+Sounds	Sound2	\ULLL\Sounds\conflict_alert.wav
+Sounds	Sound3	\ULLL\Sounds\radio_message.wav
+Sounds	Sound4	\ULLL\Sounds\private_message.wav
+Sounds	Sound5	\ULLL\Sounds\atc_message.wav
+Sounds	Sound6	\ULLL\Sounds\broadcast_message.wav
+Sounds	Sound7	\ULLL\Sounds\landline_request.wav
+Sounds	Sound8	\ULLL\Sounds\supervisor_message.wav
+Sounds	Sound9	\ULLL\Sounds\connected.wav
+Sounds	Sound10	\ULLL\Sounds\disconnected.wav
+Sounds	Sound11	\ULLL\Sounds\ongoing_request.wav
+Sounds	Sound12	\ULLL\Sounds\ongoing_accepted.wav
+Sounds	Sound13	\ULLL\Sounds\ongoing_refused.wav
+Sounds	Sound14	\ULLL\Sounds\ongoing_manual.wav
+Sounds	Sound15	\ULLL\Sounds\new_atis.wav
+Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
+Sounds	Sound17	\ULLL\Sounds\pointout.wav
+Sounds	Sound18	\ULLL\Sounds\startup_silent.wav
+RecentFiles	Recent1	\ULLL\ASR\Kaliningrad\UMKK_CTR.asr
+RecentFiles	Recent2	\ULLL\ASR\Kaliningrad\UMKK_APP.asr
+RecentFiles	Recent3	\ULLL\ASR\Kaliningrad\UMKK_TWR.asr
+RecentFiles	Recent4	\ULLL\ASR\Kaliningrad\Ground layout.asr
+Plugins	Plugin0Display0	Standard ES radar screen
+Plugins	Plugin0	\ULLL\Plugins\TopSky Kaliningrad\TopSky.dll
+Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope Kaliningrad\DiscordEuroscope.dll
+Plugins	Plugin2	\ULLL\Plugins\GRplugin\GRplugin.dll
+Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
+Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
+Plugins	Plugin0Display1	Ground Radar display
+Plugins	Plugin3Display0	Ground Radar display
+Plugins	Plugin3Display1	Standard ES radar screen
+Plugins	Plugin5Display0	Ground Radar display
+Plugins	Plugin5Display1	SMR radar display
+Plugins	Plugin5Display2	Standard ES radar screen
+Plugins	Plugin2Display0	Ground Radar display
+Plugins	Plugin2Display1	Standard ES radar screen
+TeamSpeakVccs	Ts3DialogLeft	0
+TeamSpeakVccs	Ts3DialogTop	0
+TeamSpeakVccs	Ts3DialogRight	750
+TeamSpeakVccs	Ts3DialogBottom	600
+LastSession	atis_freq0	122475
+LastSession	atis_callsign0	UMKK_ATIS
+LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
+LastSession	atis_url1	https://vatis.ru/P-D287FC46?arrp=$atisairportB&arr=$arrrwy($atisairportB)&dep=$deprwy($atisairportB)&info=$atiscodeB
+LastSession	atis_url2	https://vatis.ru/P-D287FC46?arrp=$atisairportC&arr=$arrrwy($atisairportC)&dep=$deprwy($atisairportC)&info=$atiscodeC
+LastSession	atis_url3	https://vatis.ru/P-D287FC46?arrp=$atisairportD&arr=$arrrwy($atisairportD)&dep=$deprwy($atisairportD)&info=$atiscodeD
