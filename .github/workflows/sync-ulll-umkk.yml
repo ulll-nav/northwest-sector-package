@@ -9,12 +9,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout C
+      - name: Checkout RU-NWC
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Настроить remotes
+      - name: Setting remotes
         run: |
           git remote add repo-ulll https://github.com/ulll-nav/ulll-sector-package.git || true
           git remote add repo-umkk https://github.com/ulll-nav/umkk-sector-package.git || true
@@ -29,15 +29,15 @@ jobs:
         run: |
           git merge repo-umkk/master --allow-unrelated-histories -m "chore: merge from UMKK @${{ github.run_id }}"
 
-      - name: Unify directories to XXXX
+      - name: Unify UMKK into ULLL
         run: |
-          if [ -d ULLL ]; then git mv ULLL ULLL; fi
           if [ -d UMKK ]; then
-            mkdir -p ULLL
             git mv UMKK/* ULLL/
-            git rm -r UMKK
+            git rm -rf UMKK
+            git commit -m "chore: unify UMKK into ULLL"
+          else
+            echo "No UMKK directory to unify"
           fi
-          git commit -m "chore: unify ULLL/UMKK into ULLL" || echo "No rename changes"
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
