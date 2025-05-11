@@ -9,41 +9,45 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout RU-NWC
+      - name: Checkout C
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
+          submodules: false
 
       - name: Configure Git author
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config merge.ours.driver true
 
-      - name: Setting remotes
+      - name: Set up .gitattributes for file-specific merges
+        run: |
+          echo "**/.gitignore merge=ours" >> .gitattributes
+          git add .gitattributes
+          git commit -m "chore: configure .gitattributes for .gitignore"
+
+      - name: Add remotes & fetch
         run: |
           git remote add repo-ulll https://github.com/ulll-nav/ulll-sector-package.git || true
           git remote add repo-umkk https://github.com/ulll-nav/umkk-sector-package.git || true
           git fetch repo-ulll
           git fetch repo-umkk
 
-      - name: Merge from ULLL
+      - name: Merge from ULLL (favor ULLL on conflicts)
         run: |
-          git merge repo-ulll/main  --allow-unrelated-histories -m "chore: merge from ULLL @${{ github.run_id }}"
-      
-      - name: Merge from UMKK
-        run: |
-          git merge repo-umkk/main  --allow-unrelated-histories -m "chore: merge from UMKK @${{ github.run_id }}"
+          git merge repo-ulll/main \
+            --allow-unrelated-histories \
+            -X ours \
+            -m "chore: merge from ULLL @${{ github.run_id }}"
 
-      - name: Unify UMKK into ULLL
+      - name: Merge from UMKK (favor ULLL on conflicts for .gitignore)
         run: |
-          if [ -d UMKK ]; then
-            git mv UMKK/* ULLL/
-            git rm -rf UMKK
-            git commit -m "chore: unify UMKK into ULLL"
-          else
-            echo "No UMKK directory to unify"
-          fi
+          git merge repo-umkk/main \
+            --allow-unrelated-histories \
+            -X ours \
+            -m "chore: merge from UMKK @${{ github.run_id }}"
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
