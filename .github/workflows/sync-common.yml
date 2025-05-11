@@ -29,6 +29,13 @@ jobs:
           path: shared
           token: ${{ env.PAT }}
 
+      - name: Checkout northwest-sector-package
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.ORG }}/northwest-sector-package
+          path: northwest
+          token: ${{ env.PAT }}
+
       - name: Checkout umkk-sector-package
         uses: actions/checkout@v4
         with:
@@ -53,19 +60,25 @@ jobs:
           IFS=',' read -ra FOLDERS <<< "${{ steps.manifest.outputs.common_folders }}"
           for F in "${FOLDERS[@]}"; do
             echo "Syncing $F …"
-            
-            SRC="ULLL/$F"
+            # Self path
+            SRC="$F"
+            #  └─ if folder doesn't exist, skip
             [ -d "$SRC" ] || continue
 
-            # shared/F
+            #  a) shared root/F
             DST_SHARED="shared/$F"
             mkdir -p "$DST_SHARED"
-            rsync -a --delete "$SRC/" "$DST_SHARED/"
+            rsync -a "$SRC/" "$DST_SHARED/"
 
-            # umkk/UMKK/F
+            #  b) northwest/ULLL/F
+            DST_NW="northwest/ULLL/$F"
+            mkdir -p "$DST_NW"
+            rsync -a "$SRC/" "$DST_NW/"
+
+            #  c) umkk/UMKK/F
             DST_U="umkk/UMKK/$F"
             mkdir -p "$DST_U"
-            rsync -a --delete "$SRC/" "$DST_U/"
+            rsync -a "$SRC/" "$DST_U/"
           done
 
       - name: Commit & push shared
@@ -74,6 +87,17 @@ jobs:
           git add .
           if git diff --cached --quiet; then
             echo "No updates for shared-sector-package"
+          else
+            git commit -m "chore: sync common from ULLL @${{ github.sha }}"
+            git push origin main
+          fi
+
+      - name: Commit & push northwest
+        working-directory: northwest
+        run: |
+          git add ULLL
+          if git diff --cached --quiet; then
+            echo "No updates for northwest-sector-package"
           else
             git commit -m "chore: sync common from ULLL @${{ github.sha }}"
             git push origin main
