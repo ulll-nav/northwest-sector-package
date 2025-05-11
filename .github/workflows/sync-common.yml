@@ -1,4 +1,4 @@
-name: Sync common folders to shared, northwest & UMKK
+name: Sync common folders to shared & UMKK
 
 on:
   push:
@@ -9,6 +9,7 @@ on:
 
 jobs:
   sync-common:
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
     env:
       PAT: ${{ secrets.PAT_TOKEN }}
