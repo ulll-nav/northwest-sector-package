@@ -31,33 +31,29 @@ jobs:
 
       - name: Merge from ULLL (favor ULLL on conflicts)
         run: |
-            git merge repo-ulll/main \
-              --allow-unrelated-histories \
-              -X ours \
-              -m "chore: merge from ULLL @${{ github.run_id }}"
-        
-            # Remove .github/ from ULLL merge
-            git rm -r --cached .github || true
-            rm -rf .github
+          git merge repo-ulll/main \
+            --allow-unrelated-histories \
+            -X ours \
+            -m "chore: merge from ULLL @${{ github.run_id }}"
+
+          # Restore original .github folder from RU-NWC
+          git checkout HEAD -- .github || true
 
       - name: Read UMKK tree into temp dir
         run: |
           mkdir -p /tmp/umkk-temp
-          git --work-tree=/tmp/umkk-temp checkout repo-umkk/main -- . ':(exclude).github'
+          git --work-tree=/tmp/umkk-temp checkout repo-umkk/main -- .
 
-      - name: Move UMKK → ULLL and root files
+      - name: Move UMKK → ULLL and root files (excluding .github)
         run: |
+          rm -rf /tmp/umkk-temp/.github
           mkdir -p ULLL
           rsync -a /tmp/umkk-temp/UMKK/ ULLL/
-          rsync -a --exclude=UMKK --exclude=.git /tmp/umkk-temp/ ./
-
-      - name: Cleanup temp dir
-        run: rm -rf /tmp/umkk-temp
+          rsync -a --exclude=UMKK --exclude=.git --exclude=.github /tmp/umkk-temp/ ./
 
       - name: Commit & push to main
         run: |
           git add .
-          git status
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
