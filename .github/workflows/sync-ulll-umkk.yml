@@ -51,6 +51,11 @@ jobs:
           rsync -a /tmp/umkk-temp/UMKK/ ULLL/
           rsync -a --exclude=UMKK --exclude=.git --exclude=.github /tmp/umkk-temp/ ./
 
+      - name: Rename UMKK to ULLL in .prf files
+        run: |
+          # Find all .prf files and replace UMKK with ULLL in their contents
+          find . -type f -name "*.prf" -exec sed -i 's|\\UMKK|\\ULLL|g' {} \;
+
       - name: Commit & push to main
         run: |
           git add .
