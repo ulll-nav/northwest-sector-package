@@ -15,6 +15,11 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
 
+      - name: Configure Git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Setting remotes
         run: |
           git remote add repo-ulll https://github.com/ulll-nav/ulll-sector-package.git || true
