@@ -60,25 +60,24 @@ jobs:
           IFS=',' read -ra FOLDERS <<< "${{ steps.manifest.outputs.common_folders }}"
           for F in "${FOLDERS[@]}"; do
             echo "Syncing $F …"
-            # Self path
-            SRC="$F"
-            #  └─ if folder doesn't exist, skip
+            
+            SRC="ULLL/$F"
             [ -d "$SRC" ] || continue
 
-            #  a) shared root/F
+            # shared/F
             DST_SHARED="shared/$F"
             mkdir -p "$DST_SHARED"
-            rsync -a "$SRC/" "$DST_SHARED/"
+            rsync -a --delete "$SRC/" "$DST_SHARED/"
 
-            #  b) northwest/ULLL/F
+            # northwest/ULLL/F
             DST_NW="northwest/ULLL/$F"
             mkdir -p "$DST_NW"
-            rsync -a "$SRC/" "$DST_NW/"
+            rsync -a --delete "$SRC/" "$DST_NW/"
 
-            #  c) umkk/UMKK/F
+            # umkk/UMKK/F
             DST_U="umkk/UMKK/$F"
             mkdir -p "$DST_U"
-            rsync -a "$SRC/" "$DST_U/"
+            rsync -a --delete "$SRC/" "$DST_U/"
           done
 
       - name: Commit & push shared
