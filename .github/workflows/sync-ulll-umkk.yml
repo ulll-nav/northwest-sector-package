@@ -1,0 +1,45 @@
+name: Sync from UMKK and ULLL into RU-NWC
+
+on:
+  schedule:
+    - cron: '30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout C
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Настроить remotes
+        run: |
+          git remote add repo-ulll https://github.com/ulll-nav/ulll-sector-package.git || true
+          git remote add repo-umkk https://github.com/ulll-nav/umkk-sector-package.git || true
+          git fetch repo-ulll
+          git fetch repo-umkk
+
+      - name: Merge from ULLL
+        run: |
+          git merge repo-ulll/master --allow-unrelated-histories -m "chore: merge from ULLL @${{ github.run_id }}"
+      
+      - name: Merge from UMKK
+        run: |
+          git merge repo-umkk/master --allow-unrelated-histories -m "chore: merge from UMKK @${{ github.run_id }}"
+
+      - name: Unify directories to XXXX
+        run: |
+          if [ -d ULLL ]; then git mv ULLL ULLL; fi
+          if [ -d UMKK ]; then
+            mkdir -p ULLL
+            git mv UMKK/* ULLL/
+            git rm -r UMKK
+          fi
+          git commit -m "chore: unify ULLL/UMKK into ULLL" || echo "No rename changes"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
