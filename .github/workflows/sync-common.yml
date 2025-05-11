@@ -29,13 +29,6 @@ jobs:
           path: shared
           token: ${{ env.PAT }}
 
-      - name: Checkout northwest-sector-package
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ env.ORG }}/northwest-sector-package
-          path: northwest
-          token: ${{ env.PAT }}
-
       - name: Checkout umkk-sector-package
         uses: actions/checkout@v4
         with:
@@ -69,11 +62,6 @@ jobs:
             mkdir -p "$DST_SHARED"
             rsync -a --delete "$SRC/" "$DST_SHARED/"
 
-            # northwest/ULLL/F
-            DST_NW="northwest/ULLL/$F"
-            mkdir -p "$DST_NW"
-            rsync -a --delete "$SRC/" "$DST_NW/"
-
             # umkk/UMKK/F
             DST_U="umkk/UMKK/$F"
             mkdir -p "$DST_U"
@@ -86,17 +74,6 @@ jobs:
           git add .
           if git diff --cached --quiet; then
             echo "No updates for shared-sector-package"
-          else
-            git commit -m "chore: sync common from ULLL @${{ github.sha }}"
-            git push origin main
-          fi
-
-      - name: Commit & push northwest
-        working-directory: northwest
-        run: |
-          git add ULLL
-          if git diff --cached --quiet; then
-            echo "No updates for northwest-sector-package"
           else
             git commit -m "chore: sync common from ULLL @${{ github.sha }}"
             git push origin main
