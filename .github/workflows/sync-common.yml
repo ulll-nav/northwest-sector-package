@@ -50,13 +50,7 @@ jobs:
 
       - name: Read common manifest
         id: manifest
-        run: |
-          python3 - <<EOF
-          import yaml, os
-          with open(os.path.join('shared','common.yml')) as f:
-              common = yaml.safe_load(f).get('common',[])
-          print("common_folders=" + ",".join(common))
-          EOF >> $GITHUB_OUTPUT
+        run: ./.github/scripts/read_common_manifest.sh
 
       - name: Copy common folders
         run: |
