@@ -58,7 +58,7 @@ jobs:
 
       - name: Replace \UMKK → \ULLL in .prf
         run: |
-          find ULLL -type f -name '*.prf' -print0 \
+          find . -type f -name '*.prf' -print0 \
             | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
 
       - name: Commit & force push
