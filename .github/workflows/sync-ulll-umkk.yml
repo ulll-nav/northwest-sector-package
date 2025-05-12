@@ -35,12 +35,15 @@ jobs:
               \( -path './.git' -o -path './.git/*' -o -path './.github' -o -path './.github/*' -o -name '.gitignore' \) \
               -prune \
               -o -exec rm -rf {} +
+
       - name: Commit all files from ULLL except .github and .gitignore
         run: |
           mkdir -p /tmp/ulll-temp
           git --work-tree=/tmp/ulll-temp checkout repo-ulll/main -- .
           rm -rf /tmp/ulll-temp/.github
-          find /tmp/ulll-temp -type f -not -name '.gitignore' -exec cp --parents {} . \;
+          mkdir -p ULLL
+          rsync -a --exclude=.git --exclude=.github /tmp/umkk-temp/ ./
+          rm -rf /tmp/ulll-temp/
 
       - name: Read UMKK tree into temp dir
         run: |
