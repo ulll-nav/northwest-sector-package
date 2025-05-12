@@ -36,7 +36,7 @@ jobs:
         with:
           repository: ${{ env.ORG }}/ulll-sector-package
           path: ulll-temp
-          token: ${{ env.PAT_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           fetch-depth: 0
 
       - name: Checkout UMKK-sector-package (temp)
@@ -44,7 +44,7 @@ jobs:
         with:
           repository: ${{ env.ORG }}/umkk-sector-package
           path: umkk-temp
-          token: ${{ env.PAT_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           fetch-depth: 0
 
       - name: Sync ULLL content into root
