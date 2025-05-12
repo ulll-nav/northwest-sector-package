@@ -70,9 +70,10 @@ jobs:
           
       - name: Replace UMKK with ULLL in .prf paths
         run: |
+          # Only run sed if .prf files are found
           find ULLL . -type f -name '*.prf' -print0 \
-            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
-          
+            | xargs -0 -r sed -i 's|\UMKK|\ULLL|g'
+
       - name: Cleanup temp dirs
         run: rm -rf ulll-temp umkk-temp
           
