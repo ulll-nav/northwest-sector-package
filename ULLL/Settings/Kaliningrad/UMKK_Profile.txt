@@ -1,0 +1,19 @@
+PROFILE
+PROFILE:%%_OBS:600:0
+ATIS2:
+ATIS3:
+ATIS4:
+PROFILE:UMKK_TWR:50:4
+ATIS2:Kaliningrad Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+PROFILE:UMKK_APP:150:5
+ATIS2:Kaliningrad Approach
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:Advise ATIS information [122.475] on initial contact. Expect RWY $arrrwy(UMKK).
+PROFILE:UMKK_CTR:500:6
+ATIS2:Kaliningrad Control
+ATIS3:We love feedback! vats.im/ulll/discord
+PROFILE:UMKK_FIS_CTR:500:6
+ATIS2:Kaliningrad Information
+ATIS3:We love feedback! vats.im/ulll/discord
+END
