@@ -32,22 +32,12 @@ jobs:
       - name: Remove everything except .github and .gitignore
         run: |
             find . -mindepth 1 -not -path './.github*' -not -name '.gitignore' -exec rm -rf {} +
-
       - name: Commit all files from ULLL except .github and .gitignore
         run: |
-          cd $GITHUB_WORKSPACE
           mkdir -p /tmp/ulll-temp
           git --work-tree=/tmp/ulll-temp checkout repo-ulll/main -- .
           rm -rf /tmp/ulll-temp/.github
           find /tmp/ulll-temp -type f -not -name '.gitignore' -exec cp --parents {} . \;
-          git add .
-          if git diff --cached --quiet; then
-          echo "No changes to commit"
-          else
-          git commit -m "chore: merge from ULLL @${{ github.run_id }}"
-          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
-          git push origin HEAD:main
-          fi
 
       - name: Read UMKK tree into temp dir
         run: |
@@ -72,7 +62,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: merge from UMKK @${{ github.run_id }}"
+            git commit -m "chore: merge from UMKK and ULLL @${{ github.run_id }}"
             git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
             git push origin HEAD:main
           fi
