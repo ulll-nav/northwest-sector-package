@@ -15,57 +15,42 @@ jobs:
           ref: main
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
-          submodules: false
 
       - name: Configure Git author
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Add remotes & fetch
+      - name: Clean workspace (keep .git & .github)
         run: |
-          git remote add repo-ulll https://github.com/ulll-nav/ulll-sector-package.git || true
-          git remote add repo-umkk https://github.com/ulll-nav/umkk-sector-package.git || true
-          git fetch repo-ulll
-          git fetch repo-umkk
+          find . -mindepth 1 \
+            | grep -vE "^./\.git(/|$)|^./\.github(/|$)" \
+            | xargs -r rm -rf
 
-      - name: Merge from ULLL (auto-resolve conflicts)
+      - name: Checkout ULLL-sector-package
+        uses: actions/checkout@v4
+        with:
+          repository: ulll-nav/ulll-sector-package
+          path: ULLL
+          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0
+
+      - name: Load UMKK into temp dir
+        uses: actions/checkout@v4
+        with:
+          repository: ulll-nav/umkk-sector-package
+          path: umkk-temp
+          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0
+
+      - name: Merge UMKK content into ULLL
         run: |
-          git merge repo-ulll/main \
-            --allow-unrelated-histories \
-            -X ours \
-            -m "chore: merge from ULLL @${{ github.run_id }}" || true
-
-          # Restore our CI workflow if deleted upstream
-          git checkout --ours .github/workflows/sync-common.yml || true
-
-          # Restore any other delete/modify conflicts to our side
-          git ls-files -u \
-            | awk '{print $4}' \
-            | sort -u \
-            | xargs -r git checkout --ours --
-
-          git add .
-
-      - name: Read UMKK tree into temp dir
-        run: |
-          mkdir -p /tmp/umkk-temp
-          git --work-tree=/tmp/umkk-temp checkout repo-umkk/main -- .
-
-      - name: Move UMKK → ULLL and root files (excluding .github) with deletions
-        run: |
-          rm -rf /tmp/umkk-temp/.github
-          mkdir -p ULLL
-
-          # Mirror ULLL/ exactly from UMKK, deleting removed files
-          rsync -a --delete /tmp/umkk-temp/UMKK/ ULLL/
-
-          # Mirror root files (excluding UMKK, .git, .github) with delete propagation
-          rsync -a --delete \
-            --exclude=UMKK \
-            --exclude=.git \
-            --exclude=.github \
-            /tmp/umkk-temp/ ./
+          # Remove existing UMKK-based files in ULLL
+          find ULLL -mindepth 1 -exec rm -rf {} +
+          # Copy UMKK/UMKK into ULLL
+          rsync -a umkk-temp/UMKK/ ULLL/
+          # Copy other UMKK root files into workspace
+          rsync -a --exclude=UMKK --exclude=.git --exclude=.github umkk-temp/ ./
 
       - name: Replace UMKK with ULLL in .prf paths
         run: |
@@ -78,7 +63,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: merge from UMKK @${{ github.run_id }}"
+            git commit -m "chore: sync from ULLL+UMKK @${{ github.run_id }}"
             git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
             git push origin HEAD:main
           fi
