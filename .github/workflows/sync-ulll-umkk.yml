@@ -29,38 +29,48 @@ jobs:
           git fetch repo-ulll
           git fetch repo-umkk
 
-      - name: Merge from ULLL (favor ULLL on conflicts)
+      - name: Merge from ULLL (auto-resolve conflicts)
         run: |
           git merge repo-ulll/main \
             --allow-unrelated-histories \
             -X ours \
-            -m "chore: merge from ULLL @${{ github.run_id }}" \
-            || true
+            -m "chore: merge from ULLL @${{ github.run_id }}" || true
 
-          # Restore original .github folder from RU-NWC
-          git checkout HEAD -- .github || true
+          # Restore our CI workflow if deleted upstream
+          git checkout --ours .github/workflows/sync-common.yml || true
+
+          # Restore any other delete/modify conflicts to our side
+          git ls-files -u \
+            | awk '{print $4}' \
+            | sort -u \
+            | xargs -r git checkout --ours --
+
+          git add .
 
       - name: Read UMKK tree into temp dir
         run: |
           mkdir -p /tmp/umkk-temp
           git --work-tree=/tmp/umkk-temp checkout repo-umkk/main -- .
 
-      - name: Move UMKK → ULLL and root files (excluding .github)
+      - name: Move UMKK → ULLL and root files (excluding .github) with deletions
         run: |
           rm -rf /tmp/umkk-temp/.github
           mkdir -p ULLL
-          rsync -a /tmp/umkk-temp/UMKK/ ULLL/
 
-          cd /tmp/umkk-temp
-          for item in * .*; do
-            [ "$item" = "." ] || [ "$item" = ".." ] || [ "$item" = "UMKK" ] || [ "$item" = ".github" ] && continue
-            rsync -a "$item" "$GITHUB_WORKSPACE/"
-          done
+          # Mirror ULLL/ exactly from UMKK, deleting removed files
+          rsync -a --delete /tmp/umkk-temp/UMKK/ ULLL/
+
+          # Mirror root files (excluding UMKK, .git, .github) with delete propagation
+          rsync -a --delete \
+            --exclude=UMKK \
+            --exclude=.git \
+            --exclude=.github \
+            /tmp/umkk-temp/ ./
 
       - name: Replace UMKK with ULLL in .prf paths
         run: |
-          find ULLL . -type f -name '*.prf' -print0 |
-            xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+          find ULLL . -type f -name '*.prf' -print0 \
+            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
 
       - name: Commit & push to main
         run: |
