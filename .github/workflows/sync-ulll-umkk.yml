@@ -11,7 +11,6 @@ jobs:
     env:
       PAT: ${{ secrets.PAT_TOKEN }}
       ORG: ulll-nav
-      COMMON_MANIFEST: shared/common.yml
 
     steps:
       - name: Checkout RU-NWC
@@ -19,42 +18,46 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ env.PAT }}
+          token: ${{ env.PAT_TOKEN }}
 
       - name: Configure Git author
         run: |
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-            - name: Clean workspace (keep .git & .github)
-            run: |
-              find . -mindepth 1 \
-                | grep -vE "^\./\.git(/|$)|^\./\.github(/|$)" \
-                | xargs -r rm -rf
-    
+      - name: Clean workspace (keep .git & .github)
+        run: |
+          find . -mindepth 1 \
+            | grep -vE "^\./\.git(/|$)|^\./\.github(/|$)" \
+            | xargs -r rm -rf
+
       - name: Checkout ULLL-sector-package (temp)
         uses: actions/checkout@v4
         with:
           repository: ${{ env.ORG }}/ulll-sector-package
           path: ulll-temp
           token: ${{ env.PAT_TOKEN }}
-          fetch-depth: 0  
+          fetch-depth: 0
+
       - name: Checkout UMKK-sector-package (temp)
         uses: actions/checkout@v4
         with:
           repository: ${{ env.ORG }}/umkk-sector-package
           path: umkk-temp
           token: ${{ env.PAT_TOKEN }}
-          fetch-depth: 0  
+          fetch-depth: 0
+
       - name: Sync ULLL content into root
         run: |
           # Mirror ULLL-temp/ULLL/ into workspace root, propagating deletes
-          rsync -a --delete ulll-temp/ULLL/ ./  
+          rsync -a --delete ulll-temp/ULLL/ ./
+
       - name: Sync UMKK content into ULLL
         run: |
           # Mirror UMKK-temp/UMKK/ into workspace ULLL/ folder, propagating deletes
           mkdir -p ULLL
-          rsync -a --delete umkk-temp/UMKK/ ULLL/  
+          rsync -a --delete umkk-temp/UMKK/ ULLL/
+
       - name: Sync UMKK root common folders
         run: |
           # Read common folders from shared/common.yml
@@ -63,13 +66,16 @@ jobs:
             echo "Syncing root folder $F..."
             rm -rf "$F"
             rsync -a --delete umkk-temp/"$F"/ "$F"/
-          done  
+          done
+
       - name: Replace UMKK with ULLL in .prf paths
         run: |
           find ULLL . -type f -name '*.prf' -print0 \
-            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'  
+            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+
       - name: Cleanup temp dirs
-        run: rm -rf ulll-temp umkk-temp  
+        run: rm -rf ulll-temp umkk-temp
+
       - name: Commit & push to main
         run: |
           git add .
