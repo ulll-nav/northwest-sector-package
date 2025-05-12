@@ -12,14 +12,14 @@ jobs:
       ORG: ulll-nav
 
     steps:
-      - name: Checkout NW
+      - name: Checkout northwest-sector-package
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
           token: ${{ env.PAT }}
 
-      - name: Configure Git
+      - name: Configure Git defaults
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -31,12 +31,24 @@ jobs:
           mkdir -p /tmp/ulll
           git --work-tree=/tmp/ulll checkout ul/main -- . ':(exclude).github'
 
-      - name: Sync ULLL into repo
+      - name: Capture ULLL commit info
+        run: |
+          read AUTHOR1_NAME AUTHOR1_EMAIL COMMIT1_MSG <<<$(git log ul/main -1 --pretty="%an %ae %s")
+          echo "AUTHOR1_NAME=$AUTHOR1_NAME" >> $GITHUB_ENV
+          echo "AUTHOR1_EMAIL=$AUTHOR1_EMAIL" >> $GITHUB_ENV
+          echo "COMMIT1_MSG=$COMMIT1_MSG" >> $GITHUB_ENV
+
+      - name: Sync ULLL content
         run: |
           mkdir -p ULLL
           rsync -a --delete --exclude='.git' --exclude='.github' /tmp/ulll/ULLL/ ULLL/
           rsync -a --exclude='.git' --exclude='.github' /tmp/ulll/*.prf ./
           rm -rf /tmp/ulll
+          git add ULLL *.prf
+          if ! git diff --cached --quiet; then
+            git commit --author="$AUTHOR1_NAME <$AUTHOR1_EMAIL>" -m "commit from ULLL: $COMMIT1_MSG
+          Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          fi
 
       - name: Fetch UMKK into temp
         run: |
@@ -45,25 +57,27 @@ jobs:
           mkdir -p /tmp/umkk
           git --work-tree=/tmp/umkk checkout um/main -- . ':(exclude).github'
 
-      - name: Sync UMKK into repo
+      - name: Capture UMKK commit info
+        run: |
+          read AUTHOR2_NAME AUTHOR2_EMAIL COMMIT2_MSG <<<$(git log um/main -1 --pretty="%an %ae %s")
+          echo "AUTHOR2_NAME=$AUTHOR2_NAME" >> $GITHUB_ENV
+          echo "AUTHOR2_EMAIL=$AUTHOR2_EMAIL" >> $GITHUB_ENV
+          echo "COMMIT2_MSG=$COMMIT2_MSG" >> $GITHUB_ENV
+
+      - name: Sync UMKK content
         run: |
           mkdir -p ULLL
           rsync -a --delete --exclude='.git' --exclude='.github' /tmp/umkk/UMKK/ ULLL/
           rsync -a --exclude='UMKK' --exclude='.git' --exclude='.github' /tmp/umkk/ ./
           rm -rf /tmp/umkk
-
-      - name: Rewrite .prf paths
-        run: |
-          find . -type f -name '*.prf' -print0 \
-            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
-
-      - name: Commit & force push
-        run: |
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Nothing changed"
-          else
-            git commit -m "chore: sync from ULLL & UMKK @${{ github.event.client_payload.source }}"
-            git remote set-url origin https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
-            git push origin main --force
+          find . -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+          git add ULLL .
+          if ! git diff --cached --quiet; then
+            git commit --author="$AUTHOR2_NAME <$AUTHOR2_EMAIL>" -m "commit from UMKK: $COMMIT2_MSG
+          Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           fi
+
+      - name: Force push
+        run: |
+          git remote set-url origin https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
+          git push origin main --force
