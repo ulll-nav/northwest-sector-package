@@ -1,0 +1,74 @@
+name: Overwrite from ULLL/UMKK on dispatch
+
+on:
+  repository_dispatch:
+    types: [sync-update]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      PAT: ${{ secrets.PAT_TOKEN }}
+      ORG: ulll-nav
+
+    steps:
+      - name: Checkout northwest-sector-package
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ env.PAT }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add & fetch ULLL
+        run: |
+          git remote add ul https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/ulll-sector-package.git || true
+          git fetch ul main
+
+      - name: Overwrite ULLL folder
+        run: |
+          rm -rf ULLL
+          git checkout ul/main -- ULLL
+          rm -rf ULLL/.github
+
+      - name: Add & fetch UMKK
+        run: |
+          git remote add um https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/umkk-sector-package.git || true
+          git fetch um main
+
+      - name: Bring in UMKK content
+        run: |
+          # extract the UMKK folder
+          rm -rf UMKK
+          git checkout um/main -- UMKK
+          rm -rf UMKK/.github
+
+          # extract root-level files (everything except UMKK/ and .github/)
+          git checkout um/main -- . ':(exclude).github' ':(exclude)UMKK'
+
+      - name: Move UMKK into ULLL
+        run: |
+          mkdir -p ULLL
+          rsync -a --exclude=.git --exclude=.github UMKK/ ULLL/
+          git rm -rf UMKK
+
+      - name: Replace \UMKK → \ULLL in .prf
+        run: |
+          find ULLL -type f -name '*.prf' -print0 \
+            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+
+      - name: Commit & force push
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "Nothing changed"
+          else
+            git commit -m "chore: overwrite from ${{ github.event.client_payload.source }} @${{ github.event.client_payload.source }}-repo"
+            git remote set-url origin \
+              https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
+            git push origin main --force
+          fi
