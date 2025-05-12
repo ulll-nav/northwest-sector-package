@@ -8,62 +8,81 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      ORG: ulll-nav
+      COMMON_MANIFEST: shared/common.yml
+
     steps:
       - name: Checkout RU-NWC
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ secrets.PAT_TOKEN }}
+          token: ${{ env.PAT_TOKEN }}
 
-      - name: Configure Git author
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Clean workspace (keep .git & .github)
-        run: |
-          find . -mindepth 1 \
-            | grep -vE "^./\.git(/|$)|^./\.github(/|$)" \
-            | xargs -r rm -rf
+      - name: Checkout shared-sector-package
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.ORG }}/shared-sector-package
+          path: shared
+          token: ${{ env.PAT_TOKEN }}
 
       - name: Checkout ULLL-sector-package
         uses: actions/checkout@v4
         with:
-          repository: ulll-nav/ulll-sector-package
+          repository: ${{ env.ORG }}/ulll-sector-package
           path: ULLL
-          token: ${{ secrets.PAT_TOKEN }}
-          fetch-depth: 0
+          token: ${{ env.PAT_TOKEN }}
 
-      - name: Load UMKK into temp dir
+      - name: Checkout UMKK-sector-package (temp)
         uses: actions/checkout@v4
         with:
-          repository: ulll-nav/umkk-sector-package
+          repository: ${{ env.ORG }}/umkk-sector-package
           path: umkk-temp
-          token: ${{ secrets.PAT_TOKEN }}
-          fetch-depth: 0
+          token: ${{ env.PAT_TOKEN }}
 
-      - name: Merge UMKK content into ULLL
+      - name: Make sync script executable
+        run: chmod +x .github/scripts/read_common_manifest.sh
+
+      - name: Read common manifest
+        id: manifest
+        run: ./.github/scripts/read_common_manifest.sh
+
+      - name: Sync common folders from UMKK
         run: |
-          # Remove existing UMKK-based files in ULLL
-          find ULLL -mindepth 1 -exec rm -rf {} +
-          # Copy UMKK/UMKK into ULLL
-          rsync -a umkk-temp/UMKK/ ULLL/
-          # Copy other UMKK root files into workspace
-          rsync -a --exclude=UMKK --exclude=.git --exclude=.github umkk-temp/ ./
+          IFS=',' read -ra FOLDERS <<< "${{ steps.manifest.outputs.common_folders }}"
+          for F in "${FOLDERS[@]}"; do
+            echo "Syncing common folder $F..."
+            # remove old copies
+            rm -rf "$F" "ULLL/$F"
+            # rsync UMKK -> root
+            SRC="umkk-temp/UMKK/$F"
+            [ -e "$SRC" ] && mkdir -p "$(dirname $F)" && rsync -a "$SRC/" "$F/"
+            # rsync UMKK -> ULLL
+            [ -e "$SRC" ] && mkdir -p "ULLL/$F" && rsync -a "$SRC/" "ULLL/$F/"
+          done
 
       - name: Replace UMKK with ULLL in .prf paths
         run: |
           find ULLL . -type f -name '*.prf' -print0 \
             | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
 
-      - name: Commit & push to main
+      - name: Cleanup temp
+        run: rm -rf umkk-temp
+
+      - name: Commit & push
         run: |
           git add .
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: sync from ULLL+UMKK @${{ github.run_id }}"
-            git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
+            git commit -m "chore: sync common from UMKK @${{ github.run_id }}"
+            git remote set-url origin https://x-access-token:${{ env.PAT_TOKEN }}@github.com/${{ github.repository }}.git
             git push origin HEAD:main
           fi
