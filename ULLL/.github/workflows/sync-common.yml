@@ -1,0 +1,92 @@
+name: Sync common folders to shared & UMKK
+
+on:
+  push:
+    paths:
+      - 'ULLL/Sounds/**'
+      - 'ULLL/Settings/**'
+      - 'ULLL/Plugins/**'
+
+jobs:
+  sync-common:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    env:
+      PAT: ${{ secrets.PAT_TOKEN }}
+      ORG: ulll-nav
+      COMMON_MANIFEST: shared/common.yml
+
+    steps:
+      - name: Checkout ULLL
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ env.PAT }}
+
+      - name: Checkout shared-sector-package
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.ORG }}/shared-sector-package
+          path: shared
+          token: ${{ env.PAT }}
+
+      - name: Checkout umkk-sector-package
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.ORG }}/umkk-sector-package
+          path: umkk
+          token: ${{ env.PAT }}
+
+      - name: Configure Git author
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Make read_common_manifest.sh executable
+        run: chmod +x .github/scripts/read_common_manifest.sh
+
+      - name: Read common manifest
+        id: manifest
+        run: ./.github/scripts/read_common_manifest.sh
+
+      - name: Copy common folders
+        run: |
+          IFS=',' read -ra FOLDERS <<< "${{ steps.manifest.outputs.common_folders }}"
+          for F in "${FOLDERS[@]}"; do
+            echo "Syncing $F …"
+            
+            SRC="ULLL/$F"
+            [ -d "$SRC" ] || continue
+
+            # shared/F
+            DST_SHARED="shared/$F"
+            mkdir -p "$DST_SHARED"
+            rsync -a --delete "$SRC/" "$DST_SHARED/"
+
+            # umkk/UMKK/F
+            DST_U="umkk/UMKK/$F"
+            mkdir -p "$DST_U"
+            rsync -a --delete "$SRC/" "$DST_U/"
+          done
+
+      - name: Commit & push shared
+        working-directory: shared
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "No updates for shared-sector-package"
+          else
+            git commit -m "chore: sync common from ULLL @${{ github.sha }}"
+            git push origin main
+          fi
+
+      - name: Commit & push umkk
+        working-directory: umkk
+        run: |
+          git add UMKK
+          if git diff --cached --quiet; then
+            echo "No updates for umkk-sector-package"
+          else
+            git commit -m "chore: sync common from ULLL @${{ github.sha }}"
+            git push origin main
+          fi

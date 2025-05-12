@@ -1,0 +1,89 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:
+SECTORTITLE:
+Airports:ULAA:symbol
+Airports:ULAE:symbol
+Airports:ULAH:symbol
+Airports:ULAM:symbol
+Airports:ULAS:symbol
+Airports:ULLA:symbol
+Airports:ULLI:symbol
+Airports:ULLY:symbol
+Airports:ULMM:symbol
+Airports:ULOO:symbol
+Airports:ULPB:symbol
+Airports:ULWC:symbol
+Airports:ULWW:symbol
+Airports:UUYH:symbol
+Airports:UUYS:symbol
+Airports:UUYY:symbol
+ARTCC boundary:Amderma CTR:
+ARTCC boundary:Apatity CTR:
+ARTCC boundary:Arkhangelsk CTA:
+ARTCC boundary:Arkhangelsk CTR:
+ARTCC boundary:Arkhanglesk sector:
+ARTCC boundary:Kharyaginsky CTR:
+ARTCC boundary:Kotlas CTR:
+ARTCC boundary:Kotlas sector:
+ARTCC boundary:Murmansk CTA:
+ARTCC boundary:Murmansk sector:
+ARTCC boundary:Pechora CTR:
+ARTCC boundary:Peterbrug Approach:
+ARTCC boundary:Petrazovodsk CTA:
+ARTCC boundary:Pskov CTA:
+ARTCC boundary:Pulkovo Radar:
+ARTCC boundary:R sector:
+ARTCC boundary:Rogachevo CTR:
+ARTCC boundary:Solovki CTR:
+ARTCC boundary:Staraya Russa CTA:
+ARTCC boundary:Staraya Russa CTR:
+ARTCC boundary:Syktyvkar CTA:
+ARTCC boundary:Syktyvkar CTR:
+ARTCC boundary:Syktyvkar sector:
+ARTCC boundary:Ukhta CTA:
+ARTCC boundary:Ukhta CTR:
+ARTCC boundary:Usinsk CTR:
+ARTCC boundary:Ust-Tsilma CTR:
+ARTCC boundary:Vologda sector:
+ARTCC low boundary:Cherepovets CTR:
+ARTCC low boundary:Levashovo CTR:
+ARTCC low boundary:Naryan-Mar CTA:
+ARTCC low boundary:Pulkovo Tower:
+ARTCC low boundary:Varandey CTA:
+ARTCC low boundary:Vaskovo CTR:
+ARTCC low boundary:Velikiy Ustyug CTR:
+ARTCC low boundary:Vologda CTA:
+ARTCC low boundary:Vorkuta CTR:
+ARTCC low boundary:Vorkuta TMA:
+Geo:ULLL Coastline:
+Geo:ULLL FIR border Borders:
+VORs:BLZ:symbol
+VORs:GNB:symbol
+VORs:KRG:symbol
+VORs:KTL:symbol
+VORs:NRM:symbol
+VORs:NWG:symbol
+VORs:OGN:symbol
+VORs:PTZ:symbol
+VORs:SN:symbol
+VORs:SPB:symbol
+VORs:UHT:symbol
+VORs:WGD:symbol
+VORs:WKL:symbol
+SHOWC:1
+SHOWSB:0
+BELOW:1000
+ABOVE:0
+LEADER:10
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:0
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Galaxy CTR
+WINDOWAREA:53.509996:2.708102:75.673179:87.729588
+PLUGIN:TopSky plugin:HideMapData:ULLL_APP

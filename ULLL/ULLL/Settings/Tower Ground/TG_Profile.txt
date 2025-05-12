@@ -1,0 +1,50 @@
+PROFILE
+PROFILE:%%_OBS:600:0
+ATIS2:
+ATIS3:
+ATIS4:
+PROFILE:ULLI_DEL:20:2
+ATIS2:Pulkovo Delivery
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULLI_GND:20:3
+ATIS2:Pulkovo Ground
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULLI_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULLI_A_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULLI_D_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULLI_VFR_TWR:50:4
+ATIS2:Pulkovo Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULAA_TWR:50:4
+ATIS2:Arkhangelsk Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULPB_TWR:50:4
+ATIS2:Petrozavodsk Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULMM_TWR:50:4
+ATIS2:Murmansk Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:UUYY_TWR:50:4
+ATIS2:Sivkar Start
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+PROFILE:ULAM_TWR:50:4
+ATIS2:Naryan-Mar Tower
+ATIS3:We love feedback! vats.im/ulll/discord
+ATIS4:
+END
