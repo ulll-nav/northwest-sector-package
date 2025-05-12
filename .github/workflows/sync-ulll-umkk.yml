@@ -8,10 +8,6 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    env:
-      PAT: ${{ secrets.PAT_TOKEN }}
-      ORG: ulll-nav
-
     steps:
       - name: Checkout RU-NWC
         uses: actions/checkout@v4
@@ -19,72 +15,54 @@ jobs:
           ref: main
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
+          submodules: false
 
       - name: Configure Git author
         run: |
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Clean workspace (keep .git & .github)
+      - name: Add remotes & fetch
         run: |
-          find . -mindepth 1 \
-            | grep -vE "^\./\.git(/|$)|^\./\.github(/|$)" \
-            | xargs -r rm -rf
+          git remote add repo-ulll https://github.com/ulll-nav/ulll-sector-package.git || true
+          git remote add repo-umkk https://github.com/ulll-nav/umkk-sector-package.git || true
+          git fetch repo-ulll
+          git fetch repo-umkk
 
-      - name: Checkout ULLL-sector-package (temp)
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ env.ORG }}/ulll-sector-package
-          path: ulll-temp
-          token: ${{ secrets.PAT_TOKEN }}
-          fetch-depth: 0
-
-      - name: Checkout UMKK-sector-package (temp)
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ env.ORG }}/umkk-sector-package
-          path: umkk-temp
-          token: ${{ secrets.PAT_TOKEN }}
-          fetch-depth: 0
-
-      - name: Sync ULLL content into root
+      - name: Merge from ULLL (favor ULLL on conflicts)
         run: |
-          # Mirror ULLL-temp/ULLL/ into workspace root, propagating deletes
-          rsync -a --delete ulll-temp/ULLL/ ./ || true
-          
-      - name: Sync UMKK content into ULLL
+          git merge repo-ulll/main \
+            --allow-unrelated-histories \
+            -X ours \
+            -m "chore: merge from ULLL @${{ github.run_id }}"
+
+          # Restore original .github folder from RU-NWC
+          git checkout HEAD -- .github || true
+
+      - name: Read UMKK tree into temp dir
         run: |
-          # Mirror UMKK-temp/UMKK/ into workspace ULLL/ folder, propagating deletes
+          mkdir -p /tmp/umkk-temp
+          git --work-tree=/tmp/umkk-temp checkout repo-umkk/main -- .
+
+      - name: Move UMKK → ULLL and root files (excluding .github)
+        run: |
+          rm -rf /tmp/umkk-temp/.github
           mkdir -p ULLL
-          rsync -a --delete umkk-temp/UMKK/ ULLL/ || true
-          
-      - name: Sync UMKK root common folders
-        run: |
-          # Read common folders from shared/common.yml
-          FOLDERS=$(sed -n 's/^\s*-\s*//p' shared/common.yml | paste -sd ' ' -)
-          for F in $FOLDERS; do
-            echo "Syncing root folder $F..."
-            rm -rf "$F"
-            rsync -a --delete umkk-temp/"$F"/ "$F"/
-          done
-          
+          rsync -a /tmp/umkk-temp/UMKK/ ULLL/
+          rsync -a --exclude=UMKK --exclude=.git --exclude=.github /tmp/umkk-temp/ ./
+
       - name: Replace UMKK with ULLL in .prf paths
         run: |
-          # Only run sed if .prf files are found
-          find ULLL . -type f -name '*.prf' -print0 \
-            | xargs -0 -r sed -i 's|\UMKK|\ULLL|g'
+          find ULLL . -type f -name '*.prf' -print0 |
+            xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
 
-      - name: Cleanup temp dirs
-        run: rm -rf ulll-temp umkk-temp
-          
       - name: Commit & push to main
         run: |
           git add .
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: sync from ULLL+UMKK @${{ github.run_id }}"
+            git commit -m "chore: merge from UMKK @${{ github.run_id }}"
             git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
             git push origin HEAD:main
           fi
-            
