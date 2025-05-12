@@ -42,12 +42,9 @@ jobs:
 
       - name: Bring in UMKK content
         run: |
-          # extract the UMKK folder
           rm -rf UMKK
           git checkout um/main -- UMKK
           rm -rf UMKK/.github
-
-          # extract root-level files (everything except UMKK/ and .github/)
           git checkout um/main -- . ':(exclude).github' ':(exclude)UMKK'
 
       - name: Move UMKK into ULLL
@@ -58,8 +55,7 @@ jobs:
 
       - name: Replace \UMKK → \ULLL in .prf
         run: |
-          find . -type f -name '*.prf' -print0 \
-            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+          find . -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
 
       - name: Commit & force push
         run: |
@@ -68,7 +64,6 @@ jobs:
             echo "Nothing changed"
           else
             git commit -m "chore: overwrite from ${{ github.event.client_payload.source }} @${{ github.event.client_payload.source }}-repo"
-            git remote set-url origin \
-              https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
+            git remote set-url origin https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
             git push origin main --force
           fi
