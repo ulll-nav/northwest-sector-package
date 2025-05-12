@@ -42,7 +42,7 @@ jobs:
           git --work-tree=/tmp/ulll-temp checkout repo-ulll/main -- .
           rm -rf /tmp/ulll-temp/.github
           mkdir -p ULLL
-          rsync -a --exclude=.git --exclude=.github /tmp/umkk-temp/ ./
+          rsync -a --exclude=.git --exclude=.github /tmp/ulll-temp/ ./
           rm -rf /tmp/ulll-temp/
 
       - name: Read UMKK tree into temp dir
