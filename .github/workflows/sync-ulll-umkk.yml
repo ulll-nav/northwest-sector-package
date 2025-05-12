@@ -50,7 +50,12 @@ jobs:
           rm -rf /tmp/umkk-temp/.github
           mkdir -p ULLL
           rsync -a /tmp/umkk-temp/UMKK/ ULLL/
-          rsync -a --exclude=UMKK --exclude=.git --exclude=.github /tmp/umkk-temp/ ./
+
+          cd /tmp/umkk-temp
+          for item in * .*; do
+            [ "$item" = "." ] || [ "$item" = ".." ] || [ "$item" = "UMKK" ] || [ "$item" = ".github" ] && continue
+            rsync -a "$item" "$GITHUB_WORKSPACE/"
+          done
 
       - name: Replace UMKK with ULLL in .prf paths
         run: |
