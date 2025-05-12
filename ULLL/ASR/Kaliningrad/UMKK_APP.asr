@@ -1,0 +1,38 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:
+SECTORTITLE:
+ARTCC low boundary:Kaliningrad Approach:
+ARTCC low boundary:Kaliningrad CTR 2:
+ARTCC low boundary:Kaliningrad Tower:
+Airports:UMKS:symbol
+Airports:XMWB:symbol
+Airports:XMWD:symbol
+Airports:XMWH:symbol
+Airports:ZF8B:symbol
+Airports:ZFC6:symbol
+Airports:ZFH8:symbol
+Geo:UMKK Rivers:
+Geo:ULLL FIR border Borders:
+NDBs:K:symbol
+NDBs:KR:symbol
+Regions:UMKK Lakes:polygon
+Regions:UMKK Water:polygon
+Runways:UMKK 06-24:centerline
+VORs:KRD:symbol
+SHOWC:1
+SHOWSB:0
+BELOW:700
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Galaxy Approach
+WINDOWAREA:54.201851:18.243881:55.535185:23.358761
+PLUGIN:TopSky plugin:HideMapData:UMKK_CTR

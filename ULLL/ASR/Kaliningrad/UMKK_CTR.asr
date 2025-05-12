@@ -1,0 +1,27 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:
+SECTORTITLE:
+ARTCC low boundary:Kaliningrad Approach:
+ARTCC low boundary:Kaliningrad CTR 2:
+ARTCC low boundary:Kaliningrad Tower:
+Geo:ULLL FIR border Borders:
+Geo:UMKK Rivers:
+Regions:UMKK Lakes:polygon
+Regions:UMKK Water:polygon
+Runways:UMKK 06-24:centerline
+SHOWC:1
+SHOWSB:0
+BELOW:1000
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Galaxy CTR
+WINDOWAREA:53.860174:15.394084:56.506217:25.384083
