@@ -12,93 +12,58 @@ jobs:
       ORG: ulll-nav
 
     steps:
-      - name: Checkout northwest-sector-package
+      - name: Checkout NW
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
           token: ${{ env.PAT }}
 
-      - name: Configure default Git
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Add & fetch ULLL
+      - name: Fetch ULLL into temp
         run: |
           git remote add ul https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/ulll-sector-package.git || true
           git fetch ul main
+          mkdir -p /tmp/ulll
+          git --work-tree=/tmp/ulll checkout ul/main -- . ':(exclude).github'
 
-      - name: Capture ULLL commit info
+      - name: Sync ULLL into repo
         run: |
-          info=$(git log ul/main -1 --pretty="%an||%ae||%s")
-          AUTHOR1_NAME=${info%%||*}
-          rest=${info#*||}
-          AUTHOR1_EMAIL=${rest%%||*}
-          COMMIT1_MSG=${rest#*||}
-          echo "AUTHOR1_NAME=$AUTHOR1_NAME" >> $GITHUB_ENV
-          echo "AUTHOR1_EMAIL=$AUTHOR1_EMAIL" >> $GITHUB_ENV
-          echo "COMMIT1_MSG=$COMMIT1_MSG" >> $GITHUB_ENV
+          mkdir -p ULLL
+          rsync -a --delete --exclude='.git' --exclude='.github' /tmp/ulll/ULLL/ ULLL/
+          rsync -a --exclude='.git' --exclude='.github' /tmp/ulll/*.prf ./
+          rm -rf /tmp/ulll
 
-      - name: Overwrite ULLL folder & root .prf
-        run: |
-          rm -rf ULLL
-          git checkout ul/main -- ULLL
-          rm -rf ULLL/.github
-          git checkout ul/main -- '*.prf'
-
-      - name: Commit ULLL changes
-        run: |
-          git config user.name "$AUTHOR1_NAME"
-          git config user.email "$AUTHOR1_EMAIL"
-          git add ULLL '*.prf'
-          if ! git diff --cached --quiet; then
-            git commit -m "$COMMIT1_MSG"
-          fi
-
-      - name: Add & fetch UMKK
+      - name: Fetch UMKK into temp
         run: |
           git remote add um https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/umkk-sector-package.git || true
           git fetch um main
+          mkdir -p /tmp/umkk
+          git --work-tree=/tmp/umkk checkout um/main -- . ':(exclude).github'
 
-      - name: Capture UMKK commit info
-        run: |
-          info2=$(git log um/main -1 --pretty="%an||%ae||%s")
-          AUTHOR2_NAME=${info2%%||*}
-          rest2=${info2#*||}
-          AUTHOR2_EMAIL=${rest2%%||*}
-          COMMIT2_MSG=${rest2#*||}
-          echo "AUTHOR2_NAME=$AUTHOR2_NAME" >> $GITHUB_ENV
-          echo "AUTHOR2_EMAIL=$AUTHOR2_EMAIL" >> $GITHUB_ENV
-          echo "COMMIT2_MSG=$COMMIT2_MSG" >> $GITHUB_ENV
-
-      - name: Bring in UMKK content
-        run: |
-          rm -rf UMKK
-          git checkout um/main -- UMKK
-          rm -rf UMKK/.github
-          git checkout um/main -- . ':(exclude).github' ':(exclude)UMKK'
-
-      - name: Move UMKK into ULLL
+      - name: Sync UMKK into repo
         run: |
           mkdir -p ULLL
-          rsync -a --exclude=.git --exclude=.github UMKK/ ULLL/
-          git rm -rf UMKK
+          rsync -a --delete --exclude='.git' --exclude='.github' /tmp/umkk/UMKK/ ULLL/
+          rsync -a --exclude='UMKK' --exclude='.git' --exclude='.github' /tmp/umkk/ ./
+          rm -rf /tmp/umkk
 
-      - name: Replace \UMKK → \ULLL in .prf
+      - name: Rewrite .prf paths
         run: |
-          find . -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+          find . -type f -name '*.prf' -print0 \
+            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
 
-      - name: Commit UMKK changes
+      - name: Commit & force push
         run: |
-          git config user.name "$AUTHOR2_NAME"
-          git config user.email "$AUTHOR2_EMAIL"
-          git add ULLL
-          if ! git diff --cached --quiet; then
-            git commit -m "$COMMIT2_MSG"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed"
+          else
+            git commit -m "chore: sync from ULLL & UMKK @${{ github.event.client_payload.source }}"
+            git remote set-url origin https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
+            git push origin main --force
           fi
-
-      - name: Force push
-        run: |
-          git remote set-url origin https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
-          git push origin main --force
