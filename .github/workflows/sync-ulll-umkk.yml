@@ -33,8 +33,9 @@ jobs:
         run: |
           git merge repo-ulll/main \
             --allow-unrelated-histories \
-            -X theirs \
-            -m "chore: merge from ULLL @${{ github.run_id }}"
+            -X ours \
+            -m "chore: merge from ULLL @${{ github.run_id }}" \
+            || true
 
           # Restore original .github folder from RU-NWC
           git checkout HEAD -- .github || true
