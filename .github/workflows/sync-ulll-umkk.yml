@@ -50,14 +50,14 @@ jobs:
       - name: Sync ULLL content into root
         run: |
           # Mirror ULLL-temp/ULLL/ into workspace root, propagating deletes
-          rsync -a --delete ulll-temp/ULLL/ ./
-
+          rsync -a --delete ulll-temp/ULLL/ ./ || true
+          
       - name: Sync UMKK content into ULLL
         run: |
           # Mirror UMKK-temp/UMKK/ into workspace ULLL/ folder, propagating deletes
           mkdir -p ULLL
-          rsync -a --delete umkk-temp/UMKK/ ULLL/
-
+          rsync -a --delete umkk-temp/UMKK/ ULLL/ || true
+          
       - name: Sync UMKK root common folders
         run: |
           # Read common folders from shared/common.yml
@@ -67,15 +67,15 @@ jobs:
             rm -rf "$F"
             rsync -a --delete umkk-temp/"$F"/ "$F"/
           done
-
+          
       - name: Replace UMKK with ULLL in .prf paths
         run: |
           find ULLL . -type f -name '*.prf' -print0 \
             | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
-
+          
       - name: Cleanup temp dirs
         run: rm -rf ulll-temp umkk-temp
-
+          
       - name: Commit & push to main
         run: |
           git add .
@@ -86,3 +86,4 @@ jobs:
             git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
             git push origin HEAD:main
           fi
+            
