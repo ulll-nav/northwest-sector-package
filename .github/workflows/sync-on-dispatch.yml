@@ -12,7 +12,7 @@ jobs:
       ORG: ulll-nav
 
     steps:
-      - name: Checkout NW
+      - name: Checkout northwest-sector-package
         uses: actions/checkout@v4
         with:
           ref: main
@@ -24,25 +24,25 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Set dispatch vars
+      - name: Set dispatch variables
         run: |
           echo "SOURCE=${{ github.event.client_payload.source }}" >> $GITHUB_ENV
           echo "SHA=${{ github.event.client_payload.sha }}"   >> $GITHUB_ENV
 
-      # ——————————————
-      # ULLL block: only if SOURCE=ULLL
       - name: Fetch ULLL into temp
         if: env.SOURCE == 'ULLL'
         run: |
           git remote add ul https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/ulll-sector-package.git || true
-          git fetch ul main
+          REF="${SHA:-main}"
+          git fetch ul "$REF"
           mkdir -p /tmp/ulll
-          git --work-tree=/tmp/ulll checkout ul/${{ env.SHA }} -- . ':(exclude).github'
+          git --work-tree=/tmp/ulll checkout ul/"$REF" -- . ':(exclude).github'
 
       - name: Capture ULLL author/msg
         if: env.SOURCE == 'ULLL'
         run: |
-          read AN AE MSG <<<$(git log ul/${{ env.SHA }} -1 --pretty="%an %ae %s")
+          REF="${SHA:-main}"
+          read AN AE MSG <<<$(git log ul/"$REF" -1 --pretty="%an %ae %s")
           echo "AUTHOR_NAME=$AN"   >> $GITHUB_ENV
           echo "AUTHOR_EMAIL=$AE"  >> $GITHUB_ENV
           echo "COMMIT_MSG=$MSG"    >> $GITHUB_ENV
@@ -68,20 +68,20 @@ jobs:
             Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           fi
 
-      # ——————————————
-      # UMKK block: only if SOURCE=UMKK
       - name: Fetch UMKK into temp
         if: env.SOURCE == 'UMKK'
         run: |
           git remote add um https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/umkk-sector-package.git || true
-          git fetch um main
+          REF="${SHA:-main}"
+          git fetch um "$REF"
           mkdir -p /tmp/umkk
-          git --work-tree=/tmp/umkk checkout um/${{ env.SHA }} -- . ':(exclude).github'
+          git --work-tree=/tmp/umkk checkout um/"$REF" -- . ':(exclude).github'
 
       - name: Capture UMKK author/msg
         if: env.SOURCE == 'UMKK'
         run: |
-          read AN AE MSG <<<$(git log um/${{ env.SHA }} -1 --pretty="%an %ae %s")
+          REF="${SHA:-main}"
+          read AN AE MSG <<<$(git log um/"$REF" -1 --pretty="%an %ae %s")
           echo "AUTHOR_NAME=$AN"   >> $GITHUB_ENV
           echo "AUTHOR_EMAIL=$AE"  >> $GITHUB_ENV
           echo "COMMIT_MSG=$MSG"    >> $GITHUB_ENV
@@ -98,8 +98,7 @@ jobs:
       - name: Replace \UMKK → \ULLL in .prf
         if: env.SOURCE == 'UMKK'
         run: |
-          find . -type f -name '*.prf' -print0 \
-            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+          find . -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
           git add -A
 
       - name: Commit UMKK sync
@@ -114,7 +113,6 @@ jobs:
             Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           fi
 
-      # ——————————————
       - name: Force push
         run: |
           git remote set-url origin https://x-access-token:${{ env.PAT }}@github.com/${{ github.repository }}.git
