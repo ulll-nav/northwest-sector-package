@@ -18,7 +18,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ env.PAT_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Configure Git author
         run: |
