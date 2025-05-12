@@ -29,15 +29,24 @@ jobs:
           git fetch repo-ulll
           git fetch repo-umkk
 
-      - name: Merge from ULLL (favor ULLL on conflicts)
+      - name: Remove everything except .github and .gitignore
         run: |
-          git merge repo-ulll/main \
-            --allow-unrelated-histories \
-            -X theirs \
-            -m "chore: merge from ULLL @${{ github.run_id }}"
+            find . -mindepth 1 -not -path './.github*' -not -name '.gitignore' -exec rm -rf {} +
 
-          # Restore original .github folder from RU-NWC
-          git checkout HEAD -- .github || true
+      - name: Commit all files from ULLL except .github and .gitignore
+        run: |
+          mkdir -p /tmp/ulll-temp
+          git --work-tree=/tmp/ulll-temp checkout repo-ulll/main -- .
+          rm -rf /tmp/ulll-temp/.github
+          find /tmp/ulll-temp -type f -not -name '.gitignore' -exec cp --parents {} . \;
+          git add .
+          if git diff --cached --quiet; then
+          echo "No changes to commit"
+          else
+          git commit -m "chore: merge from ULLL @${{ github.run_id }}"
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
+          git push origin HEAD:main
+          fi
 
       - name: Read UMKK tree into temp dir
         run: |
