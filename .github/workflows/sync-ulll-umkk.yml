@@ -9,7 +9,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
-      PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      PAT: ${{ secrets.PAT_TOKEN }}
       ORG: ulll-nav
       COMMON_MANIFEST: shared/common.yml
 
@@ -19,62 +19,64 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ env.PAT_TOKEN }}
+          token: ${{ env.PAT }}
 
-      - name: Configure Git
+      - name: Configure Git author
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config.user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Checkout shared-sector-package
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ env.ORG }}/shared-sector-package
-          path: shared
-          token: ${{ env.PAT_TOKEN }}
+      - name: Clean workspace (keep .git & .github)
+        run: |
+          find . -mindepth 1 \
+            | grep -vE "^\./\.git(/|$)|^\./\.github(/|$)" \
+            | xargs -r rm -rf
 
       - name: Checkout ULLL-sector-package
         uses: actions/checkout@v4
         with:
           repository: ${{ env.ORG }}/ulll-sector-package
-          path: ULLL
-          token: ${{ env.PAT_TOKEN }}
+          path: ul ll-temp
+          token: ${{ env.PAT }}
 
-      - name: Checkout UMKK-sector-package (temp)
+      - name: Checkout UMKK-sector-package
         uses: actions/checkout@v4
         with:
           repository: ${{ env.ORG }}/umkk-sector-package
           path: umkk-temp
-          token: ${{ env.PAT_TOKEN }}
+          token: ${{ env.PAT }}
 
-      - name: Make sync script executable
-        run: chmod +x .github/scripts/read_common_manifest.sh
-
-      - name: Read common manifest
-        id: manifest
-        run: ./.github/scripts/read_common_manifest.sh
-
-      - name: Sync common folders from UMKK
+      - name: Sync ULLL directory
         run: |
-          IFS=',' read -ra FOLDERS <<< "${{ steps.manifest.outputs.common_folders }}"
-          for F in "${FOLDERS[@]}"; do
-            echo "Syncing common folder $F..."
-            # remove old copies
-            rm -rf "$F" "ULLL/$F"
-            # rsync UMKK -> root
-            SRC="umkk-temp/UMKK/$F"
-            [ -e "$SRC" ] && mkdir -p "$(dirname $F)" && rsync -a "$SRC/" "$F/"
-            # rsync UMKK -> ULLL
-            [ -e "$SRC" ] && mkdir -p "ULLL/$F" && rsync -a "$SRC/" "ULLL/$F/"
+          # Mirror ULLL folder exactly, propagating deletes
+          rm -rf ULLL
+          mkdir -p ULLL
+          rsync -a --delete ul ll-temp/ULLL/ ULLL/
+
+      - name: Sync UMKK content into ULLL
+        run: |
+          # Mirror UMKK/UMKK into ULLL, propagating deletes
+          rsync -a --delete umkk-temp/UMKK/ ULLL/
+
+      - name: Sync UMKK root files
+        run: |
+          # Read common folders from manifest
+          FOLDERS=$(sed -n 's/^\s*-\s*//p' shared/common.yml | paste -sd ' ' -)
+          for F in $FOLDERS; do
+            echo "Syncing root folder $F..."
+            # delete old
+            rm -rf "$F"
+            # copy new (with deletes inside F)
+            rsync -a --delete umkk-temp/"$F"/ "$F"/
           done
 
       - name: Replace UMKK with ULLL in .prf paths
         run: |
-          find ULLL . -type f -name '*.prf' -print0 \
-            | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+          find ULLL . -type f -name '*.prf' -print0 | \
+            xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
 
-      - name: Cleanup temp
-        run: rm -rf umkk-temp
+      - name: Cleanup temp dirs
+        run: rm -rf ul ll-temp umkk-temp
 
       - name: Commit & push
         run: |
@@ -82,7 +84,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: sync common from UMKK @${{ github.run_id }}"
-            git remote set-url origin https://x-access-token:${{ env.PAT_TOKEN }}@github.com/${{ github.repository }}.git
+            git commit -m "chore: sync from ULLL+UMKK @${{ github.run_id }}"
+            git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
             git push origin HEAD:main
           fi
