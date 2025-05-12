@@ -35,6 +35,7 @@ jobs:
 
       - name: Commit all files from ULLL except .github and .gitignore
         run: |
+          cd $GITHUB_WORKSPACE
           mkdir -p /tmp/ulll-temp
           git --work-tree=/tmp/ulll-temp checkout repo-ulll/main -- .
           rm -rf /tmp/ulll-temp/.github
