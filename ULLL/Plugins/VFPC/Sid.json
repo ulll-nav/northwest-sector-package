@@ -1,0 +1,94 @@
+[
+   {
+      "icao": "ULLI",
+      "sids": {
+         "KERIS": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "L255",
+                 "P989"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+        "SUGIN": [
+          {
+            "direction": "ODD",
+            "airways": [
+              "T635",
+              "T824",
+              "T873"
+            ]
+          },
+          {
+            "direction": "ODD"
+          }
+        ],
+        "RUMOL": [
+          {
+            "direction": "ANY",
+            "airways": [
+              "N171",
+              "T271",
+              "T272"
+            ]
+          }
+        ],
+        "TURAL": [
+          {
+            "direction": "EVEN",
+            "airways": [
+              "L870",
+              "T561"
+            ]
+          },
+          {
+            "direction": "EVEN"
+          }
+        ],
+        "UTETA": [
+          {
+            "direction": "EVEN",
+            "airways": [
+              "M60"
+            ]
+          },
+          {
+            "direction": "EVEN"
+          }
+        ],
+        "PETAP": [
+          {
+            "direction": "EVEN",
+            "airways": [
+              "T562",
+              "L254"
+            ]
+          },
+          {
+            "direction": "ODD",
+            "airways": [
+              "T821"
+            ]
+          },
+          {
+            "direction": "ANY",
+            "airways": [
+              "T457"
+            ]
+          }
+        ],
+        "RELNI": [
+          {
+            "direction": "ANY",
+            "airways": [
+              "T693"
+            ]
+          }
+        ]
+      }
+   }
+]

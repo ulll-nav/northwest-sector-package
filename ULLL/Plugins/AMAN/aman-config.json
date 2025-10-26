@@ -1,0 +1,44 @@
+{
+  "openAutomatically": false,
+  "timelines": {
+    "10L": {
+      "targetFixes": [ "LEPTO" ],
+      "viaFixes": [ "AKARU", "BEPOL", "GENPA", "KOLET", "OBANA" ],
+      "tagLayout": "default",
+      "destinationAirports": [ "ULLI" ]
+    },
+    "10R": {
+      "targetFixes": [ "GEBKA" ],
+      "viaFixes": [ "AKARU", "BEPOL", "GENPA", "KOLET", "OBANA" ],
+      "tagLayout": "default",
+      "destinationAirports": [ "ULLI" ]
+    },
+    "28R": {
+      "targetFixes": [ "MADID" ],
+      "viaFixes": [ "AKARU", "BEPOL", "GENPA", "KOLET", "OBANA" ],
+      "tagLayout": "default",
+      "destinationAirports": [ "ULLI" ]
+    },
+    "28L": {
+      "targetFixes": [ "BIPRI" ],
+      "viaFixes": [ "AKARU", "BEPOL", "GENPA", "KOLET", "OBANA" ],
+      "tagLayout": "default",
+      "destinationAirports": [ "ULLI" ]
+    }
+  },
+  "tagLayouts": {
+    "default": [
+      { "source": "callsign", "width": 8, "isViaFixIndicator": true },
+      { "source": "aircraftType", "width": 5 },
+      { "source": "aircraftWtc", "width": 2 },
+      { "source": "remainingDistance", "width": 4, "rightAligned": true },
+      { "source": "static", "width": 1 },
+      { "source": "directRouting", "width": 5, "rightAligned": true, "defaultValue": "-----" },
+      { "source": "static", "width": 1 },
+      { "source": "altitude", "width": 4 },
+      { "source": "groundSpeed", "width": 4 },
+      { "source": "static", "width": 1 },
+      { "source": "scratchPad", "width": 4 }
+    ]
+  }
+}
