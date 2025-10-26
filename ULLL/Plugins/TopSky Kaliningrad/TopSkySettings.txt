@@ -31,6 +31,7 @@ APW_Buffer_Vert_L_VFR=500
 Areas_Label_Name=0
 Areas_Label_MapText=1
 Areas_Label_Times=1
+Areas_AUP_Activation=1
 
 //Standard colors, all other defined below
 Color_Assumed=255,255,255
@@ -151,7 +152,7 @@ FlightLeg_Use_Ack_Color=0
 FPCP_HeadingTime=5
 FPCP_PredictionTime=10
 
-// HTTP_AUP_URL=https://lara.vatsim.pt/api/areas/UL/
+HTTP_AUP_URL=https://aup.vatsim-petersburg.com
 
 HTTP_GRIB_Server=https://nomads.ncep.noaa.gov/
 HTTP_GRIB_Page=cgi-bin/filter_gfs_1p00.pl?
@@ -270,6 +271,7 @@ Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1
 Vector_QDM_AP_Label_Dist=1
 
+Window_ASM=1,0,900
 Window_SM_LeaveHoldTime=3
 Window_QNHTL=3,0,400
 Window_COL_Warning_Threshold=12
