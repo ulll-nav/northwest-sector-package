@@ -92,6 +92,8 @@ jobs:
           mkdir -p ULLL
           rsync -a --delete --exclude='.git' --exclude='.github' /tmp/umkk/UMKK/ ULLL/
           rsync -a --exclude='.git' --exclude='.github' /tmp/umkk/*.prf ./
+          rsync -a /tmp/umkk/UMKK/Settings/Kaliningrad ULLL/Settings/Kaliningrad
+          rsync -a /tmp/umkk/UMKK/Plugins/TopSky Kaliningrad ULLL/Plugins/TopSky Kaliningrad
           rm -rf /tmp/umkk
           git add -A
 
