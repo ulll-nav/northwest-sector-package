@@ -80,4 +80,3 @@ TeamSpeakVccs	Ts3DialogBottom	600
 LastSession	atis_freq0	122475
 LastSession	atis_callsign0	UMKK_ATIS
 LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
-
