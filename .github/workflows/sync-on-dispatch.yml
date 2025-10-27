@@ -51,7 +51,7 @@ jobs:
         if: env.SOURCE == 'ULLL'
         run: |
           mkdir -p ULLL
-          rsync -a --delete --exclude='.git' --exclude='.github' /tmp/ulll/ULLL/ ULLL/
+          rsync -a --exclude='.git' --exclude='.github' /tmp/ulll/ULLL/ ULLL/
           rsync -a --exclude='.git' --exclude='.github' /tmp/ulll/*.prf ./
           rm -rf /tmp/ulll
           git add -A
@@ -90,10 +90,11 @@ jobs:
         if: env.SOURCE == 'UMKK'
         run: |
           mkdir -p ULLL
-          rsync -a --delete --exclude='.git' --exclude='.github' /tmp/umkk/UMKK/ ULLL/
           rsync -a --exclude='.git' --exclude='.github' /tmp/umkk/*.prf ./
-          rsync -a /tmp/umkk/UMKK/Settings/Kaliningrad ULLL/Settings/Kaliningrad
-          rsync -a /tmp/umkk/UMKK/Plugins/ ULLL/Plugins/
+          mkdir -p ULLL/Settings/
+          rsync -a --exclude-'.git' --exclude='.github' /tmp/umkk/UMKK/Settings/Kaliningrad ./ULLL/Settings/ 
+          mkdir -p ULLL/Plugins/TopSky Kaliningrad/
+          rsync -a --exclude-'.git' --exclude='.github' /tmp/umkk/UMKK/Plugins/TopSky Kaliningrad/ ./ULLL/Plugins/TopSky Kaliningrad/Kaliningrad          
           rm -rf /tmp/umkk
           git add -A
 
