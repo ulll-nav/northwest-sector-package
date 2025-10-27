@@ -1,15 +1,6 @@
 name: Overwrite from ULLL/UMKK on dispatch
 
 on:
-  workflow_dispatch:
-    inputs:
-      source:
-        required: true
-        default: "ULLL"
-        type: choice
-        options:
-          - UMKK
-          - ULLL
   repository_dispatch:
     types: [sync-update]
 
@@ -17,7 +8,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
-      SOURCE: ${{ github.event.inputs.source }}
       PAT: ${{ secrets.PAT_TOKEN }}
       ORG: ulll-nav
 
@@ -104,7 +94,7 @@ jobs:
           mkdir -p "ULLL/Settings/"
           rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/Settings/Kaliningrad" "./ULLL/Settings/" 
           mkdir -p "ULLL/Plugins/TopSky Kaliningrad/"
-          rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/Plugins/TopSky Kaliningrad/" "./ULLL/Plugins/TopSky Kaliningrad/Kaliningrad"          
+          rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/Plugins/TopSky Kaliningrad/" "./ULLL/Plugins/TopSky Kaliningrad/"          
           rm -rf /tmp/umkk
           git add -A
 
