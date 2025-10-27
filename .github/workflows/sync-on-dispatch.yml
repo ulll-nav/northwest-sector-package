@@ -96,7 +96,7 @@ jobs:
           mkdir -p "ULLL/Plugins/TopSky Kaliningrad/"
           rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/Plugins/TopSky Kaliningrad/" "./ULLL/Plugins/TopSky Kaliningrad/"          
           mkdir -p "ULLL/Plugins/DiscordEuroscope Kaliningrad/"
-          rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/DiscordEuroscope Kaliningrad/" "./ULLL/Plugins/DiscordEuroscope Kaliningrad/"     
+          rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/Plugins/DiscordEuroscope Kaliningrad/" "./ULLL/Plugins/DiscordEuroscope Kaliningrad/"     
           rm -rf /tmp/umkk
           git add -A
 
