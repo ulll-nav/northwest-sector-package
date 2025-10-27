@@ -17,6 +17,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
+      SOURCE: ${{ github.event.inputs.source }}
       PAT: ${{ secrets.PAT_TOKEN }}
       ORG: ulll-nav
 
