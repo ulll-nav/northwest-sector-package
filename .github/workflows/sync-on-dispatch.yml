@@ -2,6 +2,14 @@ name: Overwrite from ULLL/UMKK on dispatch
 
 on:
   workflow_dispatch:
+    inputs:
+      source:
+        required: true
+        default: "ULLL"
+        type: choice
+        options:
+          - UMKK
+          - ULLL
   repository_dispatch:
     types: [sync-update]
 
