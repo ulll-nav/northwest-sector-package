@@ -91,7 +91,7 @@ jobs:
         run: |
           mkdir -p ULLL
           rsync -a --delete --exclude='.git' --exclude='.github' /tmp/umkk/UMKK/ ULLL/
-          rsync -a --exclude='UMKK' --exclude='.git' --exclude='.github' /tmp/umkk/ ./
+          rsync -a --exclude='.git' --exclude='.github' /tmp/umkk/*.prf ./
           rm -rf /tmp/umkk
           git add -A
 
