@@ -91,6 +91,8 @@ jobs:
         run: |
           mkdir -p ULLL
           rsync -a --exclude='.git' --exclude='.github' /tmp/umkk/*.prf ./
+          mkdir -p "ULLL/ASR/Kaliningrad"
+          rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/ASR/Kaliningrad" "./ULLL/ASR/Kaliningrad" 
           mkdir -p "ULLL/Settings/"
           rsync -a --exclude='.git' --exclude='.github' "/tmp/umkk/UMKK/Settings/Kaliningrad" "./ULLL/Settings/" 
           mkdir -p "ULLL/Plugins/TopSky Kaliningrad/"
@@ -103,7 +105,7 @@ jobs:
       - name: Replace \UMKK → \ULLL in .prf
         if: env.SOURCE == 'UMKK'
         run: |
-          find . -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK|\\ULLL|g'
+          find . -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK\\|\\ULLL\\|g'
           git add -A
 
       - name: Commit UMKK sync
