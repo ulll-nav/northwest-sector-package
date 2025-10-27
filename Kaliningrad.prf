@@ -1,24 +1,24 @@
-Settings	SettingsfileSYMBOLOGY	\ULLL\Settings\Kaliningrad\ULLL_Symbology.txt
+Settings	SettingsfileSYMBOLOGY	\ULLL\Settings\Kaliningrad\UMKK_Symbology.txt
 Settings	SettingsfileVOICE	\ULLL\Settings\ALL\Frequencies.txt
-Settings	SettingsfilePROFILE	\ULLL\Settings\Kaliningrad\ULLL_Profile.txt
+Settings	SettingsfilePROFILE	\ULLL\Settings\Kaliningrad\UMKK_Profile.txt
 Settings	SettingsfileTAGS	\ULLL\Settings\ALL\Tags.txt
-Settings	SettingsfileSIL	\ULLL\Settings\Kaliningrad\ULLL_Lists.txt
-Settings	SettingsfileSEL	\ULLL\Settings\Kaliningrad\ULLL_Lists.txt
-Settings	SettingsfileDEP	\ULLL\Settings\Kaliningrad\ULLL_DepartureList.txt
-Settings	SettingsfileARR	\ULLL\Settings\Kaliningrad\ULLL_Lists.txt
-Settings	SettingsfileFP	\ULLL\Settings\Kaliningrad\ULLL_Lists.txt
-Settings	SettingsfilePLUGINS	\ULLL\Settings\Kaliningrad\ULLL_Plugins.txt
-Settings	Settingsfile	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
-Settings	SettingsfileSCREEN	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
-Settings	SettingsfileCONFLICT	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
+Settings	SettingsfileSIL	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileSEL	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileDEP	\ULLL\Settings\Kaliningrad\UMKK_DepartureList.txt
+Settings	SettingsfileARR	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileFP	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfilePLUGINS	\ULLL\Settings\Kaliningrad\UMKK_Plugins.txt
+Settings	Settingsfile	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileSCREEN	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileCONFLICT	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
 Settings	SettingsfileVCCS	\ULLL\Settings\ALL\VCCS.txt
-Settings	SettingsfileFP	\ULLL\Settings\Kaliningrad\ULLL_Lists.txt
-Settings	SettingsfileORIGPLANE	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
-Settings	SettingsfileSTUP	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
-Settings	SettingsfileTAXIOUT	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
-Settings	SettingsfileTAKEOFF	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
-Settings	SettingsfileADCS	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
-Settings	SettingsfileTAXIIN	\ULLL\Settings\Kaliningrad\ULLL_Settings.txt
+Settings	SettingsfileFP	\ULLL\Settings\Kaliningrad\UMKK_Lists.txt
+Settings	SettingsfileORIGPLANE	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileSTUP	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileTAXIOUT	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileTAKEOFF	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileADCS	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
+Settings	SettingsfileTAXIIN	\ULLL\Settings\Kaliningrad\UMKK_Settings.txt
 Settings	sector	\.sct
 Settings	AselKey	5111808
 Settings	FreqKey	3604480
@@ -49,9 +49,9 @@ Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup_silent.wav
-RecentFiles	Recent1	\ULLL\ASR\Kaliningrad\ULLL_CTR.asr
-RecentFiles	Recent2	\ULLL\ASR\Kaliningrad\ULLL_APP.asr
-RecentFiles	Recent3	\ULLL\ASR\Kaliningrad\ULLL_TWR.asr
+RecentFiles	Recent1	\ULLL\ASR\Kaliningrad\UMKK_CTR.asr
+RecentFiles	Recent2	\ULLL\ASR\Kaliningrad\UMKK_APP.asr
+RecentFiles	Recent3	\ULLL\ASR\Kaliningrad\UMKK_TWR.asr
 RecentFiles	Recent4	\ULLL\ASR\Kaliningrad\Ground layout.asr
 Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Kaliningrad\TopSky.dll
@@ -80,3 +80,4 @@ TeamSpeakVccs	Ts3DialogBottom	600
 LastSession	atis_freq0	122475
 LastSession	atis_callsign0	UMKK_ATIS
 LastSession	atis_url0	https://vatis.ru/P-D287FC46?arrp=$atisairportA&arr=$arrrwy($atisairportA)&dep=$deprwy($atisairportA)&info=$atiscodeA
+
