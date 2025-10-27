@@ -59,6 +59,8 @@ Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope Kaliningrad\DiscordEuroscope.dll
 Plugins	Plugin2	\ULLL\Plugins\GRplugin\GRplugin.dll
 Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
 Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
+Plugins	Plugin6	\ULLL\Plugins\AMAN\Aman.dll
+Plugins	Plugin7	\ULLL\Plugins\VFPC\VFPC.dll
 Plugins	Plugin0Display1	Ground Radar display
 Plugins	Plugin3Display0	Ground Radar display
 Plugins	Plugin3Display1	Standard ES radar screen
@@ -67,6 +69,10 @@ Plugins	Plugin5Display1	SMR radar display
 Plugins	Plugin5Display2	Standard ES radar screen
 Plugins	Plugin2Display0	Ground Radar display
 Plugins	Plugin2Display1	Standard ES radar screen
+Plugins	Plugin6Display0	Ground Radar display
+Plugins	Plugin6Display1	Standard ES radar screen
+Plugins	Plugin7Display0	Ground Radar display
+Plugins	Plugin7Display1	Standard ES radar screen
 TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
