@@ -159,11 +159,9 @@ Window_APP_Extensions=11
 Window_APP_Extensions_TickWidth=0.25
 Window_APP_Scale=20.0
 
-Window_METAR=1,1450,45,600,75
-
-Window_QNH=1,2050,45
-Window_QNH_Units=1
-Window_QNH_SwitchUnits=1
+Window_QNH=1,1850,45
+Window_QNH_DisplayUnits=3
+Window_QNH_SwitchUnits=0
 
 [ULLI]
 Airport_Elevation=79
