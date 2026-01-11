@@ -3,6 +3,22 @@ DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
+ARTCC boundary:Arkhanglesk sector:
+ARTCC boundary:KALININGRAD ACC:
+ARTCC boundary:Kotlas sector:
+ARTCC boundary:Murmansk sector:
+ARTCC boundary:R sector:
+ARTCC boundary:Syktyvkar sector:
+ARTCC boundary:Vologda sector:
+ARTCC high boundary:Ekaterinenburg FIR:
+ARTCC high boundary:Helsinki Control:
+ARTCC high boundary:Helsinki CTR:
+ARTCC high boundary:Minsk CTR:
+ARTCC high boundary:Moscow G5:
+ARTCC high boundary:Moscow S:
+ARTCC high boundary:Moscow Z:
+ARTCC high boundary:Polaris CTR:
+ARTCC high boundary:Tyumen FIR:
 ARTCC low boundary:Kaliningrad Approach:
 ARTCC low boundary:Kaliningrad CTR 2:
 ARTCC low boundary:Kaliningrad Tower:
