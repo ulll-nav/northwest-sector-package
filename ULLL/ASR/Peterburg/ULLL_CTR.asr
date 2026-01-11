@@ -24,11 +24,15 @@ ARTCC boundary:Apatity CTR:
 ARTCC boundary:Arkhangelsk CTA:
 ARTCC boundary:Arkhangelsk CTR:
 ARTCC boundary:Arkhanglesk sector:
+ARTCC boundary:KALININGRAD ACC:
 ARTCC boundary:Kharyaginsky CTR:
 ARTCC boundary:Kotlas CTR:
 ARTCC boundary:Kotlas sector:
+ARTCC boundary:Mezen CTA:
+ARTCC boundary:Mezen CTR:
 ARTCC boundary:Murmansk CTA:
 ARTCC boundary:Murmansk sector:
+ARTCC boundary:Oceanic sector:
 ARTCC boundary:Pechora CTR:
 ARTCC boundary:Peterbrug Approach:
 ARTCC boundary:Petrazovodsk CTA:
@@ -47,6 +51,12 @@ ARTCC boundary:Ukhta CTR:
 ARTCC boundary:Usinsk CTR:
 ARTCC boundary:Ust-Tsilma CTR:
 ARTCC boundary:Vologda sector:
+ARTCC high boundary:Ekaterinenburg FIR:
+ARTCC high boundary:Minsk CTR:
+ARTCC high boundary:Moscow G5:
+ARTCC high boundary:Moscow S:
+ARTCC high boundary:Moscow Z:
+ARTCC high boundary:Tyumen FIR:
 ARTCC low boundary:Cherepovets CTR:
 ARTCC low boundary:Levashovo CTR:
 ARTCC low boundary:Naryan-Mar CTA:

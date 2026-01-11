@@ -11,8 +11,11 @@ ARTCC boundary:Arkhanglesk sector:
 ARTCC boundary:Kharyaginsky CTR:
 ARTCC boundary:Kotlas CTR:
 ARTCC boundary:Kotlas sector:
+ARTCC boundary:Mezen CTA:
+ARTCC boundary:Mezen CTR:
 ARTCC boundary:Murmansk CTA:
 ARTCC boundary:Murmansk sector:
+ARTCC boundary:Oceanic sector:
 ARTCC boundary:Pechora CTR:
 ARTCC boundary:Peterbrug Approach:
 ARTCC boundary:Petrazovodsk CTA:
@@ -40,6 +43,7 @@ ARTCC low boundary:Vaskovo CTR:
 ARTCC low boundary:Velikiy Ustyug CTR:
 ARTCC low boundary:Vologda CTA:
 ARTCC low boundary:Vorkuta CTR:
+ARTCC low boundary:Vorkuta TMA:
 Geo:ULLL Coastline:
 SHOWC:1
 SHOWSB:1
