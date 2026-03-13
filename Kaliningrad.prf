@@ -61,6 +61,7 @@ Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
 Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
 Plugins	Plugin6	\ULLL\Plugins\AMAN\Aman.dll
 Plugins	Plugin7	\ULLL\Plugins\VFPC\VFPC.dll
+Plugins Plugin8 \ULLL\Plugins\MetarDiff\MetarDiff.dll
 Plugins	Plugin0Display1	Ground Radar display
 Plugins	Plugin3Display0	Ground Radar display
 Plugins	Plugin3Display1	Standard ES radar screen
@@ -73,6 +74,8 @@ Plugins	Plugin6Display0	Ground Radar display
 Plugins	Plugin6Display1	Standard ES radar screen
 Plugins	Plugin7Display0	Ground Radar display
 Plugins	Plugin7Display1	Standard ES radar screen
+Plugins Plugin8Display0 Ground Radar display
+Plugins Plugin8Display1 Standard ES radar screen
 TeamSpeakVccs	Ts3DialogLeft	0
 TeamSpeakVccs	Ts3DialogTop	0
 TeamSpeakVccs	Ts3DialogRight	750
