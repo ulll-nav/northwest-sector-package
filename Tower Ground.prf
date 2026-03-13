@@ -39,6 +39,7 @@ Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
 Plugins	Plugin5	\ULLL\Plugins\ULLL Plugin\ULLLPlugin.dll
 Plugins	Plugin6	\ULLL\Plugins\AMAN\Aman.dll
 Plugins	Plugin7	\ULLL\Plugins\VFPC\VFPC.dll
+Plugins Plugin8 \ULLL\Plugins\MetarDiff\MetarDiff.dll
 Plugins	Plugin5Display0	Ground Radar display
 Plugins	Plugin5Display1	Standard ES radar screen
 Plugins	Plugin3Display0	Ground Radar display
@@ -50,6 +51,8 @@ Plugins	Plugin6Display0	Ground Radar display
 Plugins	Plugin6Display1	Standard ES radar screen
 Plugins	Plugin7Display0	Ground Radar display
 Plugins	Plugin7Display1	Standard ES radar screen
+Plugins Plugin8Display0 Ground Radar display
+Plugins Plugin8Display1 Standard ES radar screen
 Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
 Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
 Sounds	Sound2	\ULLL\Sounds\conflict_alert.wav
