@@ -10,17 +10,15 @@ TopSky plugin:ACList/Sector List/m_Column_1:ATYP:5:1:10028:2:24:1:TopSky plugin:
 TopSky plugin:ACList/Sector List/m_Column_2:W:2:1:71:0:0:1:TopSky plugin::
 TopSky plugin:ACList/Sector List/m_Column_3:aSSR:5:1:10041:62:62:1:TopSky plugin:TopSky plugin:TopSky plugin
 TopSky plugin:ACList/Sector List/m_Column_4:FR:4:1:503:0:0:1:ULLL Plugin::
-TopSky plugin:ACList/Sector List/m_Column_5:ETN:5:1:10016:0:0:1:TopSky plugin::
-TopSky plugin:ACList/Sector List/m_Column_6:ADEP:5:1:10007:7:99:1:TopSky plugin::TopSky plugin
-TopSky plugin:ACList/Sector List/m_Column_7:ADES:5:1:10008:7:99:1:TopSky plugin::TopSky plugin
-TopSky plugin:ACList/Sector List/m_Column_8:SID:8:1:10011:17:17:1:TopSky plugin::
-TopSky plugin:ACList/Sector List/m_Column_9:DRWY:4:0:10050:19:19:1:TopSky plugin::
+TopSky plugin:ACList/Sector List/m_Column_5:ADEP:5:1:10007:7:99:1:TopSky plugin::TopSky plugin
+TopSky plugin:ACList/Sector List/m_Column_6:ADES:5:1:10008:7:99:1:TopSky plugin::TopSky plugin
+TopSky plugin:ACList/Sector List/m_Column_7:SID:8:1:10011:17:17:1:TopSky plugin::
+TopSky plugin:ACList/Sector List/m_Column_8:ARWY:4:1:10010:19:19:1:TopSky plugin::
+TopSky plugin:ACList/Sector List/m_Column_9:STAND:6:1:2:1:0:1:Ground Radar plugin:Ground Radar plugin:
 TopSky plugin:ACList/Sector List/m_Column_10:STS:5:1:3:13:13:1:Ground Radar plugin:Ground Radar plugin:Ground Radar plugin
-TopSky plugin:ACList/Sector List/m_Column_11:STAR:8:1:10012:18:18:1:TopSky plugin::
-TopSky plugin:ACList/Sector List/m_Column_12:ARWY:4:1:10010:19:19:1:TopSky plugin::
-TopSky plugin:ACList/Sector List/m_Column_13:CTL:5:1:641:650:650:1:VCH:VCH:VCH
-TopSky plugin:ACList/Sector List/m_Column_14:T:2:1:11:32:32:1:::
-TopSky plugin:ACList/Sector List/m_Column_15:RMK:10:1:38:2:2:1:TopSky plugin:TopSky plugin:TopSky plugin
+TopSky plugin:ACList/Sector List/m_Column_11:CTL:5:1:641:650:650:1:VCH:VCH:VCH
+TopSky plugin:ACList/Sector List/m_Column_12:T:2:1:11:32:32:1:::
+TopSky plugin:ACList/Sector List/m_Column_13:RMK:10:1:38:2:2:1:TopSky plugin:TopSky plugin:TopSky plugin
 TopSky plugin:ACList/Holding List /m_Visible:0
 TopSky plugin:ACList/Holding List /m_X:20
 TopSky plugin:ACList/Holding List /m_Y:20

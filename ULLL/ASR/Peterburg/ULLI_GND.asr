@@ -1,5 +1,5 @@
-DisplayTypeName:Standard ES radar screen
-DisplayTypeNeedRadarContent:1
+DisplayTypeName:Ground Radar display
+DisplayTypeNeedRadarContent:0
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
@@ -7,15 +7,18 @@ Regions:ULLL Approch background:polygon
 SHOWC:1
 SHOWSB:1
 BELOW:0
-ABOVE:0
-LEADER:5
-SHOWLEADER:1
+ABOVE:3000
+LEADER:-1
+SHOWLEADER:0
 TURNLEADER:0
-HISTORY_DOTS:5
+HISTORY_DOTS:0
 SIMULATION_MODE:4
 DISABLEPANNING:0
 DISABLEZOOMING:0
-DisplayRotation:343.50000
+DisplayRotation:343.60000
 TAGFAMILY:Matias (built in)
-WINDOWAREA:59.788187:30.206612:59.819899:30.328265
+WINDOWAREA:59.787942:30.210865:59.818026:30.322578
+PLUGIN:Ground Radar plugin:AirportElevation:79
+PLUGIN:Ground Radar plugin:AirportRadius:1.5
+PLUGIN:Ground Radar plugin:GroundMode:ULLI
 PLUGIN:TopSky plugin:ShowMapData:ULLI_GND

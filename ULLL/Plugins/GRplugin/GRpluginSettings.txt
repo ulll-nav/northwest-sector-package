@@ -2,7 +2,7 @@ Equip_ProMode=1
 
 System_GUI_Version=1
 
-System_AutoAssignDist=100
+System_AutoAssignDist=25
 
 System_SchengenArea=BI,EB,ED,EE,EF,EH,EK,EL,EN,EP,ES,ET,EV,EY,GC,LE,LF,LG,LH,LI,LJ,LK,LM,LO,LP,LS,LZ,LT,UA,UB,UD,LB,UM,UK,LR,LY,EG,UT
 
@@ -25,6 +25,7 @@ System_RIM=1
 System_RVM=1
 
 Track_HistoryDots_GND=5
+Track_HistoryDots_TWR=0
 Track_PredictionLine_APP=0
 Track_HistoryDots_APP=5
 
@@ -62,7 +63,7 @@ Color_Selected=7,163,7
 RawVideo=0
 
 Track_Heading_Line=1
-Track_PredictionLine_TWR=1
+Track_PredictionLine_TWR=0
 
 Window_APP_Extensions=16
 Window_APP_Scale=15
@@ -95,13 +96,13 @@ GroundLabel=1
 
 Label=GND:ARR:0:ALRT,0,0:COMM,0,1 
 Label=GND:ARR:1:CALLSIGN,0,0:STAND,0,1 
-Label=GND:ARR:2:ATYP,0,0:WTC,0,1,0
+Label=GND:ARR:2:ATYP,0,0:WTC,0,1,0:GS,0,1,20
 Label=GND:ARR:3:RMK,0,1 
 
-Label=GND:DEP:0:ALRT,0,0:ASSR_E,0,1:COMM,0,1 
-Label=GND:DEP:1:CALLSIGN,0,0:DRWY,0,1,1 
-Label=GND:DEP:2:ATYP,0,0:WTC,0,1,0
-Label=GND:DEP:3:DEP,0,0:RMK,0,1 
+Label=GND:DEP:0:ALRT,0,0:ASSR_E,0,1:COMM,0,1
+Label=GND:DEP:1:CALLSIGN,0,0:STS,0,1
+Label=GND:DEP:2:ATYP,0,0:WTC,0,1,0:GS,0,1,20
+Label=GND:DEP:3:DRWY,0,1,1:RMK,0,1 
 
 Label=GND:OTH:0:ALRT,0,0:COMM,0,0
 Label=GND:OTH:1:CALLSIGN,0,0
@@ -147,10 +148,11 @@ Label_AFL+VS=1,0,1
 Label_ARWY=0,0,0
 Label_ATYP=0,1,0
 Label_DEP=0,0,0
-Label_DRWY=0,1,0
+Label_DRWY=0,0,0
 Label_RMK=0,1,1
 Label_STAND=0,1,0
 Label_GS=1,0,1
+Label_STS=0,1,0
 
 Window_APP_AltFilter=3500
 Window_APP_DefPos=600,1170

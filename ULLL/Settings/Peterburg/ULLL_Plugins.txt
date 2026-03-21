@@ -95,5 +95,5 @@ TopSky plugin:ACList/HOLDING LIST/m_Column_3:-:2:0:10027:0:0:1:TopSky plugin::
 TopSky plugin:ACList/HOLDING LIST/m_Column_4: CFL:5:0:10002:12:99:1:TopSky plugin:TopSky plugin:TopSky plugin
 TopSky plugin:ACList/HOLDING LIST/m_Column_5:HPT:6:0:10024:65:0:1:TopSky plugin:TopSky plugin:
 TopSky plugin:ACList/HOLDING LIST/m_Column_6:ETO:4:0:10036:0:0:1:TopSky plugin::
-TopSky plugin:ACList/Sector List/m_Column_21:CTL:7:1:641:0:0:1:VCH::
+TopSky plugin:ACList/Sector List/m_Column_21:CTL:7:1:641:650:650:1:VCH:VCH:VCH
 END
