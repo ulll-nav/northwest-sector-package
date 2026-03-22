@@ -3,7 +3,6 @@ DisplayTypeNeedRadarContent:0
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
-Regions:ULLL Approch background:polygon
 SHOWC:1
 SHOWSB:1
 BELOW:0
@@ -12,7 +11,7 @@ LEADER:-1
 SHOWLEADER:0
 TURNLEADER:0
 HISTORY_DOTS:0
-SIMULATION_MODE:4
+SIMULATION_MODE:1
 DISABLEPANNING:0
 DISABLEZOOMING:0
 DisplayRotation:343.60000
@@ -21,4 +20,4 @@ WINDOWAREA:59.787942:30.210865:59.818026:30.322578
 PLUGIN:Ground Radar plugin:AirportElevation:79
 PLUGIN:Ground Radar plugin:AirportRadius:1.5
 PLUGIN:Ground Radar plugin:GroundMode:ULLI
-PLUGIN:TopSky plugin:ShowMapData:ULLI_GND
+PLUGIN:TopSky plugin:NoDraw:1
