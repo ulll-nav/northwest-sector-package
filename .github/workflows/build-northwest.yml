@@ -16,9 +16,9 @@ jobs:
 
     steps:
     - name: Checkout Northwest
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
-        ref: test-pipe
+        ref: main
         fetch-depth: 0
         token: ${{ env.PAT }}
 
@@ -117,7 +117,7 @@ jobs:
             dst = entry['to']
             os.makedirs(dst, exist_ok=True)
             subprocess.run([
-                'rsync', '-a', '--delete', src, dst
+                'rsync', '-a', src, dst
             ], check=True)
             print(f"Synced {src} → {dst}")
         PY
@@ -131,7 +131,6 @@ jobs:
 
     - name: Commit & push
       run: |
-        git checkout test-pipe
         git add -A
         if git diff --cached --quiet; then
           echo "No changes to commit"
@@ -139,5 +138,5 @@ jobs:
           git commit \
             --author="${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
             -m "build: sync from ULLL/UMKK/shared by ${{ github.actor }}"
-          git push origin test-pipe --force-with-lease
+          git push origin main --force-with-lease
         fi
