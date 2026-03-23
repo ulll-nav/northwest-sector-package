@@ -48,13 +48,6 @@ jobs:
         mkdir -p /tmp/shared
         git --work-tree=/tmp/shared checkout sh/main -- . ':(exclude).github'
 
-    - name: Clean working directory
-      run: |
-        git rm -r --cached . 
-        git checkout HEAD -- .github
-        find . -not -path './.git/*' -not -path './.github/*' -not -name '.git' -delete
-        git add -A
-
     - name: Read common manifest
       id: manifest
       run: |
