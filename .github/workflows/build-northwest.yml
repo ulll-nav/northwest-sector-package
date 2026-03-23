@@ -16,36 +16,9 @@ jobs:
 
     steps:
     - name: Checkout Northwest
-      uses: actions/checkout@v5
+      uses: actions/checkout@v4
       with:
-        ref: main
-        fetch-depth: 0
-        token: ${{ env.PAT }}
-
-    - name: Checkout ULLL
-      uses: actions/checkout@v5
-      with:
-        repository: ${{ env.ORG }}/ulll-sector-package
-        path: ulll
-        ref: main
-        fetch-depth: 0
-        token: ${{ env.PAT }}
-
-    - name: Checkout UMKK
-      uses: actions/checkout@v5
-      with:
-        repository: ${{ env.ORG }}/umkk-sector-package
-        path: umkk
-        ref: main
-        fetch-depth: 0
-        token: ${{ env.PAT }}
-
-    - name: Checkout Shared
-      uses: actions/checkout@v5
-      with:
-        repository: ${{ env.ORG }}/shared-sector-package
-        path: shared
-        ref: main
+        ref: test-pipe
         fetch-depth: 0
         token: ${{ env.PAT }}
 
@@ -54,12 +27,46 @@ jobs:
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor }}@users.noreply.github.com"
 
-    - name: Make read_common_manifest.sh executable
-      run: chmod +x ulll/.github/scripts/read_common_manifest.sh
+    - name: Fetch ULLL into temp
+      run: |
+        git remote add ul https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/ulll-sector-package.git || true
+        git fetch ul main
+        mkdir -p /tmp/ulll
+        git --work-tree=/tmp/ulll checkout ul/main -- . ':(exclude).github'
+
+    - name: Fetch UMKK into temp
+      run: |
+        git remote add um https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/umkk-sector-package.git || true
+        git fetch um main
+        mkdir -p /tmp/umkk
+        git --work-tree=/tmp/umkk checkout um/main -- . ':(exclude).github'
+
+    - name: Fetch shared into temp
+      run: |
+        git remote add sh https://x-access-token:${{ env.PAT }}@github.com/${{ env.ORG }}/shared-sector-package.git || true
+        git fetch sh main
+        mkdir -p /tmp/shared
+        git --work-tree=/tmp/shared checkout sh/main -- . ':(exclude).github'
+
+    - name: Clean working directory
+      run: |
+        git rm -r --cached . 
+        git checkout HEAD -- .github
+        find . -not -path './.git/*' -not -path './.github/*' -not -name '.git' -delete
+        git add -A
 
     - name: Read common manifest
       id: manifest
-      run: ulll/.github/scripts/read_common_manifest.sh
+      run: |
+        common=$(python3 << 'PY'
+        import yaml
+        with open('/tmp/shared/common.yml') as f:
+            data = yaml.safe_load(f)
+            lst = data.get('common', [])
+        print(','.join(lst))
+        PY
+        )
+        echo "common_folders=${common}" >> "$GITHUB_OUTPUT"
 
     - name: Sync ULLL specific content
       run: |
@@ -69,21 +76,34 @@ jobs:
           EXCLUDES+=(--exclude="$F/")
         done
 
+        python3 -c "
+        import yaml
+        with open('.github/northwest-mapping.yml') as f:
+            m = yaml.safe_load(f)
+        for e in m.get('ulll', {}).get('exclude', []):
+            print(e)
+        " | while read E; do
+          EXCLUDES+=(--exclude="$E")
+        done
+
         mkdir -p ULLL
-        rsync -a --exclude='.git' --exclude='.github' "${EXCLUDES[@]}" ulll/ULLL/ ULLL/
+        rsync -a --exclude='.git' --exclude='.github' "${EXCLUDES[@]}" /tmp/ulll/ULLL/ ULLL/
+
+        # PRF ULLL
+        rsync -a --include='*.prf' --exclude='*' /tmp/ulll/ ./
 
     - name: Sync common content from shared
       run: |
         IFS=',' read -ra COMMON <<< "${{ steps.manifest.outputs.common_folders }}"
         for F in "${COMMON[@]}"; do
-          SRC="shared/$F"
+          SRC="/tmp/shared/$F"
           [ -d "$SRC" ] || continue
           DST="ULLL/$F"
           mkdir -p "$DST"
           rsync -a --delete "$SRC/" "$DST/"
         done
 
-    - name: Sync PRF and UMKK specific content
+    - name: Sync UMKK specific content
       run: |
         python3 << 'PY'
         import yaml, subprocess, os
@@ -91,31 +111,20 @@ jobs:
         with open('.github/northwest-mapping.yml') as f:
             mapping = yaml.safe_load(f)
 
-        # PRF ULLL
-        if mapping.get('ulll', {}).get('prf'):
-            subprocess.run([
-                'rsync', '-a', '--exclude=.git',
-                '--include=*.prf', '--exclude=*',
-                'ulll/', './'
-            ], check=True)
-
         # PRF UMKK
         if mapping.get('umkk', {}).get('prf'):
             subprocess.run([
-                'rsync', '-a', '--exclude=.git',
+                'rsync', '-a',
                 '--include=*.prf', '--exclude=*',
-                'umkk/', './'
+                '/tmp/umkk/', './'
             ], check=True)
 
-        # FIR-SPEC UMKK
         for entry in mapping.get('umkk', {}).get('folders', []):
-            src = os.path.join('umkk', entry['from'])
+            src = os.path.join('/tmp/umkk', entry['from'])
             dst = entry['to']
             os.makedirs(dst, exist_ok=True)
             subprocess.run([
-                'rsync', '-a', '--delete',
-                '--exclude=.git', '--exclude=.github',
-                src, dst
+                'rsync', '-a', '--delete', src, dst
             ], check=True)
             print(f"Synced {src} → {dst}")
         PY
@@ -123,6 +132,9 @@ jobs:
     - name: Replace \UMKK → \ULLL in .prf
       run: |
         find . -maxdepth 1 -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK\\|\\ULLL\\|g'
+
+    - name: Cleanup temp
+      run: rm -rf /tmp/ulll /tmp/umkk /tmp/shared
 
     - name: Commit & push
       run: |
