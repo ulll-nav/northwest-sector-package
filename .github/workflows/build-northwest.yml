@@ -1,0 +1,137 @@
+name: Build northwest sector
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: northwest-sync
+      cancel-in-progress: false
+    env:
+      PAT: ${{ secrets.PAT_TOKEN }}
+      ORG: ulll-nav
+
+    steps:
+    - name: Checkout Northwest
+      uses: actions/checkout@v5
+      with:
+        ref: main
+        fetch-depth: 0
+        token: ${{ env.PAT }}
+
+    - name: Checkout ULLL
+      uses: actions/checkout@v5
+      with:
+        repository: ${{ env.ORG }}/ulll-sector-package
+        path: ulll
+        ref: main
+        fetch-depth: 0
+        token: ${{ env.PAT }}
+
+    - name: Checkout UMKK
+      uses: actions/checkout@v5
+      with:
+        repository: ${{ env.ORG }}/umkk-sector-package
+        path: umkk
+        ref: main
+        fetch-depth: 0
+        token: ${{ env.PAT }}
+
+    - name: Checkout Shared
+      uses: actions/checkout@v5
+      with:
+        repository: ${{ env.ORG }}/shared-sector-package
+        path: shared
+        ref: main
+        fetch-depth: 0
+        token: ${{ env.PAT }}
+
+    - name: Configure Git identity
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+    - name: Make read_common_manifest.sh executable
+      run: chmod +x ulll/.github/scripts/read_common_manifest.sh
+
+    - name: Read common manifest
+      id: manifest
+      run: ulll/.github/scripts/read_common_manifest.sh
+
+    - name: Sync ULLL specific content
+      run: |
+        IFS=',' read -ra COMMON <<< "${{ steps.manifest.outputs.common_folders }}"
+        EXCLUDES=()
+        for F in "${COMMON[@]}"; do
+          EXCLUDES+=(--exclude="$F/")
+        done
+
+        mkdir -p ULLL
+        rsync -a --exclude='.git' --exclude='.github' "${EXCLUDES[@]}" ulll/ULLL/ ULLL/
+
+    - name: Sync common content from shared
+      run: |
+        IFS=',' read -ra COMMON <<< "${{ steps.manifest.outputs.common_folders }}"
+        for F in "${COMMON[@]}"; do
+          SRC="shared/$F"
+          [ -d "$SRC" ] || continue
+          DST="ULLL/$F"
+          mkdir -p "$DST"
+          rsync -a --delete "$SRC/" "$DST/"
+        done
+
+    - name: Sync PRF and UMKK specific content
+      run: |
+        python3 << 'PY'
+        import yaml, subprocess, os
+
+        with open('.github/northwest-mapping.yml') as f:
+            mapping = yaml.safe_load(f)
+
+        # PRF ULLL
+        if mapping.get('ulll', {}).get('prf'):
+            subprocess.run([
+                'rsync', '-a', '--exclude=.git',
+                '--include=*.prf', '--exclude=*',
+                'ulll/', './'
+            ], check=True)
+
+        # PRF UMKK
+        if mapping.get('umkk', {}).get('prf'):
+            subprocess.run([
+                'rsync', '-a', '--exclude=.git',
+                '--include=*.prf', '--exclude=*',
+                'umkk/', './'
+            ], check=True)
+
+        # FIR-SPEC UMKK
+        for entry in mapping.get('umkk', {}).get('folders', []):
+            src = os.path.join('umkk', entry['from'])
+            dst = entry['to']
+            os.makedirs(dst, exist_ok=True)
+            subprocess.run([
+                'rsync', '-a', '--delete',
+                '--exclude=.git', '--exclude=.github',
+                src, dst
+            ], check=True)
+            print(f"Synced {src} → {dst}")
+        PY
+
+    - name: Replace \UMKK → \ULLL in .prf
+      run: |
+        find . -maxdepth 1 -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK\\|\\ULLL\\|g'
+
+    - name: Commit & push
+      run: |
+        git add -A
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+        else
+          git commit \
+            --author="${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
+            -m "build: sync from ULLL/UMKK/shared by ${{ github.actor }}"
+          git push origin test-pipe --force-with-lease
+        fi

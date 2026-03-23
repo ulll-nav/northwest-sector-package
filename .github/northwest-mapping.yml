@@ -1,0 +1,19 @@
+# .github/northwest-mapping.yml
+#
+# Building manifest for northwest sector
+# Common files syncing from SHARED repo
+
+ulll:
+  prf: true
+
+umkk:
+  prf: true
+  folders:
+  - from: UMKK/ASR/
+    to: ULLL/ASR/
+  - from: UMKK/Settings/Kaliningrad/
+    to: ULLL/Settings/Kaliningrad/
+  - from: UMKK/Plugins/TopSky Kaliningrad/
+    to: ULLL/Plugins/TopSky Kaliningrad/
+  - from: UMKK/Plugins/DiscordEuroscope Kaliningrad/
+    to: ULLL/Plugins/DiscordEuroscope Kaliningrad/
