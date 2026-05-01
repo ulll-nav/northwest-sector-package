@@ -295,7 +295,7 @@ WXR_Echo_dBZ_Lo=25
 
 AIW=1
 
-Window_ASM=1,0,900
+Window_ASM=1,0,700
 
 [_APP]
 MTCD=0

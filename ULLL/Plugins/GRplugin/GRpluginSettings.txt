@@ -32,7 +32,7 @@ Track_HistoryDots_APP=5
 Color_Arrival=240,240,0
 Color_Departure=0,232,232
 Color_RawVideo=255,255,0
-Color_Unknown=160,160,160
+Color_Unknown=210,210,210
 
 Color_New_Stand=255,110,0
 
@@ -50,15 +50,11 @@ Color_WTitleText=255,255,255
 Color_WForeground=0,0,0
 Color_WBackground2=200,200,200
 Color_WBackground3=200,200,200
-Color_Arrival=240,240,0
-Color_Departure=20,255,102
-Color_Departure=20,255,0
 Color_Caution=192,192,192
-Color_Departure=30,255,245
 Color_RawVideoHistory=111,111,60
 
 Color_SelectedLabelFill_App=163,161,164
-Color_Selected=7,163,7
+Color_Selected=10,255,10
 
 RawVideo=0
 
@@ -86,13 +82,11 @@ GroundLabel_Filter_OnFreq=0
 
 GroundLabel_FontSize=12
 GroundLabel_Transparency_Bd=100
-GroundLabel_Transparency_Bg=100
+GroundLabel_Transparency_Bg=200
 
 AppLabel_FontSize=12
 AppLabel_UseSelColor=1
 AppLabel_Transparency_Bg=255
-
-GroundLabel=1
 
 Label=GND:ARR:0:ALRT,0,0:COMM,0,1 
 Label=GND:ARR:1:CALLSIGN,0,0:STAND,0,1 

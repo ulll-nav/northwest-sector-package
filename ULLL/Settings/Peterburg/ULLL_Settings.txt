@@ -133,7 +133,7 @@ m_AutoAssumeOnGroundStateChangeButton:0
 m_ShowTrackMilesInRouteButton:1
 m_FilterOutSquawks:
 m_EquipmentsIcaoFormat:1
-m_DoNotShowMessageHandlersInProxy:0
+m_DoNotShowMessageHandlersInProxy:1
 m_DoNotShowMessageHandlersInMainIfProxyConnected:0
 m_ShowControllers:1
 m_ShowAircraft:0
@@ -189,7 +189,7 @@ m_ShowTooltips:1
 m_OnTheGroundAltitude:2000
 m_OnTheGroundSpeed:50
 m_ShowCdtOnCflCheck:1
-m_ShowTsVccsMiniControl:1
+m_ShowTsVccsMiniControl:0
 ScenarioEditorX:977
 ScenarioEditorY:185
 m_ShowSTARControllers:1
