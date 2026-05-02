@@ -49,11 +49,10 @@ Sounds	Sound15	\ULLL\Sounds\new_atis.wav
 Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup_silent.wav
-RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLI_TWR.asr
+RecentFiles	Recent1	\ULLL\ASR\Peterburg\ULLL_CTR.asr
 RecentFiles	Recent2	\ULLL\ASR\Peterburg\ULLL_APP.asr
-RecentFiles	Recent3	\ULLL\ASR\Peterburg\ULLL_CTR.asr
+RecentFiles	Recent3	\ULLL\ASR\Peterburg\ULLL Tower.asr
 RecentFiles	Recent4	\ULLL\ASR\Peterburg\ULLI_GND.asr
-RecentFiles	Recent5	\ULLL\ASR\Peterburg\ULLL Tower.asr
 Plugins	Plugin0Display0	Standard ES radar screen
 Plugins	Plugin0	\ULLL\Plugins\TopSky Peterburg\TopSky.dll
 Plugins	Plugin1	\ULLL\Plugins\GRplugin\GRplugin.dll

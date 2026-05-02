@@ -192,7 +192,7 @@ MSAW_VFR=0
 
 MTCD_Filter_Dep=3
 
-RDF_Mode=2
+RDF_Mode=0
 RDF_Floor=-999
 
 SAP_Floor=3500
