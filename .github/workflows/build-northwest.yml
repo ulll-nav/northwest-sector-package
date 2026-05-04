@@ -50,7 +50,7 @@ jobs:
 
     - name: Prepare build directory
       run: |
-        rm -rm /tmp/build
+        rm -rf /tmp/build
         mkdir -p /tmp/build
 
     - name: Read common manifest
