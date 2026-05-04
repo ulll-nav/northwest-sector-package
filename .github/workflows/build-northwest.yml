@@ -48,6 +48,11 @@ jobs:
         mkdir -p /tmp/shared
         git --work-tree=/tmp/shared checkout sh/main -- . ':(exclude).github'
 
+    - name: Prepare build directory
+      run: |
+        rm -rm /tmp/build
+        mkdir -p /tmp/build
+
     - name: Read common manifest
       id: manifest
       run: |
@@ -64,6 +69,7 @@ jobs:
     - name: Sync ULLL specific content
       run: |
         IFS=',' read -ra COMMON <<< "${{ steps.manifest.outputs.common_folders }}"
+
         EXCLUDES=()
         for F in "${COMMON[@]}"; do
           EXCLUDES+=(--exclude="$F/")
@@ -80,19 +86,22 @@ jobs:
         done
 
         mkdir -p ULLL
-        rsync -a --exclude='.git' --exclude='.github' "${EXCLUDES[@]}" /tmp/ulll/ULLL/ ULLL/
+        rsync -a --exclude='.git' --exclude='.github' "${EXCLUDES[@]}" /tmp/ulll/ULLL/ /tmp/build/ULLL/
 
         # PRF ULLL
-        rsync -a --include='*.prf' --exclude='*' /tmp/ulll/ ./
+        rsync -a --include='*.prf' --exclude='*' /tmp/ulll/ /tmp/build/
 
     - name: Sync common content from shared
       run: |
         IFS=',' read -ra COMMON <<< "${{ steps.manifest.outputs.common_folders }}"
+
         for F in "${COMMON[@]}"; do
           SRC="/tmp/shared/$F"
           [ -d "$SRC" ] || continue
-          DST="ULLL/$F"
+
+          DST="/tmp/build/ULLL/$F"
           mkdir -p "$DST"
+
           rsync -a --delete "$SRC/" "$DST/"
         done
 
@@ -109,29 +118,42 @@ jobs:
             subprocess.run([
                 'rsync', '-a',
                 '--include=*.prf', '--exclude=*',
-                '/tmp/umkk/', './'
+                '/tmp/umkk/', '/tmp/build/'
             ], check=True)
 
         for entry in mapping.get('umkk', {}).get('folders', []):
             src = os.path.join('/tmp/umkk', entry['from'])
-            dst = entry['to']
+            dst = os.path.join('/tmp/build', entry['to'])
+
             os.makedirs(dst, exist_ok=True)
+
             subprocess.run([
                 'rsync', '-a', src, dst
             ], check=True)
+
             print(f"Synced {src} → {dst}")
         PY
 
     - name: Replace \UMKK → \ULLL in .prf
       run: |
-        find . -maxdepth 1 -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK\\|\\ULLL\\|g'
+        find /tmp/build -type f -name '*.prf' -print0 | xargs -0 sed -i 's|\\UMKK\\|\\ULLL\\|g'
+
+    - name: Replace repo content with build directory
+      run: |
+        find . -mindepth 1 -maxdepth 1 \
+          ! -name '.git' \
+          ! -name '.github' \
+          -exec rm -rf {} +
+
+        rsync -a /tmp/build/ ./
 
     - name: Cleanup temp
-      run: rm -rf /tmp/ulll /tmp/umkk /tmp/shared
+      run: rm -rf /tmp/ulll /tmp/umkk /tmp/shared /tmp/build
 
     - name: Commit & push
       run: |
         git add -A
+
         if git diff --cached --quiet; then
           echo "No changes to commit"
         else
