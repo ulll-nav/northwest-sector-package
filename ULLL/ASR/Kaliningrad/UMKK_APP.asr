@@ -3,18 +3,17 @@ DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
 SECTORFILE:
 SECTORTITLE:
-ARTCC low boundary:Kaliningrad Approach:
-ARTCC low boundary:Kaliningrad CTR 2:
-ARTCC low boundary:Kaliningrad Tower:
-Airports:UMKS:symbol
 Airports:XMWB:symbol
 Airports:XMWD:symbol
 Airports:XMWH:symbol
 Airports:ZF8B:symbol
 Airports:ZFC6:symbol
 Airports:ZFH8:symbol
+ARTCC boundary:KALININGRAD ACC:
+ARTCC low boundary:Kaliningrad Approach:
+ARTCC low boundary:Kaliningrad CTR 2:
+ARTCC low boundary:Kaliningrad Tower:
 Geo:UMKK Rivers:
-Geo:ULLL FIR border Borders:
 NDBs:K:symbol
 NDBs:KR:symbol
 Regions:UMKK Lakes:polygon
