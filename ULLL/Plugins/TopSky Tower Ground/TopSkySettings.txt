@@ -296,6 +296,12 @@ AIW=1
 
 Window_ASM=1,0,700
 
+[ULMM_]
+Setup_ScreenLat=ULMM
+
+[ULAA_]
+Setup_ScreenLat=ULAA
+
 [_APP]
 MTCD=0
 AIW=0

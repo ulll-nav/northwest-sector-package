@@ -56,8 +56,8 @@ m_Column:SI:6:1:10014:20:0:1:TopSky plugin:::1:0.0
 END
 ARR
 m_Visible:1
-m_X:1310
-m_Y:229
+m_X:0
+m_Y:463
 m_LineNumber:0
 m_Resizable:1
 m_OrderingColumn:4

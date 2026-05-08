@@ -28,8 +28,6 @@ Settings	aircraft	\ULLL\ICAO\ICAO_Aircraft.txt
 Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
-TeamSpeakVccs	TsVccsMiniControlX	1758
-TeamSpeakVccs	TsVccsMiniControlY	26
 Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
 Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
 Sounds	Sound2	\ULLL\Sounds\conflict_alert.wav
@@ -75,10 +73,6 @@ Plugins	Plugin6Display0	Ground Radar display
 Plugins	Plugin6Display1	Standard ES radar screen
 Plugins	Plugin7Display0	Ground Radar display
 Plugins	Plugin7Display1	Standard ES radar screen
-TeamSpeakVccs	Ts3DialogLeft	0
-TeamSpeakVccs	Ts3DialogTop	0
-TeamSpeakVccs	Ts3DialogRight	750
-TeamSpeakVccs	Ts3DialogBottom	600
 LastSession	atis_freq0	127300
 LastSession	atis_callsign0	ULLI_ATIS
 LastSession	atis_url0	https://atis.mooo.com/es?icao=$atisairport&arr=$arrrwy($atisairport)&dep=$deprwy($atisairport)&info=$atiscode

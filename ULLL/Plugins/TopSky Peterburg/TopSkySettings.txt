@@ -283,6 +283,12 @@ WXR_Echo_dBZ_Lo=25
 
 AIW=1
 
+[ULMM_]
+Setup_ScreenLat=ULMM
+
+[ULAA_]
+Setup_ScreenLat=ULAA
+
 [_APP]
 MTCD=0
 AIW=0
