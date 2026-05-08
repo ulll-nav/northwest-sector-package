@@ -13,7 +13,7 @@ TopSky plugin:ACList/Sector List/m_Column_4:V:2:1:10031:0:0:1:TopSky plugin::
 TopSky plugin:ACList/Sector List/m_Column_5:COPN:6:1:10004:45:99:1:TopSky plugin:TopSky plugin:TopSky plugin
 TopSky plugin:ACList/Sector List/m_Column_6:ETN:5:1:10016:0:0:1:TopSky plugin::
 TopSky plugin:ACList/Sector List/m_Column_7:PEL:4:1:10001:68:0:1:TopSky plugin:TopSky plugin:
-TopSky plugin:ACList/Sector List/m_Column_8:CFL:4:1:10002:44:16:1:TopSky plugin:TopSky plugin:TopSky plugin
+TopSky plugin:ACList/Sector List/m_Column_8:CFL:6:1:10002:44:16:1:TopSky plugin:TopSky plugin:TopSky plugin
 TopSky plugin:ACList/Sector List/m_Column_9:HOLD:6:1:10024:65:0:0:TopSky plugin:TopSky plugin:
 TopSky plugin:ACList/Sector List/m_Column_10:COPX:6:1:10005:45:99:1:TopSky plugin:TopSky plugin:TopSky plugin
 TopSky plugin:ACList/Sector List/m_Column_11:ETX:5:1:10017:0:0:1:TopSky plugin::

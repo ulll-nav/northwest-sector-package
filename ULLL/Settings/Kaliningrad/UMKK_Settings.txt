@@ -189,7 +189,7 @@ m_ShowTooltips:1
 m_OnTheGroundAltitude:2000
 m_OnTheGroundSpeed:50
 m_ShowCdtOnCflCheck:1
-m_ShowTsVccsMiniControl:1
+m_ShowTsVccsMiniControl:0
 ScenarioEditorX:977
 ScenarioEditorY:185
 m_ShowSTARControllers:1

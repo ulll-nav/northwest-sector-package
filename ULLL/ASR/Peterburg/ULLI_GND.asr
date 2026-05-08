@@ -17,7 +17,5 @@ DISABLEZOOMING:0
 DisplayRotation:343.60000
 TAGFAMILY:Matias (built in)
 WINDOWAREA:59.787942:30.210865:59.818026:30.322578
-PLUGIN:Ground Radar plugin:AirportElevation:79
-PLUGIN:Ground Radar plugin:AirportRadius:1.5
 PLUGIN:Ground Radar plugin:GroundMode:ULLI
 PLUGIN:TopSky plugin:NoDraw:1

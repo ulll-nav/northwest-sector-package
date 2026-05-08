@@ -28,18 +28,15 @@ Settings	alias	\ULLL\Alias\alias.txt
 Settings	airways	\ULLL\NavData\airway.txt
 Settings	airportcoords	\ULLL\NavData\icao.txt
 Settings	sector	\123.sct
-TeamSpeakVccs	TsVccsMiniControlX	1541
-TeamSpeakVccs	TsVccsMiniControlY	26
 Plugins	Plugin0Display0	Ground Radar display
 Plugins	Plugin0	\ULLL\Plugins\GRplugin\GRplugin.dll
 Plugins	Plugin1	\ULLL\Plugins\DiscordEuroscope Peterburg\DiscordEuroscope.dll
 Plugins	Plugin2	\ULLL\Plugins\TopSky Tower Ground\TopSky.dll
 Plugins	Plugin3	\ULLL\Plugins\VCH\VCH.dll
 Plugins	Plugin4	\ULLL\Plugins\IASsure\IASsure.dll
-Plugins	Plugin5	\ULLL\Plugins\ULLL Plugin\ULLLPlugin.dll
-Plugins	Plugin6	\ULLL\Plugins\AMAN\Aman.dll
-Plugins	Plugin7	\ULLL\Plugins\VFPC\VFPC.dll
-Plugins	Plugin8	\ULLL\Plugins\MetarDiff\MetarDiff.dll
+Plugins	Plugin5	\ULLL\Plugins\AMAN\Aman.dll
+Plugins	Plugin6	\ULLL\Plugins\VFPC\VFPC.dll
+Plugins	Plugin7	\ULLL\Plugins\ULLLPlugin\ULLLPlugin.dll
 Plugins	Plugin5Display0	Ground Radar display
 Plugins	Plugin5Display1	Standard ES radar screen
 Plugins	Plugin3Display0	Ground Radar display
@@ -49,10 +46,8 @@ Plugins	Plugin2Display1	Standard ES radar screen
 Plugins	Plugin0Display1	Standard ES radar screen
 Plugins	Plugin6Display0	Ground Radar display
 Plugins	Plugin6Display1	Standard ES radar screen
-Plugins	Plugin7Display0	Ground Radar display
-Plugins	Plugin7Display1	Standard ES radar screen
-Plugins	Plugin8Display0	Ground Radar display
-Plugins	Plugin8Display1	Standard ES radar screen
+Plugins	Plugin7Display0	Standard ES radar screen
+Plugins	Plugin7Display1	Ground Radar display
 Sounds	Sound0	\ULLL\Sounds\handoff_request.wav
 Sounds	Sound1	\ULLL\Sounds\handoff_accept.wav
 Sounds	Sound2	\ULLL\Sounds\conflict_alert.wav
@@ -73,12 +68,10 @@ Sounds	Sound16	\ULLL\Sounds\handoff_refused.wav
 Sounds	Sound17	\ULLL\Sounds\pointout.wav
 Sounds	Sound18	\ULLL\Sounds\startup_silent.wav
 RecentFiles	Recent1	\ULLL\ASR\Tower Ground\ULLI Ground.asr
-RecentFiles	Recent2	\ULLL\ASR\Tower Ground\ULLI_TWR.asr
+RecentFiles	Recent2	\ULLL\ASR\Tower Ground\ULLI Tower.asr
 RecentFiles	Recent3	\ULLL\ASR\Tower Ground\ULAA Ground.asr
-TeamSpeakVccs	Ts3DialogLeft	0
-TeamSpeakVccs	Ts3DialogTop	0
-TeamSpeakVccs	Ts3DialogRight	750
-TeamSpeakVccs	Ts3DialogBottom	600
+RecentFiles	Recent4	\ULLL\ASR\Tower Ground\ULMM Ground.asr
+RecentFiles	Recent5	\ULLL\ASR\Tower Ground\ULLL Tower.asr
 LastSession	atis_freq0	127300
 LastSession	atis_callsign0	ULLI_ATIS
 LastSession	atis_url0	https://atis.mooo.com/es?icao=$atisairport&arr=$arrrwy($atisairport)&dep=$deprwy($atisairport)&info=$atiscode

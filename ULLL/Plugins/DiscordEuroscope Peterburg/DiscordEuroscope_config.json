@@ -23,7 +23,7 @@
         "sweatbox": {
             "presence_small_image_key": "",
             "presence_large_image_key" : "",
-            "state" : "sweating someone",
+            "state" : "Sweating someone",
             "details" : "Sweatbox",
             "presence_small_image_text" : "",
             "presence_large_image_text" : ""
@@ -50,7 +50,7 @@
                 "presence_large_image_key" : "",
                 "state" : "Controlling ({current_tracked} of {total_inrange})",
                 "details" : "{rcallsign} {frequency}MHz",
-                "presence_small_image_text" : "Total trakcs: {total_tracked}",
+                "presence_small_image_text" : "Total tracks: {total_tracked}",
                 "presence_large_image_text" : "{callsign}"
             },
             

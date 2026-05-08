@@ -1,8 +1,8 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:
-SECTORTITLE:
+SECTORFILE:F:\ATC VATSIM\Sector\ULLL 2604\ULLL-Galaxy-radar_20260502120748-260401-0001.sct
+SECTORTITLE:ULLL-Galaxy-radar_20260502120748-260401-0001.sct
 ARTCC boundary:Amderma CTR:
 ARTCC boundary:Apatity CTR:
 ARTCC boundary:Arkhangelsk CTA:
@@ -45,17 +45,28 @@ ARTCC low boundary:Vologda CTA:
 ARTCC low boundary:Vorkuta CTR:
 ARTCC low boundary:Vorkuta TMA:
 Geo:ULLL Coastline:
+Geo:ULLL FIR border Borders:
+NDBs:K:symbol
+NDBs:L:symbol
+NDBs:O:symbol
+NDBs:PK:symbol
+NDBs:PL:symbol
+NDBs:PO:symbol
+NDBs:PU:symbol
+NDBs:U:symbol
+VORs:SPB:symbol
 SHOWC:1
 SHOWSB:1
-BELOW:0
-ABOVE:0
-LEADER:5
+BELOW:100
+ABOVE:27000
+LEADER:3
 SHOWLEADER:1
 TURNLEADER:0
 HISTORY_DOTS:5
 SIMULATION_MODE:1
 DISABLEPANNING:0
 DISABLEZOOMING:0
-TAGFAMILY:Galaxy Tower Peterburg
-WINDOWAREA:59.441003:28.898738:60.173649:31.664806
-PLUGIN:TopSky plugin:ShowMapData:ALL_TOWER_SHOW,ALL_TOWER
+DisplayRotation:0.00000
+TAGFAMILY:Galaxy Tower
+WINDOWAREA:53.227992:4.274560:76.387962:87.785952
+PLUGIN:TopSky plugin:ShowMapData:ULLL_TWR
