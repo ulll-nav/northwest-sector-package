@@ -248,7 +248,7 @@ System_UseRwyLockedColor=1
 System_UseSidAllocationColor=1
 System_UseStarAllocationColor=1
 
-Track_HistoryDots=5
+Track_HistoryDots=0
 Track_PredictionLine=0
 
 Vector_AHDG_FontSize=12
@@ -262,7 +262,7 @@ Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1
 Vector_QDM_AP_Label_Dist=1
 
-Window_ASM=1,0,900
+Window_ASM=1,0,610
 Window_SM_LeaveHoldTime=3
 Window_QNHTL=3,0,400
 Window_COL_Warning_Threshold=12

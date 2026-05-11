@@ -264,7 +264,7 @@ System_UseRwyLockedColor=1
 System_UseSidAllocationColor=1
 System_UseStarAllocationColor=1
 
-Track_HistoryDots=5
+Track_HistoryDots=0
 Track_PredictionLine=0
 
 Vector_AHDG_FontSize=12

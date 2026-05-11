@@ -202,8 +202,8 @@ SAP_Buffer_Vert_L_IFR=500
 SAP_Buffer_Vert_L_VFR=500
 
 //Shortcut_RadarMenu_Combo=0x00
-//Shortcut_Map_Xfr_Key=1,0x47 ; G
-//Shortcut_Map_Target=1,ULLI\ULLI STANDS
+Shortcut_Map_Xfr_Key=1,0x47 ; G
+Shortcut_Map_Target=1,Airport Layouts\UMKK_Airports_Text
 //Shortcut_Map_Xfr_Key=2,0x41 ; A
 //Shortcut_Map_Target=2,ULLL\ULLL_CTR_HIGHAIRWAYS
 //Shortcut_Map_Xfr_Key=3,0x46; F
@@ -256,7 +256,7 @@ System_UseRwyLockedColor=1
 System_UseSidAllocationColor=1
 System_UseStarAllocationColor=1
 
-Track_HistoryDots=5
+Track_HistoryDots=0
 Track_PredictionLine=0
 
 Vector_AHDG_FontSize=11
@@ -270,9 +270,9 @@ Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1
 Vector_QDM_AP_Label_Dist=1
 
-Window_ASM=1,0,900
+Window_ASM=1,0,650
 Window_SM_LeaveHoldTime=3
-Window_QNHTL=3,0,400
+Window_QNHTL=3,0,440
 Window_COL_Warning_Threshold=12
 
 WXR_Brightness=40

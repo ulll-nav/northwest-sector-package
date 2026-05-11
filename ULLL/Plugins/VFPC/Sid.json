@@ -90,5 +90,174 @@
           }
         ]
       }
+   },
+   {
+      "icao": "ULMM",
+      "sids": {
+         "ULMER": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "T693"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "PELOR": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "N2",
+                 "P65"
+               ]
+            },
+            {
+               "direction": "ANY"
+            }
+         ],
+         "ASGOR": [
+            {
+               "direction": "ANY",
+               "airways": [
+                 "T693"
+               ]
+            },
+            {
+               "direction": "ANY"
+            }
+         ],
+         "LOPRA": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "T822"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "EKLED": [
+            {
+               "direction": "ODD"
+            }
+         ]
+      }
+   },
+   {
+      "icao": "ULPB",
+      "sids": {
+         "SOPID": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "T821"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "OSNEN": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "P986"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "GITOS": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "N187"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "BOBMU": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "T821"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "PEMEM": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "T785"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ]
+      }
+   },
+   {
+      "icao": "ULOO",
+      "sids": {
+         "NOTAR": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "N609",
+                 "P607"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "IRBUG": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "N743"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "BEPUT": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "A966",
+                 "T782"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "UNPOR": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "P727"
+               ]
+            },
+            {
+               "direction": "ODD",
+               "airways": [
+                 "N609"
+               ]
+            }
+         ]
+      }
    }
 ]
