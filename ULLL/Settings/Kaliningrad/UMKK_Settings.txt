@@ -133,8 +133,6 @@ m_AutoAssumeOnGroundStateChangeButton:0
 m_ShowTrackMilesInRouteButton:0
 m_FilterOutSquawks:
 m_EquipmentsIcaoFormat:1
-m_DoNotShowMessageHandlersInProxy:0
-m_DoNotShowMessageHandlersInMainIfProxyConnected:0
 m_ShowControllers:1
 m_ShowAircraft:0
 m_ShowTextMessages:0
@@ -193,8 +191,6 @@ m_ShowTsVccsMiniControl:0
 ScenarioEditorX:977
 ScenarioEditorY:185
 m_ShowSTARControllers:1
-MessageLinesNumber:4
-BackgroundGrphicsInThread:1
 CONFLICT
 m_Visible:0
 m_X:50

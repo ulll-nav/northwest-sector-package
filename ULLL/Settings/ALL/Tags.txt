@@ -1,18 +1,20 @@
 TAGS
 TAGFAMILY:Galaxy Approach
-TAGTYPE:0:7:1
+TAGTYPE:0:6:1
 TAGITEM:72::0:0:0:0:TopSky plugin:0:1:::1
 TAGITEM:23::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:26::0:1:0:0:TopSky plugin:0:1:::1
-TAGITEM:5::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:58::0:1:0:0:TopSky plugin:0:1:::6
 TAGITEM:38::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:22::1:0:0:0:TopSky plugin:0:1:::9
+TAGITEM:66::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:118::0:1:0:0:TopSky plugin:0:1:::9
+TAGITEM:503::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:509::0:0:0:0:ULLLPlugin:0:1:::0
 TAGITEM:67::0:1:0:0:TopSky plugin:0:1:::1
+TAGITEM:510::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:40::0:0:0:0:TopSky plugin:0:1:::8
 TAGITEM:69::0:1:0:0:TopSky plugin:0:1:::1
@@ -77,7 +79,7 @@ TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:22::1:0:6:6:TopSky plugin:0:1:TopSky plugin:TopSky plugin:0
 TAGITEM:66::0:1:20:100:TopSky plugin:0:1::TopSky plugin:1
 TAGITEM:118::0:1:0:0:TopSky plugin:0:1:::1
-TAGITEM:5::0:1:0:0:TopSky plugin:0:1:::1
+TAGITEM:503::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:509::0:0:1:143:ULLLPlugin:0:1::TopSky plugin:1
 TAGITEM:67::0:1:0:0:TopSky plugin:0:1:::1
@@ -301,9 +303,11 @@ TAGITEM:58::0:1:0:0:TopSky plugin:0:1:::6
 TAGITEM:38::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:22::1:0:0:0:TopSky plugin:0:1:::9
+TAGITEM:66::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:509::0:0:0:0:ULLLPlugin:0:1:::0
 TAGITEM:67::0:1:0:0:TopSky plugin:0:1:::1
+TAGITEM:510::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:40::0:1:0:0:TopSky plugin:0:1:::8
 TAGTYPE:1:18:1
 TAGITEM:72::0:0:0:0:TopSky plugin:0:1:::1
@@ -363,7 +367,7 @@ TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:107::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:22::1:0:6:6:TopSky plugin:0:1:TopSky plugin:TopSky plugin:0
 TAGITEM:66::0:1:20:100:TopSky plugin:0:1::TopSky plugin:1
-TAGITEM:5::0:1:0:0:TopSky plugin:0:1:::1
+TAGITEM:503::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:106::0:1:62:0:TopSky plugin:0:1:TopSky plugin::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:509::0:1:1:99:ULLLPlugin:0:1::TopSky plugin:1
@@ -588,15 +592,17 @@ TAGTYPE:0:7:1
 TAGITEM:72::0:0:0:0:TopSky plugin:0:1:::1
 TAGITEM:23::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:26::0:1:0:0:TopSky plugin:0:1:::1
-TAGITEM:503::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:58::0:1:0:0:TopSky plugin:0:1:::6
 TAGITEM:38::0:1:0:0:TopSky plugin:0:1:::1
+TAGITEM:503::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:22::1:0:0:0:TopSky plugin:0:1:::9
+TAGITEM:66::0:1:0:0:TopSky plugin:0:1:::1
 TAGITEM:118::0:1:0:0:TopSky plugin:0:1:::9
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:509::0:0:0:0:ULLLPlugin:0:1:::0
 TAGITEM:67::0:1:0:0:TopSky plugin:0:1:::1
+TAGITEM:510::0:1:0:0:ULLLPlugin:0:1:::1
 TAGITEM:0::0:0:0:0::0:1:::1
 TAGITEM:40::0:0:0:0:TopSky plugin:0:1:::8
 TAGITEM:69::0:1:0:0:TopSky plugin:0:1:::1
