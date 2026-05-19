@@ -18,5 +18,4 @@ DisplayRotation:304.00000
 TAGFAMILY:Matias (built in)
 WINDOWAREA:68.775337:32.716012:68.791248:32.795751
 PLUGIN:Ground Radar plugin:GroundMode:ULMM
-PLUGIN:MetarDiff:MD_ICAO:ULMM
 PLUGIN:TopSky plugin:NoDraw:1

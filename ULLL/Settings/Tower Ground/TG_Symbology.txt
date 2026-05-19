@@ -23,12 +23,12 @@ NDBs:frequency:11711154:3.5:0:0:0
 Runways:centerline:8487297:3.5:0:3:7
 Runways:extended centerline:6579300:3.5:0:0:7
 Runways:name:13158600:3.5:0:0:7
-Datablock:non concerned:16777215:3.5:0:0:7
-Datablock:notified:16777215:3.5:0:0:7
-Datablock:assumed:16777215:3.5:0:0:7
-Datablock:transfer to me initiated:16777215:3.5:0:0:7
-Datablock:redundant:16777215:3.5:0:0:7
-Datablock:information:12677603:3.5:0:0:7
+Datablock:non concerned:16777215:3.8:0:0:7
+Datablock:notified:16777215:3.8:0:0:7
+Datablock:assumed:16777215:3.8:0:0:7
+Datablock:transfer to me initiated:16777215:3.8:0:0:7
+Datablock:redundant:16777215:3.8:0:0:7
+Datablock:information:12677603:3.8:0:0:7
 Datablock:even flight level:16777215:3.5:0:0:7
 Datablock:odd flight level:16777215:3.5:0:0:7
 Datablock:arrivals:123386:3.5:0:0:7
@@ -68,14 +68,14 @@ Other:distance annotation:65535:3.5:0:0:7
 Other:separation leader:16777215:3.5:0:3:7
 Other:separation leader2:16777215:3.5:0:1:7
 Other:find:16777215:3.5:0:5:7
-Other:valid airway:65280:3.5:0:2:7
+Other:valid airway:65535:3.6:0:2:7
 Other:bad direction airway:255:3.5:0:2:7
 Other:unconnected airway:16711680:3.5:0:2:7
-Other:direct no airway:65280:3.5:0:1:7
+Other:direct no airway:65535:3.6:0:1:7
 Other:free of conflict:65280:3.5:0:2:7
 Other:conflict warning:65535:3.5:0:2:7
 Other:conflict detected:255:3.5:0:2:7
-Other:route annotation:16777215:3.5:0:2:7
+Other:route annotation:62464:4.0:0:1:2
 Other:freetext:14408667:3.9:0:0:7
 Other:range rings:65535:5.0:0:0:2
 Other:off antenna range rings:255:5.0:0:0:2
@@ -84,7 +84,6 @@ Other:manual taxi line:16777215:5.0:0:3:2
 Other:manual taxi line ends at predefined point:65535:5.0:0:3:2
 Other:predefined taxi line:65280:5.0:0:3:2
 Other:terminal taxi line:255:5.0:0:3:2
-Other:list title bar:16777215:0.0:0:0:7
 Other:list header:14342864:3.8:0:0:7
 Other:normal menu item:16777215:3.5:0:0:7
 Other:disabled menu item:8421504:3.5:0:0:7

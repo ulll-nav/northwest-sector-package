@@ -26,10 +26,11 @@ APW_Buffer_Vert_U=1500
 APW_Buffer_Vert_L_IFR=500
 APW_Buffer_Vert_L_VFR=500
 
+Areas_AUP_Activation=1
 Areas_Label_Name=0
 Areas_Label_MapText=1
 Areas_Label_Times=1
-Areas_AUP_Activation=1
+
 
 Color_Active_Map_Type_1=120,0,0
 Color_Active_Map_Type_2=80,162,74
@@ -107,7 +108,7 @@ Color_Trough=97,99,97
 Color_TSA_Active=93,138,195
 Color_TSA_Border_Highlight=200,53,18
 Color_TSA_Preactive=132,142,139
-Color_Unknown=255,255,255
+Color_Unknown=239,224,42
 Color_Urgency=225,25,25
 Color_Urgency_FL=225,25,25
 Color_VAW_Profile=152,202,172
@@ -116,7 +117,7 @@ Color_VAW_Track_Position=219,219,219
 Color_Warning=255,100,50
 Color_Warning_FL=255,100,50
 Color_WM_Active_Fg=255,254,254
-Color_WM_Bg=100,100,105
+Color_WM_Bg=25,31,38
 Color_WM_Border=88,95,99
 Color_WM_Fg=180,184,181
 Color_WM_Frame=88,95,99
@@ -136,8 +137,12 @@ Color_Coordination=255,255,255
 
 CPDLC_Default=0
 
-Divergence_CLAM_DelayTime=120
+Divergence_CLAM=0
+Divergence_CLAM_DelayTime=60
 Divergence_CLAM_MinCFL=3500
+
+Divergence_RAM_Inhibit_App_Clr=2
+Divergence_RAM_DCT_MaxTrkError=15
 
 Equip_UseCodes=3
 
@@ -161,6 +166,7 @@ HTTP_GRIB_Latitude_Min=55
 HTTP_GRIB_Longitude_Max=90
 HTTP_GRIB_Longitude_Min=20
 
+Label_AFL_Buffer=200
 Label_AHDG_Point_Label=0
 Label_AHDG_HideDctIfCOPX=0
 Label_AHDG_ShowDct=2
@@ -242,7 +248,7 @@ STCA_AlertSound
 
 System_TrueColorMode=1
 System_UseReportedGS=1
-System_ASP_IasMach=30000
+System_ASP_IasMach=27000
 System_Filters_Concerned=0
 System_Filters_Alt_Allow=2000
 System_Filters_Hard=1
@@ -263,6 +269,7 @@ System_UseAcceptedCoordColor=1
 System_UseRwyLockedColor=1
 System_UseSidAllocationColor=1
 System_UseStarAllocationColor=1
+System_Trf_Release=-1
 
 Track_HistoryDots=0
 Track_PredictionLine=0
@@ -305,7 +312,3 @@ Setup_ScreenLat=ULAA
 [_APP]
 MTCD=0
 AIW=0
-
-[_CTR]
-Label_GS_Digits=3
-Label_GS_Prefix=N

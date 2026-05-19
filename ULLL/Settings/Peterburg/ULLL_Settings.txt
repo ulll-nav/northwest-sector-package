@@ -62,7 +62,7 @@ SET_WTC_A380:J
 m_RotateRouteTexts:0
 m_NeverCloseFreqChat:1
 m_KeepScratchPadAfterDirect:1
-m_HiliteASELAircraft:0
+m_HiliteASELAircraft:1
 m_EnableVoiceRecognition:0
 m_VoiceRecognitionStyle:2
 m_SModeTransponders:IEFGRWQ
@@ -121,7 +121,7 @@ m_MTCA_Distance:0.0
 m_UseIsectForScratchPad:0
 m_RotateRadarTargetSymbol:0
 m_RotateFlightPlanTrackSymbol:0
-m_RubberHeadingRounding:10
+m_RubberHeadingRounding:5
 SqawkForSModeTransponder:
 m_TransparentTagBackground:1
 m_UseArrDepTagBgColor:0
@@ -130,11 +130,9 @@ m_TaxiOutTime:7
 m_StartupTime:10
 m_ConnectTime:15
 m_AutoAssumeOnGroundStateChangeButton:0
-m_ShowTrackMilesInRouteButton:1
+m_ShowTrackMilesInRouteButton:0
 m_FilterOutSquawks:
 m_EquipmentsIcaoFormat:1
-m_DoNotShowMessageHandlersInProxy:1
-m_DoNotShowMessageHandlersInMainIfProxyConnected:0
 m_ShowControllers:1
 m_ShowAircraft:0
 m_ShowTextMessages:0
@@ -193,8 +191,6 @@ m_ShowTsVccsMiniControl:0
 ScenarioEditorX:977
 ScenarioEditorY:185
 m_ShowSTARControllers:1
-MessageLinesNumber:4
-BackgroundGrphicsInThread:1
 CONFLICT
 m_Visible:0
 m_X:50

@@ -18,6 +18,7 @@ ARTCC high boundary:Moscow G5:
 ARTCC high boundary:Moscow S:
 ARTCC high boundary:Moscow Z:
 ARTCC high boundary:Tyumen FIR:
+ARTCC low boundary:Levashovo CTR:
 ARTCC low boundary:Pulkovo Tower:
 Geo:ULLL FIR border Borders:
 NDBs:K:symbol
@@ -36,7 +37,7 @@ ABOVE:0
 LEADER:6
 SHOWLEADER:1
 TURNLEADER:0
-HISTORY_DOTS:0
+HISTORY_DOTS:5
 SIMULATION_MODE:1
 DISABLEPANNING:0
 DISABLEZOOMING:0
@@ -45,4 +46,3 @@ TAGFAMILY:Galaxy Approach
 WINDOWAREA:58.524800:26.501266:60.648290:34.647309
 PLUGIN:TopSky plugin:HideMapData:ULLL_CTR
 PLUGIN:TopSky plugin:ShowMapData:ULLL_APP
-PLUGIN:ULLLPlugin:MD_ICAO:ULLI

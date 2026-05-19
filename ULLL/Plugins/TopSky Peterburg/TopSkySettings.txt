@@ -124,7 +124,7 @@ Color_VAW_Track_Position=219,219,219
 Color_Warning=255,100,50
 Color_Warning_FL=255,100,50
 Color_WM_Active_Fg=255,254,254
-Color_WM_Bg=100,100,105
+Color_WM_Bg=25,31,38
 Color_WM_Border=88,95,99
 Color_WM_Fg=180,184,181
 Color_WM_Frame=88,95,99
@@ -137,8 +137,12 @@ Color_Standard_RDF=190,190,220
 
 CPDLC_Default=0
 
-Divergence_CLAM_DelayTime=120
+Divergence_CLAM=0
+Divergence_CLAM_DelayTime=60
 Divergence_CLAM_MinCFL=3500
+
+Divergence_RAM_Inhibit_App_Clr=2
+Divergence_RAM_DCT_MaxTrkError=15
 
 Equip_UseCodes=3
 
@@ -162,12 +166,13 @@ HTTP_GRIB_Latitude_Min=55
 HTTP_GRIB_Longitude_Max=90
 HTTP_GRIB_Longitude_Min=20
 
+Label_AFL_Buffer=200
 Label_AHDG_Point_Label=0
 Label_AHDG_HideDctIfCOPX=0
 Label_AHDG_ShowDct=2
 Label_Field18_Flag_Items=STS/,newbie,NEWBIE,Newbie,beginner,newbe,deaf,blind,new,first,slow,slowly,noob
 Label_GS_Digits=3
-Label_GS_Prefix=N
+Label_GS_Prefix=Kt
 
 Label_Rev_Highlight_Delta_ETN=4
 Label_OpTextCaps=0
@@ -226,7 +231,7 @@ STCA_AlertSound_Filter=1
 
 System_TrueColorMode=1
 System_UseReportedGS=1
-System_ASP_IasMach=30000
+System_ASP_IasMach=27000
 System_Filters_Concerned=0
 System_Filters_Alt_Allow=2000
 System_Filters_Hard=1
@@ -247,6 +252,7 @@ System_UseAcceptedCoordColor=1
 System_UseRwyLockedColor=1
 System_UseSidAllocationColor=1
 System_UseStarAllocationColor=1
+System_Trf_Release=-1
 
 Track_HistoryDots=0
 Track_PredictionLine=0
@@ -293,7 +299,9 @@ Setup_ScreenLat=ULAA
 MTCD=0
 AIW=0
 RDF_Accuracy=3
+Label_ASP_Digits=2
 
 [_CTR]
 RDF_Accuracy=5
 Window_CARD=3,1564,340
+Label_ASP_Digits=3

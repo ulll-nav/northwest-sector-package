@@ -1,0 +1,40 @@
+DisplayTypeName:Standard ES radar screen
+DisplayTypeNeedRadarContent:1
+DisplayTypeGeoReferenced:1
+SECTORFILE:E:\Metramak\Downloads\ULLL-Galaxy-dev_202605\ULLL-Galaxy-dev_20260511161644-260401-0013.sct
+SECTORTITLE:ULLL-Galaxy-dev_20260511161644-260401-0013.sct
+Airports:XMWB:symbol
+Airports:XMWD:symbol
+Airports:XMWH:symbol
+Airports:ZF8B:symbol
+Airports:ZFC6:symbol
+Airports:ZFH8:symbol
+ARTCC low boundary:Kaliningrad Approach:
+ARTCC low boundary:Kaliningrad CTR 2:
+ARTCC low boundary:Kaliningrad Tower:
+Geo:ULLL FIR border Borders:
+Geo:UMKK Rivers:
+NDBs:K:symbol
+NDBs:KR:symbol
+Regions:UMKK Lakes:polygon
+Regions:UMKK Water:polygon
+Runways:UMKK 06-24:centerline
+VORs:KRD:symbol
+SHOWC:1
+SHOWSB:0
+BELOW:700
+ABOVE:0
+LEADER:6
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Galaxy Approach
+WINDOWAREA:54.099907:18.008937:55.721746:23.857045
+PLUGIN:ULLLPlugin:MD_TAB:ULLI
+PLUGIN:ULLLPlugin:MD_W:620
+PLUGIN:ULLLPlugin:MD_X:80
+PLUGIN:ULLLPlugin:MD_Y:80
