@@ -6,45 +6,45 @@ ATIS4:
 PROFILE:ULLI_DEL:20:2
 ATIS2:Pulkovo Delivery
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Advise stand number on initial contact
 PROFILE:ULLI_GND:20:3
 ATIS2:Pulkovo Ground
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C before pushback
 PROFILE:ULLI_TWR:50:4
 ATIS2:Pulkovo Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:ULLI_A_TWR:50:4
 ATIS2:Pulkovo Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:ULLI_D_TWR:50:4
 ATIS2:Pulkovo Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:ULLI_VFR_TWR:50:4
 ATIS2:Pulkovo Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:ULAA_TWR:50:4
 ATIS2:Arkhangelsk Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:ULPB_TWR:50:4
 ATIS2:Petrozavodsk Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:ULMM_TWR:50:4
 ATIS2:Murmansk Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:UUYY_TWR:50:4
 ATIS2:Sivkar Start
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 PROFILE:ULAM_TWR:50:4
 ATIS2:Naryan-Mar Tower
 ATIS3:Feel free to visit vatsim-petersburg.com
-ATIS4:
+ATIS4:Set Squawk Mode C when moving
 END
