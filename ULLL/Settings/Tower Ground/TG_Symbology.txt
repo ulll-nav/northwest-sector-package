@@ -68,14 +68,14 @@ Other:distance annotation:65535:3.5:0:0:7
 Other:separation leader:16777215:3.5:0:3:7
 Other:separation leader2:16777215:3.5:0:1:7
 Other:find:16777215:3.5:0:5:7
-Other:valid airway:65535:3.6:0:2:7
+Other:valid airway:5953520:3.6:0:2:7
 Other:bad direction airway:255:3.5:0:2:7
 Other:unconnected airway:16711680:3.5:0:2:7
-Other:direct no airway:65535:3.6:0:1:7
+Other:direct no airway:5953520:3.6:0:1:7
 Other:free of conflict:65280:3.5:0:2:7
 Other:conflict warning:65535:3.5:0:2:7
 Other:conflict detected:255:3.5:0:2:7
-Other:route annotation:62464:4.0:0:1:2
+Other:route annotation:5953520:4.0:0:1:2
 Other:freetext:14408667:3.9:0:0:7
 Other:range rings:65535:5.0:0:0:2
 Other:off antenna range rings:255:5.0:0:0:2

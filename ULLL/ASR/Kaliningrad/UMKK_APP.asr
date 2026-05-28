@@ -1,8 +1,8 @@
 DisplayTypeName:Standard ES radar screen
 DisplayTypeNeedRadarContent:1
 DisplayTypeGeoReferenced:1
-SECTORFILE:E:\Metramak\Downloads\ULLL-Galaxy-dev_202605\ULLL-Galaxy-dev_20260511161644-260401-0013.sct
-SECTORTITLE:ULLL-Galaxy-dev_20260511161644-260401-0013.sct
+SECTORFILE:
+SECTORTITLE:
 Airports:XMWB:symbol
 Airports:XMWD:symbol
 Airports:XMWH:symbol
