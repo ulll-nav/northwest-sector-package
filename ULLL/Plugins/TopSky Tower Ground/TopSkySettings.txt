@@ -31,6 +31,13 @@ Areas_Label_Name=0
 Areas_Label_MapText=1
 Areas_Label_Times=1
 
+//Standard colors, all other defined below
+Color_Assumed=255,255,255
+Color_Concerned=85,173,255
+Color_Unconcerned=150,150,150
+Color_Unknown=239,224,42
+Color_Redundant=40,184,40
+Color_Coordination=85,173,255
 
 Color_Active_Map_Type_1=120,0,0
 Color_Active_Map_Type_2=80,162,74
@@ -46,7 +53,6 @@ Color_AIW_Intrusion=255,152,0
 Color_Background=10,20,20
 Color_Border=25,35,35
 Color_BottomShadow=25,35,35
-Color_CARD_Conflict_Number
 Color_CARD_Mark_All=255,125,0
 Color_CARD_Mark_Own=255,125,0
 Color_CARD_Min_Sep=63,125,84
@@ -92,7 +98,7 @@ Color_SEP_Tool_2=255,153,184
 Color_SEP_Tool_3=255,209,143
 Color_SEP_Tool_4=197,64,212
 Color_SEP_Tool_5=140,140,255
-Color_Sid_Star_Allocation=13,156,164
+Color_Sid_Star_Allocation=25,113,195
 Color_Suite_Highlight=0,220,255
 Color_SMW_Level_Band=24,209,114
 Color_SMW_Overflight=254,152,1
@@ -108,6 +114,7 @@ Color_Trough=97,99,97
 Color_TSA_Active=93,138,195
 Color_TSA_Border_Highlight=200,53,18
 Color_TSA_Preactive=132,142,139
+Color_Unconcerned=150,150,150
 Color_Unknown=239,224,42
 Color_Urgency=225,25,25
 Color_Urgency_FL=225,25,25
@@ -124,16 +131,9 @@ Color_WM_Frame=88,95,99
 Color_Proposition_Accepted=0,160,0
 Color_Proposition_In=0,128,125
 Color_Proposition_Out=200,185,120
-Color_Weather_Map=207,128,238
-Color_VFR=255,255,255
-
-Color_Assumed=255,255,255 
-Color_Concerned=255,255,255
-Color_Informed=255,255,255 
-Color_Unconcerned=255,255,255 
-Color_Unknown=255,255,255
-Color_Redundant=255,255,255 
-Color_Coordination=255,255,255
+Color_Weather_Map=207,128,23
+Color_Standard_Line_RDF=190,190,220
+Color_Standard_RDF=190,190,220
 
 CPDLC_Default=0
 
@@ -279,7 +279,7 @@ Vector_AHDG_Label_Dist=2
 Vector_AHDG_Label_Time=1
 Vector_MinSep_FontSize=12
 Vector_MinSep_Label_Time=1
-Vector_QDM_FontSize=12
+Vector_QDM_FontSize=13
 Vector_QDM_MaxNumber=99
 Vector_QDM_Airports=0
 Vector_QDM_AA_Label_Dist=1

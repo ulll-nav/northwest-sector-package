@@ -147,6 +147,139 @@
       }
    },
    {
+      "icao": "ULAA",
+      "sids": {
+         "RILDA": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "T825"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "UNARI": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "L250",
+				 "M58"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "GUMSA": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "T821"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "ADINU": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "T762"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "ODESI": [
+            {
+               "direction": "ODD",
+               "airways": [
+                 "L93"
+               ]
+            },
+            {
+               "direction": "ODD"
+            }
+         ],
+         "ABELU": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "T825"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "OBIRA": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "M58"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "MAKOG": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "L299",
+                 "N742",
+				 "T821"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+        "MAGEM": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "N746",
+                 "T453"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "BESUM": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "L11",
+				 "M57",
+				 "T762"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ],
+         "KOTID": [
+            {
+               "direction": "EVEN",
+               "airways": [
+                 "L250",
+				 "L93"
+               ]
+            },
+            {
+               "direction": "EVEN"
+            }
+         ]
+      }
+   },
+   {
       "icao": "ULPB",
       "sids": {
          "SOPID": [
